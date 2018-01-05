@@ -1,0 +1,4 @@
+D:\BestFunction\SRC\bf\login_info\login_info\bin\Debug\login_info.exe.config
+D:\BestFunction\SRC\bf\login_info\login_info\obj\Debug\login_info.csprojResolveAssemblyReference.cache
+D:\BestFunction\SRC\bf\login_info\login_info\obj\Debug\b2.BestFunction.Properties.Resources.resources
+D:\BestFunction\SRC\bf\login_info\login_info\obj\Debug\login_info.csproj.GenerateResource.Cache

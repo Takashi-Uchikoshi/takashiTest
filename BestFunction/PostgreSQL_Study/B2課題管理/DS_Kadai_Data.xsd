@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Kadai_Data" targetNamespace="http://tempuri.org/DS_Kadai_Data.xsd" xmlns:mstns="http://tempuri.org/DS_Kadai_Data.xsd" xmlns="http://tempuri.org/DS_Kadai_Data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Kadai_Data" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Kadai_Data" msprop:Generator_UserDSName="DS_Kadai_Data">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KADAI" msprop:Generator_TableClassName="KADAIDataTable" msprop:Generator_TableVarName="tableKADAI" msprop:Generator_TablePropName="KADAI" msprop:Generator_RowDeletingName="KADAIRowDeleting" msprop:Generator_RowChangingName="KADAIRowChanging" msprop:Generator_RowEvHandlerName="KADAIRowChangeEventHandler" msprop:Generator_RowDeletedName="KADAIRowDeleted" msprop:Generator_UserTableName="KADAI" msprop:Generator_RowChangedName="KADAIRowChanged" msprop:Generator_RowEvArgName="KADAIRowChangeEvent" msprop:Generator_RowClassName="KADAIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PJ_NO" msdata:Caption="プロジェクト番号" msprop:Generator_ColumnVarNameInTable="columnPJ_NO" msprop:Generator_ColumnPropNameInRow="PJ_NO" msprop:Generator_ColumnPropNameInTable="PJ_NOColumn" msprop:Generator_UserColumnName="PJ_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PJ_NAME" msdata:Caption="プロジェクト名" msprop:Generator_ColumnVarNameInTable="columnPJ_NAME" msprop:Generator_ColumnPropNameInRow="PJ_NAME" msprop:Generator_ColumnPropNameInTable="PJ_NAMEColumn" msprop:Generator_UserColumnName="PJ_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ORDER_NO" msdata:Caption="受注管理番号" msprop:Generator_ColumnVarNameInTable="columnORDER_NO" msprop:Generator_ColumnPropNameInRow="ORDER_NO" msprop:Generator_ColumnPropNameInTable="ORDER_NOColumn" msprop:Generator_UserColumnName="ORDER_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="USER_NAME" msdata:Caption="顧客名" msprop:Generator_ColumnVarNameInTable="columnUSER_NAME" msprop:Generator_ColumnPropNameInRow="USER_NAME" msprop:Generator_ColumnPropNameInTable="USER_NAMEColumn" msprop:Generator_UserColumnName="USER_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="MAKER_NAME" msdata:Caption="発注元名" msprop:Generator_ColumnVarNameInTable="columnMAKER_NAME" msprop:Generator_ColumnPropNameInRow="MAKER_NAME" msprop:Generator_ColumnPropNameInTable="MAKER_NAMEColumn" msprop:Generator_UserColumnName="MAKER_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="MAKER_PARSON" msdata:Caption="発注元担当者" msprop:Generator_ColumnVarNameInTable="columnMAKER_PARSON" msprop:Generator_ColumnPropNameInRow="MAKER_PARSON" msprop:Generator_ColumnPropNameInTable="MAKER_PARSONColumn" msprop:Generator_UserColumnName="MAKER_PARSON" type="xs:string" minOccurs="0" />
+              <xs:element name="MEMO" msdata:Caption="備考" msprop:Generator_ColumnVarNameInTable="columnMEMO" msprop:Generator_ColumnPropNameInRow="MEMO" msprop:Generator_ColumnPropNameInTable="MEMOColumn" msprop:Generator_UserColumnName="MEMO" type="xs:string" minOccurs="0" />
+              <xs:element name="KANRYOU" msdata:Caption="完了" msprop:Generator_ColumnVarNameInTable="columnKANRYOU" msprop:Generator_ColumnPropNameInRow="KANRYOU" msprop:Generator_ColumnPropNameInTable="KANRYOUColumn" msprop:Generator_UserColumnName="KANRYOU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SEQ_NO" msdata:Caption="連番" msprop:Generator_ColumnVarNameInTable="columnSEQ_NO" msprop:Generator_ColumnPropNameInRow="SEQ_NO" msprop:Generator_ColumnPropNameInTable="SEQ_NOColumn" msprop:Generator_UserColumnName="SEQ_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KANRI_NO" msdata:Caption="管理番号" msprop:Generator_ColumnVarNameInTable="columnKANRI_NO" msprop:Generator_ColumnPropNameInRow="KANRI_NO" msprop:Generator_ColumnPropNameInTable="KANRI_NOColumn" msprop:Generator_UserColumnName="KANRI_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BUNRUI" msdata:Caption="分類" msprop:Generator_ColumnVarNameInTable="columnBUNRUI" msprop:Generator_ColumnPropNameInRow="BUNRUI" msprop:Generator_ColumnPropNameInTable="BUNRUIColumn" msprop:Generator_UserColumnName="BUNRUI" type="xs:string" minOccurs="0" />
+              <xs:element name="KINOU" msdata:Caption="機能名称" msprop:Generator_ColumnVarNameInTable="columnKINOU" msprop:Generator_ColumnPropNameInRow="KINOU" msprop:Generator_ColumnPropNameInTable="KINOUColumn" msprop:Generator_UserColumnName="KINOU" type="xs:string" minOccurs="0" />
+              <xs:element name="KANRI_NAIYOU" msdata:Caption="管理内容" msprop:Generator_ColumnVarNameInTable="columnKANRI_NAIYOU" msprop:Generator_ColumnPropNameInRow="KANRI_NAIYOU" msprop:Generator_ColumnPropNameInTable="KANRI_NAIYOUColumn" msprop:Generator_UserColumnName="KANRI_NAIYOU" type="xs:string" minOccurs="0" />
+              <xs:element name="SYOCHI_NAIYOU" msdata:Caption="処置内容" msprop:Generator_ColumnVarNameInTable="columnSYOCHI_NAIYOU" msprop:Generator_ColumnPropNameInRow="SYOCHI_NAIYOU" msprop:Generator_ColumnPropNameInTable="SYOCHI_NAIYOUColumn" msprop:Generator_UserColumnName="SYOCHI_NAIYOU" type="xs:string" minOccurs="0" />
+              <xs:element name="SYUBETU" msdata:Caption="種別" msprop:Generator_ColumnVarNameInTable="columnSYUBETU" msprop:Generator_ColumnPropNameInRow="SYUBETU" msprop:Generator_ColumnPropNameInTable="SYUBETUColumn" msprop:Generator_UserColumnName="SYUBETU" type="xs:string" minOccurs="0" />
+              <xs:element name="JYOUTAI" msdata:Caption="状態" msprop:Generator_ColumnVarNameInTable="columnJYOUTAI" msprop:Generator_ColumnPropNameInRow="JYOUTAI" msprop:Generator_ColumnPropNameInTable="JYOUTAIColumn" msprop:Generator_UserColumnName="JYOUTAI" type="xs:string" minOccurs="0" />
+              <xs:element name="HASSEI_F" msdata:Caption="発生フェーズ" msprop:Generator_ColumnVarNameInTable="columnHASSEI_F" msprop:Generator_ColumnPropNameInRow="HASSEI_F" msprop:Generator_ColumnPropNameInTable="HASSEI_FColumn" msprop:Generator_UserColumnName="HASSEI_F" type="xs:string" minOccurs="0" />
+              <xs:element name="GENIN_F" msdata:Caption="原因フェーズ" msprop:Generator_ColumnVarNameInTable="columnGENIN_F" msprop:Generator_ColumnPropNameInRow="GENIN_F" msprop:Generator_ColumnPropNameInTable="GENIN_FColumn" msprop:Generator_UserColumnName="GENIN_F" type="xs:string" minOccurs="0" />
+              <xs:element name="GENIN_KUBUN" msdata:Caption="原因区分" msprop:Generator_ColumnVarNameInTable="columnGENIN_KUBUN" msprop:Generator_ColumnPropNameInRow="GENIN_KUBUN" msprop:Generator_ColumnPropNameInTable="GENIN_KUBUNColumn" msprop:Generator_UserColumnName="GENIN_KUBUN" type="xs:string" minOccurs="0" />
+              <xs:element name="GENIN_SYOUSAI" msdata:Caption="原因詳細" msprop:Generator_ColumnVarNameInTable="columnGENIN_SYOUSAI" msprop:Generator_ColumnPropNameInRow="GENIN_SYOUSAI" msprop:Generator_ColumnPropNameInTable="GENIN_SYOUSAIColumn" msprop:Generator_UserColumnName="GENIN_SYOUSAI" type="xs:string" minOccurs="0" />
+              <xs:element name="JYUUYOUDO" msdata:Caption="重要度" msprop:Generator_ColumnVarNameInTable="columnJYUUYOUDO" msprop:Generator_ColumnPropNameInRow="JYUUYOUDO" msprop:Generator_ColumnPropNameInTable="JYUUYOUDOColumn" msprop:Generator_UserColumnName="JYUUYOUDO" type="xs:string" minOccurs="0" />
+              <xs:element name="HASSEIBI" msdata:Caption="発生日" msprop:Generator_ColumnVarNameInTable="columnHASSEIBI" msprop:Generator_ColumnPropNameInRow="HASSEIBI" msprop:Generator_ColumnPropNameInTable="HASSEIBIColumn" msprop:Generator_UserColumnName="HASSEIBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YOTEIBI" msdata:Caption="対応予定日" msprop:Generator_ColumnVarNameInTable="columnYOTEIBI" msprop:Generator_ColumnPropNameInRow="YOTEIBI" msprop:Generator_ColumnPropNameInTable="YOTEIBIColumn" msprop:Generator_UserColumnName="YOTEIBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KANRYOUBI" msdata:Caption="完了日" msprop:Generator_ColumnVarNameInTable="columnKANRYOUBI" msprop:Generator_ColumnPropNameInRow="KANRYOUBI" msprop:Generator_ColumnPropNameInTable="KANRYOUBIColumn" msprop:Generator_UserColumnName="KANRYOUBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SHITEKISYA" msdata:Caption="指摘者" msprop:Generator_ColumnVarNameInTable="columnSHITEKISYA" msprop:Generator_ColumnPropNameInRow="SHITEKISYA" msprop:Generator_ColumnPropNameInTable="SHITEKISYAColumn" msprop:Generator_UserColumnName="SHITEKISYA" type="xs:string" minOccurs="0" />
+              <xs:element name="SYOCHISYA" msdata:Caption="処置者" msprop:Generator_ColumnVarNameInTable="columnSYOCHISYA" msprop:Generator_ColumnPropNameInRow="SYOCHISYA" msprop:Generator_ColumnPropNameInTable="SYOCHISYAColumn" msprop:Generator_UserColumnName="SYOCHISYA" type="xs:string" minOccurs="0" />
+              <xs:element name="ZESEIKUBUN" msdata:Caption="是正区分" msprop:Generator_ColumnVarNameInTable="columnZESEIKUBUN" msprop:Generator_ColumnPropNameInRow="ZESEIKUBUN" msprop:Generator_ColumnPropNameInTable="ZESEIKUBUNColumn" msprop:Generator_UserColumnName="ZESEIKUBUN" type="xs:string" minOccurs="0" />
+              <xs:element name="CYUUSYUTU_G" msdata:Caption="抽出グループ" msprop:Generator_ColumnVarNameInTable="columnCYUUSYUTU_G" msprop:Generator_ColumnPropNameInRow="CYUUSYUTU_G" msprop:Generator_ColumnPropNameInTable="CYUUSYUTU_GColumn" msprop:Generator_UserColumnName="CYUUSYUTU_G" type="xs:string" minOccurs="0" />
+              <xs:element name="TOUROKUSYA" msdata:Caption="登録者" msprop:Generator_ColumnVarNameInTable="columnTOUROKUSYA" msprop:Generator_ColumnPropNameInRow="TOUROKUSYA" msprop:Generator_ColumnPropNameInTable="TOUROKUSYAColumn" msprop:Generator_UserColumnName="TOUROKUSYA" type="xs:string" minOccurs="0" />
+              <xs:element name="TOUROKUBI" msdata:Caption="登録日" msprop:Generator_ColumnVarNameInTable="columnTOUROKUBI" msprop:Generator_ColumnPropNameInRow="TOUROKUBI" msprop:Generator_ColumnPropNameInTable="TOUROKUBIColumn" msprop:Generator_UserColumnName="TOUROKUBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YOTEIKOUSUU" msdata:Caption="予定工数" msprop:Generator_ColumnVarNameInTable="columnYOTEIKOUSUU" msprop:Generator_ColumnPropNameInRow="YOTEIKOUSUU" msprop:Generator_ColumnPropNameInTable="YOTEIKOUSUUColumn" msprop:Generator_UserColumnName="YOTEIKOUSUU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="JISSEKIKOUSUU" msdata:Caption="実績工数" msprop:Generator_ColumnVarNameInTable="columnJISSEKIKOUSUU" msprop:Generator_ColumnPropNameInRow="JISSEKIKOUSUU" msprop:Generator_ColumnPropNameInTable="JISSEKIKOUSUUColumn" msprop:Generator_UserColumnName="JISSEKIKOUSUU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KAIHATUCYAKUSYUBI" msdata:Caption="開発着手日" msprop:Generator_ColumnVarNameInTable="columnKAIHATUCYAKUSYUBI" msprop:Generator_ColumnPropNameInRow="KAIHATUCYAKUSYUBI" msprop:Generator_ColumnPropNameInTable="KAIHATUCYAKUSYUBIColumn" msprop:Generator_UserColumnName="KAIHATUCYAKUSYUBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KAIHATUKANRYOUBI" msdata:Caption="開発完了日" msprop:Generator_ColumnVarNameInTable="columnKAIHATUKANRYOUBI" msprop:Generator_ColumnPropNameInRow="KAIHATUKANRYOUBI" msprop:Generator_ColumnPropNameInTable="KAIHATUKANRYOUBIColumn" msprop:Generator_UserColumnName="KAIHATUKANRYOUBI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SHINCYOKURITU" msdata:Caption="進捗率" msprop:Generator_ColumnVarNameInTable="columnSHINCYOKURITU" msprop:Generator_ColumnPropNameInRow="SHINCYOKURITU" msprop:Generator_ColumnPropNameInTable="SHINCYOKURITUColumn" msprop:Generator_UserColumnName="SHINCYOKURITU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIKOU" msdata:Caption="備考" msprop:Generator_ColumnVarNameInTable="columnBIKOU" msprop:Generator_ColumnPropNameInRow="BIKOU" msprop:Generator_ColumnPropNameInTable="BIKOUColumn" msprop:Generator_UserColumnName="BIKOU" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
