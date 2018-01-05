@@ -1,2 +1,2 @@
-﻿# takashiTest
-テスト用35億
+# takashiTest
+テスト用
