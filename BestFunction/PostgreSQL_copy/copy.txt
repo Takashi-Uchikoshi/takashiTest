@@ -1,6 +1,0 @@
-copy 課題管理(プロジェクト番号,連番,管理番号,分類,機能名称,管理内容,処置内容,種別,状態,発生フェーズ,原因フェーズ,原因区分,原因詳細,重要度,発生日,対応予定日,完了日,指摘者,処置者,是正区分,抽出グループ,登録者,登録日,予定工数,実績工数, 開発着手日,開発完了日,進捗率,備考) from 'ファイルパス/課題管理.csv' delimiter ',' CSV quote '"' encoding 'sjis';
-
-copy 課題管理 from 'D:\BestFunction\PostgreSQL_copy\data.csv' delimiter ',' CSV quote '"' encoding 'sjis';
-
-
-ファイルパスを置き換えてください。

@@ -1,8 +1,0 @@
-D:\BestFunction\EXE\BfBaseForm.dll
-D:\BestFunction\EXE\BfBaseForm.pdb
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BfBaseForm.csprojResolveAssemblyReference.cache
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BfBaseForm.csproj.GenerateResource.Cache
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BfBaseForm.dll
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BfBaseForm.pdb
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BfBaseForm.dll.licenses
-D:\BestFunction\SRC\lib\BfBaseForm\BfBaseForm\obj\Release\BestFunction.frmMaster.resources

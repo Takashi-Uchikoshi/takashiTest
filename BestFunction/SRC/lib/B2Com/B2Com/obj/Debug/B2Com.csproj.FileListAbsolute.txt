@@ -1,5 +1,0 @@
-D:\PG_Study\ソース\PG_Study2\lib\B2Com\B2Com\bin\Debug\B2Com.dll
-D:\PG_Study\ソース\PG_Study2\lib\B2Com\B2Com\bin\Debug\B2Com.pdb
-D:\PG_Study\ソース\PG_Study2\lib\B2Com\B2Com\obj\Debug\B2Com.dll.licenses
-D:\PG_Study\ソース\PG_Study2\lib\B2Com\B2Com\obj\Debug\B2Com.dll
-D:\PG_Study\ソース\PG_Study2\lib\B2Com\B2Com\obj\Debug\B2Com.pdb
