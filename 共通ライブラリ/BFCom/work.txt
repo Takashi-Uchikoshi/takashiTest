@@ -1,0 +1,219 @@
+            this.menuStrip_ms = new System.Windows.Forms.MenuStrip();
+            this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Cancel_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Edit_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.New_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Modify_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Delete_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Update_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Show_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Select_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Refresh_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Sort_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Output_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Print_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Csv_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Renkei_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Download_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Detail_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
+
+            // 
+            // menuStrip_ms
+            // 
+            this.menuStrip_ms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.File_ToolStripMenuItem,
+            this.Edit_ToolStripMenuItem,
+            this.Show_ToolStripMenuItem,
+            this.Output_ToolStripMenuItem,
+            this.Renkei_ToolStripMenuItem});
+            this.menuStrip_ms.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_ms.Name = "menuStrip_ms";
+            this.menuStrip_ms.Size = new System.Drawing.Size(1206, 26);
+            this.menuStrip_ms.TabIndex = 2;
+            this.menuStrip_ms.Text = "menuStrip1";
+            // 
+            // File_ToolStripMenuItem
+            // 
+            this.File_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Cancel_ToolStripMenuItem,
+            this.Exit_ToolStripMenuItem});
+            this.File_ToolStripMenuItem.Name = "File_ToolStripMenuItem";
+            this.File_ToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
+            this.File_ToolStripMenuItem.Text = "ファイル";
+            // 
+            // Cancel_ToolStripMenuItem
+            // 
+            this.Cancel_ToolStripMenuItem.Name = "Cancel_ToolStripMenuItem";
+            this.Cancel_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Cancel_ToolStripMenuItem.Text = "取消終了";
+            this.Cancel_ToolStripMenuItem.Click += new System.EventHandler(this.Cancel_ToolStripMenuItem_Click);
+            // 
+            // Exit_ToolStripMenuItem
+            // 
+            this.Exit_ToolStripMenuItem.Name = "Exit_ToolStripMenuItem";
+            this.Exit_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Exit_ToolStripMenuItem.Text = "終了";
+            this.Exit_ToolStripMenuItem.Click += new System.EventHandler(this.Exit_ToolStripMenuItem_Click);
+            // 
+            // Edit_ToolStripMenuItem
+            // 
+            this.Edit_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.New_ToolStripMenuItem,
+            this.Modify_ToolStripMenuItem,
+            this.Delete_ToolStripMenuItem,
+            this.Update_ToolStripMenuItem});
+            this.Edit_ToolStripMenuItem.Name = "Edit_ToolStripMenuItem";
+            this.Edit_ToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.Edit_ToolStripMenuItem.Text = "編集";
+            // 
+            // New_ToolStripMenuItem
+            // 
+            this.New_ToolStripMenuItem.Name = "New_ToolStripMenuItem";
+            this.New_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.New_ToolStripMenuItem.Text = "新規";
+            this.New_ToolStripMenuItem.Click += new System.EventHandler(this.New_ToolStripMenuItem_Click);
+            // 
+            // Modify_ToolStripMenuItem
+            // 
+            this.Modify_ToolStripMenuItem.Name = "Modify_ToolStripMenuItem";
+            this.Modify_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Modify_ToolStripMenuItem.Text = "訂正";
+            this.Modify_ToolStripMenuItem.Click += new System.EventHandler(this.Modify_ToolStripMenuItem_Click);
+            // 
+            // Delete_ToolStripMenuItem
+            // 
+            this.Delete_ToolStripMenuItem.Name = "Delete_ToolStripMenuItem";
+            this.Delete_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Delete_ToolStripMenuItem.Text = "削除";
+            this.Delete_ToolStripMenuItem.Click += new System.EventHandler(this.Delete_ToolStripMenuItem_Click);
+            // 
+            // Update_ToolStripMenuItem
+            // 
+            this.Update_ToolStripMenuItem.Name = "Update_ToolStripMenuItem";
+            this.Update_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Update_ToolStripMenuItem.Text = "更新";
+            this.Update_ToolStripMenuItem.Click += new System.EventHandler(this.Update_ToolStripMenuItem_Click);
+            // 
+            // Show_ToolStripMenuItem
+            // 
+            this.Show_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Select_ToolStripMenuItem,
+            this.Refresh_ToolStripMenuItem,
+            this.Sort_ToolStripMenuItem});
+            this.Show_ToolStripMenuItem.Name = "Show_ToolStripMenuItem";
+            this.Show_ToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.Show_ToolStripMenuItem.Text = "表示";
+            // 
+            // Select_ToolStripMenuItem
+            // 
+            this.Select_ToolStripMenuItem.Name = "Select_ToolStripMenuItem";
+            this.Select_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Select_ToolStripMenuItem.Text = "検索";
+            this.Select_ToolStripMenuItem.Click += new System.EventHandler(this.Select_ToolStripMenuItem_Click);
+            // 
+            // Refresh_ToolStripMenuItem
+            // 
+            this.Refresh_ToolStripMenuItem.Name = "Refresh_ToolStripMenuItem";
+            this.Refresh_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Refresh_ToolStripMenuItem.Text = "リフレッシュ";
+            this.Refresh_ToolStripMenuItem.Click += new System.EventHandler(this.Refresh_ToolStripMenuItem_Click);
+            // 
+            // Sort_ToolStripMenuItem
+            // 
+            this.Sort_ToolStripMenuItem.Name = "Sort_ToolStripMenuItem";
+            this.Sort_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Sort_ToolStripMenuItem.Text = "ソート";
+            this.Sort_ToolStripMenuItem.Click += new System.EventHandler(this.Sort_ToolStripMenuItem_Click);
+            // 
+            // Output_ToolStripMenuItem
+            // 
+            this.Output_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Print_ToolStripMenuItem,
+            this.Csv_ToolStripMenuItem,
+            this.Detail_ToolStripMenuItem});
+            this.Output_ToolStripMenuItem.Name = "Output_ToolStripMenuItem";
+            this.Output_ToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.Output_ToolStripMenuItem.Text = "出力";
+            // 
+            // Print_ToolStripMenuItem
+            // 
+            this.Print_ToolStripMenuItem.Name = "Print_ToolStripMenuItem";
+            this.Print_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Print_ToolStripMenuItem.Text = "印刷";
+            this.Print_ToolStripMenuItem.Click += new System.EventHandler(this.Print_ToolStripMenuItem_Click);
+            // 
+            // Csv_ToolStripMenuItem
+            // 
+            this.Csv_ToolStripMenuItem.Name = "Csv_ToolStripMenuItem";
+            this.Csv_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Csv_ToolStripMenuItem.Text = "CSV出力";
+            this.Csv_ToolStripMenuItem.Click += new System.EventHandler(this.Csv_ToolStripMenuItem_Click);
+            // 
+            // Renkei_ToolStripMenuItem
+            // 
+            this.Renkei_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Download_ToolStripMenuItem});
+            this.Renkei_ToolStripMenuItem.Name = "Renkei_ToolStripMenuItem";
+            this.Renkei_ToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.Renkei_ToolStripMenuItem.Text = "連携";
+            // 
+            // Download_ToolStripMenuItem
+            // 
+            this.Download_ToolStripMenuItem.Name = "Download_ToolStripMenuItem";
+            this.Download_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Download_ToolStripMenuItem.Text = "ダウンロード";
+            this.Download_ToolStripMenuItem.Click += new System.EventHandler(this.Download_ToolStripMenuItem_Click);
+            // 
+            // Detail_ToolStripMenuItem
+            // 
+            this.Detail_ToolStripMenuItem.Name = "Detail_ToolStripMenuItem";
+            this.Detail_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Detail_ToolStripMenuItem.Text = "一覧印刷";
+            this.Detail_ToolStripMenuItem.Click += new System.EventHandler(this.Detail_ToolStripMenuItem_Click);
+
+
+
+public DbSet<BfChouzai_jisseki> BfChouzai_jisseki { get; set; }
+public DbSet<BfIdou> BfIdou { get; set; }
+public DbSet<BfIni> BfIni { get; set; }
+public DbSet<BfStatus> BfStatus { get; set; }
+public DbSet<EigyouMaster> EigyouMaster { get; set; }
+public DbSet<HachukanriMaster> HachukanriMaster { get; set; }
+public DbSet<HachuuDetails> HachuuDetails { get; set; }
+public DbSet<HachuuHeader> HachuuHeader { get; set; }
+public DbSet<IniMaster> IniMaster { get; set; }
+public DbSet<KanjyaData> KanjyaData { get; set; }
+public DbSet<LogData> LogData { get; set; }
+public DbSet<LoginInfo> LoginInfo { get; set; }
+public DbSet<LotinfoMaster> LotinfoMaster { get; set; }
+public DbSet<MakerMaster> MakerMaster { get; set; }
+public DbSet<MenuData> MenuData { get; set; }
+public DbSet<NouhinData> NouhinData { get; set; }
+public DbSet<Nsips0Header> Nsips0Header { get; set; }
+public DbSet<Nsips1Kanjya> Nsips1Kanjya { get; set; }
+public DbSet<Nsips2Shohosen> Nsips2Shohosen { get; set; }
+public DbSet<Nsips3Yoho> Nsips3Yoho { get; set; }
+public DbSet<Nsips4Yakuhin> Nsips4Yakuhin { get; set; }
+public DbSet<Nsips5Chozairoku> Nsips5Chozairoku { get; set; }
+public DbSet<Nsips6Chozairoku_meisai> Nsips6Chozairoku_meisai { get; set; }
+public DbSet<Nsips7Kasan> Nsips7Kasan { get; set; }
+public DbSet<NyuukoDetails> NyuukoDetails { get; set; }
+public DbSet<NyuukoHeader> NyuukoHeader { get; set; }
+public DbSet<OtcMaster> OtcMaster { get; set; }
+public DbSet<PickedYakuhin> PickedYakuhin { get; set; }
+public DbSet<SeibunMaster> SeibunMaster { get; set; }
+public DbSet<ShiiresakiMaster> ShiiresakiMaster { get; set; }
+public DbSet<StoreMaster> StoreMaster { get; set; }
+public DbSet<SyukkoDetails> SyukkoDetails { get; set; }
+public DbSet<SyukkoHeader> SyukkoHeader { get; set; }
+public DbSet<TanabanMaster> TanabanMaster { get; set; }
+public DbSet<TanaoroshiHeader> TanaoroshiHeader { get; set; }
+public DbSet<TanaoroshiKaishi> TanaoroshiKaishi { get; set; }
+public DbSet<TanaoroshiMeisai> TanaoroshiMeisai { get; set; }
+public DbSet<TehaiMaster> TehaiMaster { get; set; }
+public DbSet<TenpoMaster> TenpoMaster { get; set; }
+public DbSet<YakkyokuMaster> YakkyokuMaster { get; set; }
+public DbSet<YakuhinMaster> YakuhinMaster { get; set; }
+public DbSet<ZaikoMaster> ZaikoMaster { get; set; }

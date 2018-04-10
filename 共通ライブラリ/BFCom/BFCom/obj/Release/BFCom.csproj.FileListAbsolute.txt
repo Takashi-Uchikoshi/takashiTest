@@ -1,0 +1,14 @@
+D:\EXE\BFCom.dll.config
+D:\EXE\BFCom.XML
+D:\EXE\BFCom.dll
+D:\EXE\BFCom.pdb
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.BFBaseForm.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.CodeWariateForm.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.KensakuSyouhinForm.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.TourokuSyuseiForm.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.ZaikoChouseiForm.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\B2.BestFunction.Properties.Resources.resources
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\BFCom.csproj.GenerateResource.Cache
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\BFCom.dll.licenses
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\BFCom.dll
+D:\BestFunction2\共通ライブラリ\BFCom\BFCom\obj\Release\BFCom.pdb

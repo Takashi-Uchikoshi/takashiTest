@@ -1,0 +1,2 @@
+D:\BestFunction2\商品マスタ\BF_Shouhin\bin\Debug\BF_Shouhin.exe.config
+D:\EXE\BF_Shouhin.exe.config

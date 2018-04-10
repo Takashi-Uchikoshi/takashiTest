@@ -1,0 +1,20 @@
+﻿変数などの名前はCamel形式
+	○UserName
+	×user_name
+
+privateは小文字、publicは大文字で始める
+	○private void abc();
+	×private void Abc();
+
+クラス内の変数などへの参照はthisをつける
+	○this.abc;
+	×abc;
+
+クラス名にclsつけない
+	○ Postgres
+	× clsPostgres
+
+変数名はクラス名に従う
+	○ NpgsqlConnection connection;
+	× NpgsqlConnection Session;
+

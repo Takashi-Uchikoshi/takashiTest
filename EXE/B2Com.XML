@@ -1,0 +1,2388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B2Com</name>
+    </assembly>
+    <members>
+        <member name="T:B2.Com.AReport">
+            <summary>
+            ActiveReports設定クラス
+            INIテーブルからLabel、TextBoxコントロールの位置やフォントなどを設定します
+            </summary>
+        </member>
+        <member name="M:B2.Com.AReport.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.AReport.Dispose">
+            <summary>
+            オブジェクト解放
+            </summary>
+        </member>
+        <member name="M:B2.Com.AReport.SetFontData(GrapeCity.ActiveReports.SectionReportModel.ARControl,System.String)">
+            <summary>
+            フォント設定
+            フォント、ポイント、水平表示位置、色を設定します
+            </summary>
+            <param name="control">ActiveReportsコントロール</param>
+            <param name="data">iniテーブルデータ</param>
+        </member>
+        <member name="M:B2.Com.AReport.SetLocationData(GrapeCity.ActiveReports.SectionReportModel.ARControl,System.String)">
+            <summary>
+            位置設定
+            位置、サイズを設定します
+            </summary>
+            <param name="control">ActiveReportsコントロール</param>
+            <param name="data">iniテーブルデータ</param>
+        </member>
+        <member name="T:B2.Com.PaperSize">
+            <summary>
+            用紙サイズクラス
+            </summary>
+        </member>
+        <member name="M:B2.Com.PaperSize.GetPaperSize(System.String)">
+            <summary>
+            用紙サイズ取得
+            </summary>
+            <param name="size">用紙名</param>
+            <returns>用紙サイズ</returns>
+        </member>
+        <member name="T:B2.Com.B2Com">
+            <summary>
+            共通クラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeStart">
+            <summary>ログファイル拡張コード　起動</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeExit">
+            <summary>ログファイル拡張コード　終了</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeLogin">
+            <summary>ログファイル拡張コード　ログイン</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeLogout">
+            <summary>ログファイル拡張コード　ログアウト</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeFailed">
+            <summary>ログファイル拡張コード　認証失敗</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeStartProgram">
+            <summary>ログファイル拡張コード　別EXE起動</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.LogfileCodeUpdate">
+            <summary>ログファイル拡張コード　更新</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.B2Registrykey">
+            <summary>値を取得するレジストリキー名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbServerMeiKey">
+            <summary>DBサーバー名キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbPortBangoKey">
+            <summary>DBポート番号キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbDatabaseMeiKey">
+            <summary>DBデータベース名キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbUserMeiKey">
+            <summary>店舗DB用ユーザ名キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbPasswordKey">
+            <summary>店舗DB用パスワードキー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbSchemaKey">
+            <summary>DBスキーマー（ユーザー名と同一とする）キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbHonbuUserMeiKey">
+            <summary>本部DB用ユーザ名キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.DbHonbuPasswordKey">
+            <summary>本部DB様パスワードキー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.YakkyokuCodeKey">
+            <summary>薬局コードキー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.HonbuYakkyokuCodeKey">
+            <summary>本部薬局コード（識別）キー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.PgLib">
+            <summary> PgLibQL接続クラスの定義 </summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbServerMei">
+            <summary>DBサーバー名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbPortBango">
+            <summary>DBポート番号</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbDatabaseMei">
+            <summary>DBデータベース名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbUserMei">
+            <summary>DBユーザ名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbPassword">
+            <summary>DBパスワード</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.dbSchema">
+            <summary>DBスキーマー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.honbuDbUserMei">
+            <summary>本部DBユーザ名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.honbuDbPassword">
+            <summary>本部DBパスワード</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.yakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.honbuYakkyokuCode">
+            <summary>本部薬局コード</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.warekiGengoEijiList">
+            <summary>和暦元号英字リスト</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.programID">
+            <summary>プログラムID</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.machineMei">
+            <summary>マシン名</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.programArgument">
+            <summary>プログラム固有引数(第５引数）</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.commandlineArguments">
+            <summary>コマンドライン引数（全て）</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.formColorMode">
+            <summary>フォームカラーモード</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.backColorAlpha">
+            <summary>フォームのバックアカラー設定情報 アルファ</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.backColorRed">
+            <summary>フォームのバックアカラー設定情報 レッド</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.backColorGreen">
+            <summary>フォームのバックアカラー設定情報 グリーン</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.backColorBlue">
+            <summary>フォームのバックアカラー設定情報 ブルー</summary>
+        </member>
+        <member name="M:B2.Com.B2Com.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.B2Com.Finalize">
+            <summary>
+            デストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.B2Com.Dispose">
+            <summary>
+            メモリ等の解放処理
+            </summary>
+        </member>
+        <member name="M:B2.Com.B2Com.GetCommandlineArgument(System.Int32)">
+            <summary>
+            プログラム引数
+            </summary>
+            <param name="lintIndex">引数の順番</param>
+            <returns>プログラム引数</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.ClearData">
+            <summary>
+            データクリア処理
+            </summary>
+        </member>
+        <member name="M:B2.Com.B2Com.GetCommandLine">
+            <summary>
+            コマンドライン情報取得処理
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.Initialize(System.Boolean)">
+            <summary>
+            初期処理
+            </summary>
+            <param name="showErrorDialog">エラーダイアログ表示(true：エラー表示する false：エラー表示しない)</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.SetBackColor(System.Windows.Forms.Form)">
+            <summary>
+            バックカラー設定処理
+            </summary>
+            <param name="frm">バックカラーを設定するフォーム</param>
+        </member>
+        <member name="M:B2.Com.B2Com.SetControlStyle(System.Windows.Forms.Control)">
+            <summary>
+            コントロールスタイル設定処理
+            </summary>
+            <param name="pctrl">スタイル設定するコントロール</param>
+        </member>
+        <member name="M:B2.Com.B2Com.InitDb(System.Boolean)">
+            <summary>
+            DB接続処理
+            </summary>
+            <param name="showErrorDialog">エラーダイアログ表示(true：表示する false：表示しない)</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.CloseDb">
+            <summary>
+            DB切断処理
+            </summary>
+        </member>
+        <member name="M:B2.Com.B2Com.GetDbConectInfo">
+            <summary>
+            DB接続情報の取得
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.GetColorIni">
+            <summary>
+            COLOR情報の取得
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.ConnectDB">
+            <summary>
+            DB接続
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.ShowErrMsg(System.Exception)">
+            <summary>
+            エラーメッセージ表示処理
+            </summary>
+            <param name="errorException">エラー内容</param>
+        </member>
+        <member name="M:B2.Com.B2Com.ExecFraction(System.Decimal,System.Int32)">
+            <summary>
+            端数処理
+            </summary>
+            <param name="value">端数処理する値</param>
+            <param name="div">端数処理区分(0：四捨五入 1：切捨て 2：切上げ)</param>
+            <returns>端数処理済の値</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.ExecFractionDb(System.Double,System.Int32)">
+            <summary>
+            端数処理
+            </summary>
+            <param name="value">端数処理する値</param>
+            <param name="div">端数処理区分(0：四捨五入 1：切捨て 2：切上げ)</param>
+            <returns>端数処理済の値</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.WriteSysLog(System.String,System.String,System.String)">
+            <summary> 
+            ログ出力
+            </summary>
+            <param name="bunruiCode">分類コード</param>
+            <param name="loginCode">ログインID</param> 
+            <param name="bikou">備考</param>
+            <returns>成功したらTrue　エラーでFalse</returns>
+            <remark>システムログ　出力</remark>
+        </member>
+        <member name="M:B2.Com.B2Com.GetINIData(System.String,System.String,System.String,System.String)">
+            <summary>
+            INI情報取得
+            </summary>
+            <param name="pgName">プログラム名</param>
+            <param name="section">セクション名</param>
+            <param name="key">キー名</param>
+            <param name="def">デフォルト値</param>
+            <returns>INIデータ</returns>
+        </member>
+        <member name="P:B2.Com.B2Com.DbServerMei">
+            <summary>DBサーバー名</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.DbPortBango">
+            <summary>DBポート番号</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.DbDatabaseMei">
+            <summary>DBデータベース名</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.DbUserMei">
+            <summary>DBユーザ名</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.DbPassword">
+            <summary>DBパスワード</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.DbSchema">
+            <summary>DBスキーマー</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.HonbuDbUserMei">
+            <summary>本部DBユーザ名</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.HonbuDbPassword">
+            <summary>本部DBパスワード</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.HonbuYakkyokuCode">
+            <summary>本部薬局コード</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.ProgramId">
+            <summary>プログラムID</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.ProgramHikisu">
+            <summary>プログラム引数</summary>
+        </member>
+        <member name="P:B2.Com.B2Com.FormColorMode">
+            <summary> フォームカラーモード (FromColorPatternより設定取得) </summary>
+        </member>
+        <member name="P:B2.Com.B2Com.MachineMei">
+            <summary> マシン名 </summary>
+        </member>
+        <member name="T:B2.Com.B2Com.FormColorPattern">
+            <summary>カラー設定情報</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.FormColorPattern.Normal">
+            <summary>通常設定カラー</summary>
+        </member>
+        <member name="F:B2.Com.B2Com.FormColorPattern.Thema">
+            <summary>テーマカラー</summary>
+        </member>
+        <member name="T:B2.Com.Ime">
+            <summary>
+            IMEコントロールクラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeHankakuEisu">
+            <summary>入力モード値　半角英数</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeNihongo">
+            <summary>入力モード値　日本語</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeKatakana">
+            <summary>入力モード値　カタカナ</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeHankakuKatakana">
+            <summary>入力モード値　半角カタカナ</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeZenkaku">
+            <summary>入力モード値　全角</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeRomaji">
+            <summary>入力モード値　ローマ字入力</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeMojiCode">
+            <summary>入力モード値　文字コード入力</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeHanjaHenkan">
+            <summary>入力モード値　HANJA変換モード</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeSoftKeybord">
+            <summary>入力モード値　ソフトキーボード</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeHenkanshinai">
+            <summary>入力モード値　変換しない</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeEudcHenkan">
+            <summary>入力モード値　EUDC変換モード</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeSymbol">
+            <summary>入力モード値　</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeNyuryokuModeFixed">
+            <summary>入力モード値　</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeMuhenkan">
+            <summary>変換モード値　無変換</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeJimmeiChimei">
+            <summary>変換モード値　人名/地名</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeTankanji">
+            <summary>変換モード値　単漢字変換する</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeJido">
+            <summary>変換モード値　自動モード</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeIppan">
+            <summary>変換モード値　一般</summary>
+        </member>
+        <member name="F:B2.Com.Ime.ImeHenkanModeHanashikotoba">
+            <summary>変換モード値　話し言葉</summary>
+        </member>
+        <member name="M:B2.Com.Ime.ImmGetDefaultIMEWnd(System.IntPtr)">
+            <summary>
+            IME クラスの既定のウィンドウハンドルを取得します
+            </summary>
+            <param name="hWnd">アプリケーションのウィンドウハンドル</param>
+            <returns>IMEウィンドウハンドル</returns>
+        </member>
+        <member name="M:B2.Com.Ime.ImmGetContext(System.IntPtr)">
+            <summary>
+            指定されたウィンドウに関連付けられている入力コンテキストを取得します
+            </summary>
+            <param name="hWnd">関連付けられている入力コンテキストを取得するウィンドウのハンドル</param>
+            <returns>入力コンテキストのハンドル</returns>
+        </member>
+        <member name="M:B2.Com.Ime.ImmReleaseContext(System.IntPtr,System.IntPtr)">
+            <summary>
+            入力コンテキストを解放します
+            </summary>
+            <param name="hWnd">入力コンテキストを取得するために ImmGetContext 関数を呼び出したときに指定したウィンドウハンドル</param>
+            <param name="hImc">入力コンテキストのハンドル</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.Ime.ImmSetConversionStatus(System.IntPtr,System.UInt32,System.UInt32)">
+            <summary>
+            現在の変換状態を設定します
+            </summary>
+            <param name="hImc">入力コンテキストのハンドル</param>
+            <param name="fdwConversion">入力モードの値</param>
+            <param name="fdwSentence">変換モードの値</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.Ime.ImmGetConversionStatus(System.IntPtr,System.UInt32@,System.UInt32@)">
+            <summary>
+            現在の変換状態を取得しま
+            </summary>
+            <param name="hImc">入力コンテキストのハンドル</param>
+            <param name="fdwConversion">入力モード値</param>
+            <param name="fdwSentence">変換モードの値</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.Ime.SetIMEConversionStatus(System.IntPtr,System.UInt32,System.UInt32)">
+            <summary>
+            IMEモード設定
+            </summary>
+            <param name="hWnd">ウィンドウハンドル</param>
+            <param name="dwConversion">入力モード</param>
+            <param name="dwSentence">変換モード</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.Ime.GetIMEConversionStatus(System.IntPtr,System.UInt32@,System.UInt32@)">
+            <summary>
+            IMEモード取得
+            </summary>
+            <param name="hWnd">ウィンドウハンドル</param>
+            <param name="dwConversion">入力モード</param>
+            <param name="dwSentence">変換モード</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="T:B2.Com.RegistryControler">
+            <summary>
+            レジストリ操作クラス
+            </summary>
+        </member>
+        <member name="M:B2.Com.RegistryControler.GetRegistry(System.String,System.String)">
+            <summary>
+            レジストリ値取得処理
+            </summary>
+            <param name="RegKey">値を取得するレジストリキー名</param> 
+            <param name="RegValueName">値を取得する値名</param> 
+            <returns>レジストリ値(値がないときは空を返す)</returns>
+            <remark>レジストリから値をします</remark>
+        </member>
+        <member name="M:B2.Com.RegistryControler.SetRegistry(System.String,System.String,System.String)">
+            <summary>
+            レジストリ値設定処理
+            </summary>
+            <param name="RegKey">値を設定するレジストリキー名</param> 
+            <param name="RegValueName">設定する値名</param> 
+            <param name="SetValue">設定する値</param> 
+            <returns>true:正常終了 false:エラー</returns>
+            <remark>レジストリに値を設定します</remark>
+        </member>
+        <member name="M:B2.Com.RegistryControler.DeleteRegistry(System.String)">
+            <summary>
+            レジストリ値削除
+            </summary>
+            <param name="DelRegKey">削除する値があるレジストリキー名</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="T:B2.Com.CnvStr">
+            <summary>
+            文字変換クラス
+            </summary>
+        </member>
+        <member name="M:B2.Com.CnvStr.DataTableToCsv(System.Data.DataTable)">
+            <summary>
+            DataTable→CSV出力文字変換
+            </summary>
+            <param name="lobjDataTable">DataTableオブジェクト</param>
+            <returns>CSV出力文字</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.InitDatarow(System.Data.DataRow@)">
+            <summary>
+            DataRow初期化
+            </summary>
+            <remarks>
+            全項目に""もしくは0を設定する
+            </remarks>
+            <param name="pRow">初期化するDataRowoオブジェクト</param>
+            <returns>true:正常 false:異常</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.InvalidFileNameConv(System.String)">
+            <summary>
+            ファイル名称使用不可文字変換
+            </summary>
+            <remarks>
+            ファイル名に使用不可な文字を全角文字に変換
+            </remarks>
+            <param name="pstrFileName">ファイル(フォルダ)名称</param>
+            <returns>ファイル(フォルダ)名称</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDatarow(Npgsql.NpgsqlDataReader,System.Data.DataRow@)">
+            <summary>
+            NpgsqlDataReader→DataRow変換
+            </summary>
+            <param name="pOraDSRead">変換対象のNpgsqlDataReader</param>
+            <param name="pRow">変換後DataRowオブジェクト</param>
+            <returns>true:正常 false:異常</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToSightDate(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            予定日(yyyyMMdd)取得
+            </summary>
+            <param name="pdecBASE_DATE">基準日(yyyyMMdd)</param>
+            <param name="pdecDEADLINE_DAY">締め日(dd)</param>
+            <param name="pdecSIGHT_DAY">予定日(dd)</param>
+            <param name="pdecSIGHT">サイト日数</param>
+            <returns>予定日(yyyyMMdd)</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToString(System.Data.DataRow,System.String)">
+            <summary>
+            DataRow→string変換
+            </summary>
+            <param name="pobjDataRow">変換対象のDataRow</param>
+            <param name="pstrColumnName">変換するColumn名称</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToString(System.Object)">
+            <summary>
+            object→string変換
+            </summary>
+            <param name="pobjData">変換対象のobject</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.TrimString(System.String)">
+            <summary>
+            string空白削除
+            </summary>
+            <remarks>
+            文字列前後の全角、半角空白をすべて削除する
+            また文字列が"0"の場合は""を返します
+            </remarks>
+            <param name="pstrData">変換対象のstringデータ</param>
+            <returns>変換後stringデータ</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToString1000Separator(System.Data.DataRow,System.String)">
+            <summary>
+            DataRow→"#,0"形式string変換
+            </summary>
+            <remarks>
+            データが数値以外の場合は""とする
+            </remarks>
+            <param name="pobjDataRow">変換対象のDataRow</param>
+            <param name="pstrColumnName">変換するColumn名称</param>
+            <returns>"#,0"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToString1000Separator(System.Object)">
+            <summary>
+            object→"#,0"形式string変換
+            </summary>
+            <remarks>
+            データが数値以外の場合は""とする
+            </remarks>
+            <param name="pobjData">変換対象のobject</param>
+            <returns>"#,0"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToString1000Separator(System.String)">
+            <summary>
+            string→"#,0"形式string変換
+            </summary>
+            <remarks>
+            データが数値以外の場合は""とする
+            </remarks>
+            <param name="pstrData">文字列</param>
+            <returns>"#,0"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringDate(System.Data.DataRow,System.String)">
+            <summary>
+            DataRow→"yyyy/MM/dd"形式string変換
+            </summary>
+            <remarks>
+            データが6桁または8桁以外の場合は""とする
+            </remarks>
+            <param name="pobjDataRow">変換対象のDataRow</param>
+            <param name="pstrColumnName">変換するColumn名称</param>
+            <returns>"yyyy/MM/dd"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringDate(System.Object)">
+            <summary>
+            object→"yyyy/MM/dd"形式string変換
+            </summary>
+            <remarks>
+            データが6桁または8桁以外の場合は""とする
+            </remarks>
+            <param name="pobjData">変換対象のobject</param>
+            <returns>"yyyy/MM/dd"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringDate(System.String)">
+            <summary>
+            string→"yyyy/MM/dd"形式string変換
+            </summary>
+            <remarks>
+            データが6桁または8桁以外の場合は""とする
+            </remarks>
+            <param name="pstrData">変換対象の文字列</param>
+            <returns>"yyyy/MM/dd"形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringSql(System.Data.DataRow,System.String)">
+            <summary>
+            DataRow→SQL対応string変換
+            </summary>
+            <remarks>
+            前後の全角、半角空白を削除して「'」を「''」に変換します
+            </remarks>
+            <param name="pobjDataRow">変換対象のDataRow</param>
+            <param name="pstrColumnName">変換するColumn名称</param>
+            <returns>SQL形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringSql(System.Object)">
+            <summary>
+            object→SQL対応string変換
+            </summary>
+            <remarks>
+            前後の全角、半角空白を削除して「'」を「''」に変換します
+            </remarks>
+            <param name="pobjData">変換対象のobject</param>
+            <returns>SQL形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToStringSql(System.String)">
+            <summary>
+            string→SQL対応string変換
+            </summary>
+            <remarks>
+            前後の全角、半角空白を削除して「'」を「''」に変換します
+            </remarks>
+            <param name="pstrData">変換対象の文字列</param>
+            <returns>SQL形式文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.TypeConv(System.String,System.Type)">
+            <summary>
+            型変換
+            </summary>
+            <param name="pstrData">文字列</param>
+            <param name="pobjType">型情報(System.String、System.Decimal等)</param>
+            <returns>型変換後データ</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.XmlToDatarow(System.String,System.Data.DataRow@)">
+            <summary>
+            Xml→DataRow変換
+            </summary>
+            <param name="pstrXml">Xml文字列</param>
+            <param name="pRow">DataRowオブジェクト</param>
+            <returns>true:正常 false:異常</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.EncloseDoubleQuotesIfNeed(System.String)">
+            <summary>
+            必要ならば、文字列をダブルクォートで囲む
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.EncloseDoubleQuotes(System.String)">
+            <summary>
+            文字列をダブルクォートで囲む
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.NeedEncloseDoubleQuotes(System.String)">
+            <summary>
+            文字列をダブルクォートで囲む必要があるか調べる
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>true:必要 false:不要</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.mfnc_getDateTime(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            DateTime型データ取得
+            </summary>
+            <remarks>
+            new DateTime(year,month,day)と異なる点は month が 1 未満であるか、12 を超えている。または day が 1 未満か、month の月の日数よりも大きい値でも例外を生じさせず対応する
+            </remarks>
+            <param name="pintYear">年</param>
+            <param name="pintMonth">月</param>
+            <param name="pintDay">日</param>
+            <returns>DateTime型データ</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToChar(System.String)">
+            <summary>
+            char変換
+            </summary>
+            <param name="text">文字列</param>
+            <returns>char値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToChar(System.Object)">
+            <summary>
+            char変換
+            </summary>
+            <param name="obj">objectデータ</param>
+            <returns>char値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToInt32(System.String)">
+            <summary>
+            int変換
+            </summary>
+            <param name="text">数値文字列</param>
+            <returns>int値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToInt32(System.Object)">
+            <summary>
+            int変換
+            </summary>
+            <param name="obj">数値objectデータ</param>
+            <returns>int値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDouble(System.String)">
+            <summary>
+            double変換
+            </summary>
+            <param name="text">数値文字列</param>
+            <returns>double値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDouble(System.Object)">
+            <summary>
+            double変換
+            </summary>
+            <param name="obj">数値objectデータ</param>
+            <returns>double値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDecimal(System.String)">
+            <summary>
+            decimal変換
+            </summary>
+            <param name="text">数値文字列</param>
+            <returns>decimal値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDecimal(System.Object)">
+            <summary>
+            decimal変換
+            </summary>
+            <param name="obj">数値objectデータ</param>
+            <returns>decimal値</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDateTime(System.String,System.String)">
+            <summary>
+            DateTime変換
+            </summary>
+            <param name="text">日付文字列</param>
+            <param name="format">日付編集文字列</param>
+            <returns>DateTimeオブジェクト</returns>
+        </member>
+        <member name="M:B2.Com.CnvStr.ToDateTime(System.Object,System.String)">
+            <summary>
+            DateTime変換
+            </summary>
+            <param name="obj">日付objectデータ</param>
+            <param name="format">日付編集文字列</param>
+            <returns>DateTimeオブジェクト</returns>
+        </member>
+        <member name="T:B2.Com.ContrlColor">
+            <summary>
+            コントロールスタイル設定クラス
+            </summary>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetFormStyle(System.Windows.Forms.Control)">
+            <summary>
+            フォームスタイル設定
+            </summary>
+            <param name="pobjForm">スタイル設定するフォームコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetAllControlStyle(System.Windows.Forms.Control)">
+            <summary>
+            全コントロールスタイル設定
+            </summary>
+            <param name="pctrl">スタイル設定するコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetButtonStyle(System.Windows.Forms.Button,B2.Com.ContrlColor.ButtonStyle)">
+            <summary>
+            ボタンスタイル設定
+            </summary>
+            <param name="pobjButton">スタイル設定するボタン</param>
+            <param name="penmMode">設定するスタイル指定</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetButtonColor(System.Windows.Forms.Button,B2.Com.ContrlColor.ButtonStyle)">
+            <summary>
+            ボタンスタイル カラー設定（Enabledによる切替）
+            </summary>
+            <param name="pobjButton">カラー設定するボタン</param>
+            <param name="penmMode">設定するカラー指定</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.btnNormalColor_EnabledChanged(System.Object,System.EventArgs)">
+            <summary>
+            通常ボタンEnabled変更時のカラー設定イベント
+            </summary>
+            <param name="sender">イベント引数</param>
+            <param name="e">イベント引数</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.btnThemaColor_EnabledChanged(System.Object,System.EventArgs)">
+            <summary>
+            テーマカラーボタンEnabled変更時のカラー設定イベント
+            </summary>
+            <param name="sender">イベント引数</param>
+            <param name="e">イベント引数</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetLabelStyle(System.Windows.Forms.Label,B2.Com.ContrlColor.LabelStyle)">
+            <summary>
+            ラベルコントロール　スタイル設定
+            </summary>
+            <param name="pobjLabel">スタイル設定するラベルコントロール</param>
+            <param name="penmType">設定するスタイル指定</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetPanelStyle(System.Windows.Forms.Panel)">
+            <summary>
+            パネルコントロール　スタイル設定
+            </summary>
+            <param name="pobjPanel">スタイル設定するパネルコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetSpreadStyle(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            スプレッドコントロール　スタイル設定
+            </summary>
+            <param name="pobjSpd">スタイル設定するスプレッドコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetSpreadStyle(FarPoint.Win.Spread.FpSpread,System.Boolean)">
+            <summary>
+            スプレッドコントロール　スタイル設定
+            </summary>
+            <param name="pobjSpd">スタイル設定するスプレッドコントロール</param>
+            <param name="pblnBorderSingle">シングル枠設定（TRUE:シングル、FALSE:枠なし)</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetSpreadNamedStyle(FarPoint.Win.Spread.NamedStyleCollection,System.String,B2.Com.ContrlColor.SpreadNameStyle)">
+            <summary>
+            スプレッドNamedStyle設定
+            </summary>
+            <param name="pNameStyle">カラー設定するスタイルコレクション</param>
+            <param name="pstrStyleNm">カラー設定するスタイル名</param>
+            <param name="penmStyle">設定するスタイル指定</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetCheckBoxFlatStyle(System.Windows.Forms.CheckBox)">
+            <summary>
+            チェックボックス　スタイル設定
+            </summary>
+            <param name="pobjCheckBox">スタイル設定するチェックボックス</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetCheckBoxColor(System.Windows.Forms.CheckBox)">
+            <summary>
+            チェックボックス　カラー設定(CheckON/OFF切替)
+            </summary>
+            <param name="pobjCheckBox">カラー設定するチェックボックス</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.CheckFlat_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            チェックボックスCheck変更時のカラー設定イベント
+            </summary>
+            <param name="sender">イベント引数</param>
+            <param name="e">イベント引数</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetRadioButtonStyle(System.Windows.Forms.RadioButton)">
+            <summary>
+            ラジオボタンコントロール　スタイル設定
+            </summary>
+            <param name="pobjRadio">スタイル設定するラジオボタンコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetRadioButtonColor(System.Windows.Forms.RadioButton)">
+            <summary>
+            ラジオボタンコントロール　カラー設定(CheckON/OFF切替)
+            </summary>
+            <param name="pobjRadio">カラー設定するラジオボタンコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.ComRadio_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            ラジオボタンCheck変更時のカラー設定イベント
+            </summary>
+            <param name="sender">イベント引数</param>
+            <param name="e">イベント引数</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetNormalThemaStyle(System.Windows.Forms.Control)">
+            <summary>
+            通常強調コントロール　スタイル設定
+            </summary>
+            <param name="pobjControl">スタイル設定するコントロール</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetTextBoxStyle(System.Windows.Forms.TextBox)">
+            <summary>
+            入力←→表示　テキストスボックスタイル設定
+            </summary>
+            <param name="pobjTextbox">スタイル設定するテキストボックス</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.SetTextBoxColor(System.Windows.Forms.TextBox)">
+            <summary>
+            入力←→表示　テキストボックスカラー設定(ReadOnlyによる切替)
+            </summary>
+            <param name="pobjTextbox">カラー設定するテキストボックス</param>
+        </member>
+        <member name="M:B2.Com.ContrlColor.txtName_ReadOnlyChanged(System.Object,System.EventArgs)">
+            <summary>
+            (テキストボックスReadOnly変更時のカラー設定イベント
+            </summary>
+            <param name="sender">イベント引数</param>
+            <param name="e">イベント引数</param>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ThemaColorTsujyo">
+            <summary>通常</summary>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ThemaColorDarkDark">
+            <summary>濃い濃い</summary>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ThemaColorDark">
+            <summary>濃い</summary>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ThemaColorLight">
+            <summary>薄い</summary>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ThemaColorLightLight">
+            <summary>薄い薄い</summary>
+        </member>
+        <member name="P:B2.Com.ContrlColor.ControlColor">
+            <summary>コントロールカラー</summary>
+        </member>
+        <member name="T:B2.Com.ContrlColor.ButtonStyle">
+            <summary>ボタンスタイル</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.ButtonStyle.TsujoButton">
+            <summary>通常ボタン </summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.ButtonStyle.ThemaColorButton">
+            <summary>カラー設定ボタン </summary>
+        </member>
+        <member name="T:B2.Com.ContrlColor.LabelStyle">
+            <summary>ラベルスタイル</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.FromTitle">
+            <summary>フォームタイトル               (BK:テーマカラー、字：白)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.KyotyoTitle">
+            <summary>強調タイトル                   (BK:テーマカラー、字：白)</summary>    
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.KyotyoTitleLight">
+            <summary>強調タイトル(薄い              (BK:薄いテーマカラー、字：黒)</summary>  
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.LightKomokuColor">
+            <summary>明るい項目カラー(通常カラー)   (BK:白系、字：テーマカラー)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.TsujoKomokuColor">
+            <summary>通常項目カラー(濃いカラー)     (BK:白系、字：濃いテーマカラー)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.DarkKomokuColor">
+            <summary>濃い項目カラー(濃い濃いカラー) (BK:白系、字：濃い×２テーマカラー)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.NyuryokuKomokumei">
+            <summary>入力データ 項目名              (BK:白系、字：濃い×２テーマカラー)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.LabelStyle.NyuryokuDataMeisho">
+            <summary>入力データ 名称                (BK:白系、字：濃いテーマカラー)</summary>
+        </member>
+        <member name="T:B2.Com.ContrlColor.SpreadNameStyle">
+            <summary>スプレッドNamedStyleスタイル</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.HeaderColor">
+            <summary>ヘッダカラー               (BK:白系、字：濃い×２テーマカラー))</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.TitleColor">
+            <summary>タイトル                   (BK:テーマカラー、字：白)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.TitleLightColor">
+            <summary>タイトル文字黒（明るい）   (BK:薄いテーマカラー，字：黒)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.LabelColor">
+            <summary>通常ラベル(文字黒)         (BK:白、字:黒)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.NyuryokuKomokuTitleColor">
+            <summary>入力項目タイトル           (BK:白、字:濃い×２テーマカラー)</summary>
+        </member>
+        <member name="F:B2.Com.ContrlColor.SpreadNameStyle.MeishoLabelColor">
+            <summary>名称ラベル                 (BK:白、字:濃いテーマカラー)</summary>
+        </member>
+        <member name="T:B2.Com.HidukeLib">
+            <summary>
+            日付処理ライブラリ
+            </summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.gengoHenkanJohoList">
+            <summary>元号変換情報リスト</summary>
+        </member>
+        <member name="M:B2.Com.HidukeLib.#ctor(System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="iniFileMei">iniファイル名（フルパス）</param>
+            <remarks>iniファイル名が空のときは明治～平成までの変換になります</remarks>
+        </member>
+        <member name="M:B2.Com.HidukeLib.ConvDate(System.String,System.Int32,System.String,System.String)">
+            <summary>日付の変換</summary>
+            <param name="nyuryokuHiduke">入力日付(有効日付であれば和暦西暦両方可)</param> 
+            <param name="henkanKubun">変換区分(0:西暦 1:和暦 2:和暦略 3:和暦英略 4:年月日付き和暦)</param> 
+            <param name="kugiriMoji">区切り文字</param>
+            <param name="kijunShiteiNengappi">基準指定年月日(ﾌﾞﾗﾝｸの場合、ｼｽﾃﾑ日付)</param>
+        </member>
+        <member name="M:B2.Com.HidukeLib.ConvDate(System.String)">
+            <summary>
+            日付変換（西暦変換、区切り文字なし）
+            </summary>
+            <param name="pstrinDate">入力日付</param>
+            <returns>日付文字列</returns>
+        </member>
+        <member name="M:B2.Com.HidukeLib.ConvDate(System.String,System.Int32)">
+            <summary>
+            日付変換
+            </summary>
+            <param name="pstrinDate">入力日付</param>
+            <param name="pintretFormatType">変換区分(0:西暦 1:和暦 2:和暦略 3:和暦英略 4:年月日付き和暦)</param>
+            <returns>日付文字列</returns>
+        </member>
+        <member name="M:B2.Com.HidukeLib.ConvDate(System.String,System.String)">
+            <summary>
+            日付変換（西暦変換）
+            </summary>
+            <param name="pstrinDate">入力日付</param>
+            <param name="pstrseparateChar">区切り文字</param>
+            <returns>日付文字列</returns>
+        </member>
+        <member name="M:B2.Com.HidukeLib.ConvDate(System.String,System.Int32,System.String)">
+            <summary>
+            日付変換
+            </summary>
+            <param name="pstrinDate">入力日付</param>
+            <param name="pintretFormatType">変換区分(0:西暦 1:和暦 2:和暦略 3:和暦英略 4:年月日付き和暦)</param>
+            <param name="pstrseparateChar">区切り文字(変換区分が4のときは無効)</param>
+            <returns>日付文字列</returns>
+        </member>
+        <member name="M:B2.Com.HidukeLib.GetGengo(System.String)">
+            <summary>元号情報該当No取得</summary>
+            <param name="pstrGengoAlp">英字元号</param>
+            <returns>1以上:元号情報へのインデックス 0:該当無し</returns>
+        </member>
+        <member name="M:B2.Com.HidukeLib.IsDateW(System.String)">
+            <summary>
+            指定文字列(和暦)の日付チェック
+            </summary>
+            <param name="pstrDateW">日付文字列</param>
+            <returns>true:正しい日付 false:不正な日付</returns>
+            <remark>指定文字列の日付チェックを行います</remark>
+        </member>
+        <member name="M:B2.Com.HidukeLib.GetAlphabetEra(System.DateTime)">
+            <summary>
+            英字元号取得
+            </summary>
+            <param name="date">英字元号を取得するDateTime</param>
+            <returns>英字元号(H：平成etc)</returns>
+        </member>
+        <member name="P:B2.Com.HidukeLib.KijunNengappi">
+            <summary>基準年月日</summary>
+        </member>
+        <member name="T:B2.Com.HidukeLib.GengoHenkanJoho">
+            <summary>
+            元号変換情報
+            </summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.Gengo">
+            <summary>元号</summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.EijiGengo">
+            <summary>英字元号(英字1文字)</summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.ShoryakuGengo">
+            <summary>省略元号(漢字1文字)</summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.KaishiNegappi">
+            <summary>元号の開始年月日</summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.ShuryoNengappi">
+            <summary>元号の終了年月日</summary>
+        </member>
+        <member name="F:B2.Com.HidukeLib.GengoHenkanJoho.Nensu">
+            <summary>年数</summary>
+        </member>
+        <member name="T:IniFileControler">
+            <summary>
+            ＩＮＩファイル操作用クラス
+            </summary>
+        </member>
+        <member name="F:IniFileControler.bufferTyo">
+            <summary>バッファ長</summary>
+        </member>
+        <member name="M:IniFileControler.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.UInt32,System.String)">
+            <summary>
+            API宣言
+            * iniﾌｧｲﾙ読込み関数宣言
+            </summary>
+        </member>
+        <member name="M:IniFileControler.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            API宣言
+            * iniﾌｧｲﾙ書込み関数宣言
+            </summary>
+        </member>
+        <member name="F:IniFileControler.iniFileMei">
+            <summary>iniファイル名（フルパス）</summary>
+        </member>
+        <member name="M:IniFileControler.#ctor(System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="fileMei">iniファイルのフルパス</param>
+        </member>
+        <member name="M:IniFileControler.Close">
+            <summary>
+            リソース開放
+            </summary>
+        </member>
+        <member name="M:IniFileControler.GetIniString(System.String,System.String,System.String)">
+            <summary>
+            iniファイル情報取得
+            </summary>
+            <param name="lpszSection">セクション名</param>
+            <param name="lpszEntry">キー名</param>
+            <param name="lpszDefault">デフォルト値</param>
+            <returns>iniファイル情報</returns>
+        </member>
+        <member name="M:IniFileControler.GetIniString(System.String,System.String)">
+            <summary>
+            iniファイル情報取得
+            </summary>
+            <param name="lpszSection">セクション名</param>
+            <param name="lpszEntry">キー名</param>
+            <returns>iniファイル情報</returns>
+        </member>
+        <member name="M:IniFileControler.SetIniString(System.String,System.String,System.String)">
+            <summary>
+            Set ini String情報 (iniファイル情報書込メソッド)
+            </summary>
+            <param name="lpszSection">セクション名</param>
+            <param name="lpszEntry">キー名</param>
+            <param name="lpszString">iniファイル情報</param>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="T:B2.Com.PgLib">
+            <summary>
+            PostgreSql 操作用クラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.PgLib.userName">
+            <summary>接続ユーザ名</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.password">
+            <summary>接続パスワード</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.database">
+            <summary>接続先データベース</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.server">
+            <summary>接続先サーバ</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.port">
+            <summary>接続先ポート番号</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.Pooling">
+            <summary>接続プーリング区分(true：接続プーリングする false：しない)</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.schema">
+            <summary>接続先スキーマ</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.disposed">
+            <summary>破棄状況(true：破棄済み false：破棄されていない)</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.connection">
+            <summary>接続情報</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.command">
+            <summary>実行コマンド情報</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.transaction">
+            <summary>トランザクション情報</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.isConnected">
+            <summary>接続状況(true：接続中 false：未接続)</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.isBeginTransaction">
+            <summary>トランザクション状況(true：トランザクション中 false：それ以外)</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.lastErrorCode">
+            <summary>PostgreSqlエラーコード</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.lastError">
+            <summary>PostgreSqlエラーメッセージ</summary>
+        </member>
+        <member name="F:B2.Com.PgLib.retryCount">
+            <summary>リトライ回数</summary>
+        </member>
+        <member name="M:B2.Com.PgLib.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.PgLib.Finalize">
+            <summary>
+            デストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.PgLib.Dispose">
+            <summary>
+            解放処理
+            </summary>
+        </member>
+        <member name="M:B2.Com.PgLib.Connect(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            PostgreSql接続
+            </summary>
+            <param name="server">サーバー</param>
+            <param name="port">ポート</param>
+            <param name="userName">ユーザ名</param>
+            <param name="password">パスワード</param>
+            <param name="database">データベース</param>
+            <param name="schema">スキーマ</param>
+            <param name="pooling">接続プーリング区分(true：接続プーリングする false：しない)</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.Connect">
+            <summary>
+            PostgreSql接続
+            ユーザ名などはINIファイルを参照
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.DisConnect">
+            <summary>
+            切断
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.SelectSql_NoCache(System.String)">
+            <summary>
+            Select(接続型)
+            </summary>
+            <param name="selectSql">this.Sql文字列</param>
+            <returns>データリーダオブジェクト(エラーのときはnull)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.SelectSql_NoCache">
+            <summary>
+            Select(接続型)
+            this.Sqlに設定されたthis.Sql文字列を実行
+            </summary>
+            <returns>データリーダオブジェクト(エラーのときはnull)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.SelectSql(System.String)">
+            <summary>
+            Select(非接続型)
+            </summary>
+            <param name="selectSql">this.Sql文字列</param>
+            <returns>データアダプタオブジェクト(エラーのときはnull)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.SelectSql">
+            <summary>
+            Select(非接続型)
+            this.Sqlに設定されたthis.Sql文字列を実行
+            </summary>
+            <returns>データアダプタオブジェクト(エラーのときはnull)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.ExecuteSql(System.String)">
+            <summary>
+            this.Sql実行(接続型)
+            </summary>
+            <param name="execSql">this.Sql文字列</param>
+            <returns>処理件数(エラーのときは-1)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.ExecuteSql">
+            <summary>
+            this.Sql実行(接続型)
+            this.Sqlに設定されたthis.Sql文字列を実行
+            </summary>
+            <returns>処理件数(エラーのときは-1)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.ExecuteSqlNoErr(System.String)">
+            <summary>
+            this.Sql実行(接続型) エラーメッセージを表示しないでthrowする。
+            </summary>
+            <param name="execSql">this.Sql文字列</param>
+            <returns>処理件数(エラーのときは-1)</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.BeginTransaction">
+            <summary>
+            トランザクションの開始
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.CommitTransaction">
+            <summary>
+            コミット
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.RollbackTransaction">
+            <summary>
+            ロールバック
+            </summary>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.LastErrorClear">
+            <summary>
+            エラーのクリア
+            </summary>
+        </member>
+        <member name="M:B2.Com.PgLib.showErrorMessage(System.Exception)">
+            <summary>
+            エラーメッセージ表示処理
+            </summary>
+            <param name="ex">エラー内容</param> 
+            <remark>エラーメッセージを表示します</remark>
+        </member>
+        <member name="M:B2.Com.PgLib.isConnectError">
+            <summary>
+            接続エラー判定
+            </summary>
+            <returns>true：接続エラー false：それ以外</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.isConnectError(System.String)">
+            <summary>
+            接続エラー判定
+            </summary>
+            <param name="errorMessage">エラーメッセージ</param>
+            <returns>true：接続エラー false：それ以外</returns>
+        </member>
+        <member name="M:B2.Com.PgLib.WriteSystemLog(System.String,System.String,System.String)">
+            <summary> 
+            システムログ　出力
+            </summary>
+            <param name="bunruiCd">分類コード</param>
+            <param name="loginId">ログインID</param> 
+            <param name="biko">備考</param>
+            <returns>成功したらTrue　エラーでFalse</returns>
+            <remark>システムログ　出力</remark>
+        </member>
+        <member name="P:B2.Com.PgLib.Sql">
+            <summary>this.Sql文字列</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.RetryCount">
+            <summary>リトライ回数</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.IsConnected">
+            <summary>接続状況表示</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.LastErrorCode">
+            <summary>最後に起きたエラーコード</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.LastError">
+            <summary>最後に起きたエラー</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.Connection">
+            <summary>コネクション</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.Command">
+            <summary>コマンド</summary>
+        </member>
+        <member name="P:B2.Com.PgLib.ConnectionString">
+            <summary>
+            接続文字列
+            </summary>
+        </member>
+        <member name="T:B2.Com.SpreadColumData">
+            <summary>
+            列属性クラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.Position">
+            <summary>
+            列位置
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.Width">
+            <summary>
+            列幅サイズ
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.Label">
+            <summary>
+            列のラベル名
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.Visible">
+            <summary>
+            列の表示有無(true:表示  false:非表示)
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.FontMei">
+            <summary>
+            セルのフォント名
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.FontSize">
+            <summary>
+            セルのフォントサイズ
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.VirticalAlingment">
+            <summary>
+            セルの垂直表示位置(0:上 1:下　2:中央)
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.HorizontalAlingment">
+            <summary>
+            セルの水平表示位置(0:左 1:右　2:中央)
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.CellType">
+            <summary>
+            セルの属性(0:ﾃｷｽﾄ 1:数値 2:通貨 3:ﾊﾟｰｾﾝﾄ 4:ﾘｯﾁﾃｷｽﾄ 5:ﾁｪｯｸﾎﾞｯｸｽ 6:ｺﾝﾎﾞﾎﾞｯｸｽ 7:日付 8:ﾘｽﾄﾎﾞｯｸｽ 9:ﾎﾞﾀﾝ)
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.MaxLength">
+            <summary>
+            テキストの最大文字数
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.DecimalPlaces">
+            <summary>
+            数値の小数点以下桁数
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.ShowSeparator">
+            <summary>
+            数値の区切り表示(true:3桁区切りあり　false:3桁区切り無し)
+            </summary>
+        </member>
+        <member name="F:B2.Com.SpreadColumData.WordWrap">
+            <summary>
+            テキストのワードラップ(true:折り返しあり　false：折り返し無し)
+            </summary>
+        </member>
+        <member name="M:B2.Com.SpreadColumData.#ctor">
+            <summary>
+            コンストラクタ
+            引数なし　初期化します。
+            </summary>
+        </member>
+        <member name="T:B2.Com.SpreadControler">
+            <summary>
+            スプレッド操作クラス
+            </summary>
+        </member>
+        <member name="M:B2.Com.SpreadControler.setSpreadColumInfo(FarPoint.Win.Spread.SheetView,System.Collections.Generic.List{B2.Com.SpreadColumData})">
+            <summary>
+            列情報に従い、列の属性をセットする。
+            </summary>
+            <param name="pspdObj">列属性を設定するSheetView</param>
+            <param name="listp">列属性クラスの配列</param>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SetColorAlternating(FarPoint.Win.Spread.SheetView)">
+            <summary>
+            奇数/偶数カラー設定
+            </summary>
+            <param name="pspdObj">カラー設定するSheetView</param>
+            <returns>true：正常終了 false：エラー</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.setSpreadRowHeader(FarPoint.Win.Spread.SheetView)">
+            <summary>
+            行ヘッダーのサイズ、文字の設定　固定値
+            </summary>
+            <param name="pspdObj">行ヘッダーを設定するSheetView</param>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SetRowsHeight(FarPoint.Win.Spread.SheetView)">
+            <summary>
+            行の高さを揃える
+            </summary>
+            <param name="pspdObj">行の高さを設定するSheetView</param>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SetFrozenColumn(FarPoint.Win.Spread.SheetView,System.Int32)">
+            <summary>
+            列を固定する
+            </summary>
+            <param name="pspdObj">列を固定するSheetView</param>
+            <param name="ColumnCount">固定する列数</param>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SetCellFocus(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32)">
+            <summary>
+            フォーカス設定処理
+            </summary>
+            <param name="pspdObj">フォーカス設定をするFpSpread</param>
+            <param name="pintRow">行位置</param>
+            <param name="pintCol">列位置</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            フォーカス設定を行います
+            </remark>
+        </member>
+        <member name="M:B2.Com.SpreadControler.InitDispInputMap(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            スプレッド標準キー 無効処理(表示用)
+            </summary>
+            <param name="pspdObj">標準キー処理を無効化するFpSpread</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            各起動時に実行してください。
+            TAB：フォーカス移動用にします
+            ESC：通常画面の終了に使用します など
+            
+            ※　スプレッド読み取り専用の場合必要なし(OperationModeの設定だけ)
+            　　標準でキーを取得したい場合に使用します
+            </remark>
+        </member>
+        <member name="M:B2.Com.SpreadControler.InitRenzokuInput(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            スプレッド連続入力設定処理
+            </summary>
+            <param name="pspdObj">連続入力の初期設定をするFpSpread</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            連続入力用初期処理を行います
+            </remark>
+        </member>
+        <member name="M:B2.Com.SpreadControler.InitNormalInput(FarPoint.Win.Spread.FpSpread,System.Object)">
+            <summary>
+            スプレッド通常入力設定処理
+            </summary>
+            <param name="pspdObj">通常入力処理の設定をするFpSpread</param>
+            <param name="EnterAction">Enterキー入力時の動作</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            通常入力用初期処理を行います
+            </remark>
+        </member>
+        <member name="M:B2.Com.SpreadControler.clearSpreadSheet(FarPoint.Win.Spread.FpSpread,FarPoint.Win.Spread.SheetView)">
+            <summary>
+            スプレッドクリア処理
+            </summary>
+            <param name="pspdObj">クリア処理をするFpSpread</param>
+            <param name="psheet">クリア処理をするSheetView</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            初期化を行います
+            </remark>
+        </member>
+        <member name="M:B2.Com.SpreadControler.CheckSheetViewColumns(FarPoint.Win.Spread.Column)">
+            <summary>
+            対象カラム出力有無確認
+            </summary>
+            <param name="pobjColumn">対象カラム情報</param>
+            <returns>true:出力あり false:出力なし</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SheetViewToCsv(FarPoint.Win.Spread.SheetView)">
+            <summary>
+            SheetView→CSV出力文字変換
+            </summary>
+            <param name="lobjSheetView">DataTable</param>
+            <returns>CSV出力文字</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.SheetViewToCsv(FarPoint.Win.Spread.SheetView,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            SheetView→CSV出力文字変換
+            </summary>
+            <param name="Sheet1">CSV出力をするSheetView</param>
+            <param name="st_row">出力開始行</param>
+            <param name="st_colum">出力開始列</param>
+            <param name="end_row">出力終了行</param>
+            <param name="end_colum">出力終了列</param>
+            <returns>CSV出力文字</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.ToString(System.Object)">
+            <summary>
+            文字変換
+            </summary>
+            <remarks>
+            null等、変換に例外が発生する場合は""とする
+            </remarks>
+            <param name="pobjData">変換前データ</param>
+            <returns>文字列</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.EncloseDoubleQuotesIfNeed(System.String)">
+            <summary>
+            必要ならば、文字列をダブルクォートで囲む
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.EncloseDoubleQuotes(System.String)">
+            <summary>
+            文字列をダブルクォートで囲む
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>変換後文字列</returns>
+        </member>
+        <member name="M:B2.Com.SpreadControler.NeedEncloseDoubleQuotes(System.String)">
+            <summary>
+            文字列をダブルクォートで囲む必要があるか調べる
+            </summary>
+            <param name="pstrField">対象文字列</param>
+            <returns>true:必要 false:不要</returns>
+        </member>
+        <member name="T:B2.Com.Str">
+            <summary>
+            指定された文字数分の文字列型 (String) を返します。
+            </summary>
+        </member>
+        <member name="M:B2.Com.Str.Spaces(System.Int32)">
+            <summary>
+            指定したバイト数分のスペース文字列を返します。
+            </summary>
+            <param name="iByteSize">スペースを埋めるバイト数</param>
+            <returns>指定されたバイト数分のスペース文字列</returns>
+        </member>
+        <member name="M:B2.Com.Str.FileStrings(System.String)">
+            <summary>
+            指定したファイルを行単位の配列にします。
+            </summary>
+            <param name="stFilename">読み込むファイル</param>
+            <returns>行単位の配列</returns>
+        </member>
+        <member name="M:B2.Com.Str.StringBukatuB(System.String,System.Int32,System.Boolean)">
+            <summary>
+            指定した文字列を指定バイト数にて分割します。
+            </summary>
+            <param name="pstrMoji">指定文字列(半角混在可)</param>
+            <param name="pintLengthB">指定バイト文字数</param> 
+            <param name="pblnDelNewLine">改行コード分割フラグ(TRUE:分割あり、False：分割しない)</param> 
+            <returns>分割配列(分解できなかった場合は配列数1で空白文字)</returns>
+        </member>
+        <member name="M:B2.Com.Str.DelNewLine(System.String)">
+            <summary>
+            指定した文字列の改行コードを削除します。
+            </summary>
+            <param name="pstrMoji">指定文字列(半角混在可)</param>
+            <returns>指定文字列から改行コードを削除した文字列</returns>
+        </member>
+        <member name="T:B2.Com.Ans">
+            <summary>
+            指定された文字数分の文字列型 (String) を返します。
+            </summary>
+        </member>
+        <member name="F:B2.Com.Ans.enc">
+            <summary>
+            バイト数をカウントするために使用するShift_JISエンコード
+            </summary>
+        </member>
+        <member name="M:B2.Com.Ans.AnsLenB(System.String)">
+            <summary>
+            文字列のバイト長を返します。
+            </summary>
+            <param name="str">バイト長を取り出す元になる文字列</param>
+            <returns>文字列のバイト長</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsLeftB(System.String,System.Int32)">
+            <summary>
+            文字列の左端から指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <returns>左端から指定された文字数分の文字列(文字数を超えた場合は文字列全体)</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsMidB(System.String,System.Int32)">
+            <summary>
+            文字列の指定された位置以降のすべての文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iStart">取り出しを開始する位置</param>
+            <returns>指定された位置以降のすべての文字列</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsMidB(System.String,System.Int32,System.Int32)">
+            <summary>
+            文字列の指定された位置から、指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iStart">取り出しを開始する位置</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <returns>
+            指定された位置から指定された文字数分の文字列
+            (文字数を超えた場合は指定された位置からすべての文字列)
+            </returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsRightB(System.String,System.Int32)">
+            <summary>
+            文字列の右端から指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <returns>右端から指定された文字数分の文字列(文字数を超えた場合は文字列全体)</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsLeftC(System.String,System.Int32)">
+            <summary>
+            文字列の左端から指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <returns>左端から指定された文字数分の文字列(文字数を超えた場合は文字列全体)</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsLeftC(System.String,System.Int32,System.Int32@)">
+            <summary>
+            文字列の左端から指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <param name="oByteSize">取り出した文字のバイト数</param>
+            <returns>左端から指定された文字数分の文字列(文字数を超えた場合は文字列全体)</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsMidC(System.String,System.Int32,System.Int32)">
+            <summary>
+            文字列の指定された位置から、指定された文字数分の文字列を返します。
+            ※日本語文字を分断された場合は手前の文字列まで返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iStart">取り出しを開始する位置</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <returns>
+            指定された位置から指定された文字数分の文字列
+            文字数を超えた場合は指定された位置からすべての文字列
+            </returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsMidC(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            文字列の指定された位置から、指定された文字数分の文字列を返します。
+            ※日本語文字を分断された場合は手前の文字列まで返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iStart">取り出しを開始する位置</param>
+            <param name="iByteSize">取り出す文字数</param>
+            <param name="oByteSize">取り出した文字のバイト数</param>
+            <returns>
+            指定された位置から指定された文字数分の文字列
+            文字数を超えた場合は指定された位置からすべての文字列
+            </returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsCheck2(System.Byte[]@,System.Int32)">
+            <summary>
+            Shift JISにエンコードされたバイト配列の指定された位置のコードが日本語文字１バイト目であるかどうかチェックします
+            </summary>
+            <param name="bShiftJis">Shift JISにエンコードされたバイト配列</param>
+            <param name="iPos">チェックするバイト配列の位置</param>
+            <returns>true:日本語文字でないか、日本語文字２バイト目  false:日本語文字１バイト目</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsCheck(System.String)">
+            <summary>
+            文字列中に日本語文字が混在しているかチェックします
+            </summary>
+            <param name="stTarget">対象文字列</param>
+            <returns>true:混在していない false:混在している</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsLeft(System.String,System.Int32)">
+            <summary>
+            文字列の左端から指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iMojiSize">取り出す文字数</param>
+            <returns>
+            左端から指定された文字数分の文字列(文字数を超えた場合は文字列全体)</returns>
+        </member>
+        <member name="M:B2.Com.Ans.AnsMid(System.String,System.Int32,System.Int32)">
+            <summary>
+            文字列の指定された位置から、指定された文字数分の文字列を返します。
+            </summary>
+            <param name="stTarget">取り出す元になる文字列</param>
+            <param name="iStart">取り出しを開始する位置</param>
+            <param name="iMojiSize">取り出す文字数</param>
+            <returns>
+            指定された位置から指定された文字数分の文字列
+            文字数を超えた場合は指定された位置からすべての文字列</returns>
+        </member>
+        <member name="T:B2.Com.StrConv">
+            <summary>
+            指定に従って変換された文字列型 (String) の値を返します。
+            </summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapLowercase">
+            <summary>小文字変換</summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapUppercase">
+            <summary>大文字変換</summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapHiragana">
+            <summary>ひらがな変換</summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapKatakana">
+            <summary>カタカナ変換</summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapHalfwidth">
+            <summary>半角変換</summary>
+        </member>
+        <member name="F:B2.Com.StrConv.LcmapFullwidth">
+            <summary>全角変換</summary>
+        </member>
+        <member name="M:B2.Com.StrConv.LCMapStringA(System.Int32,System.Int32,System.String,System.Int32,System.Text.StringBuilder,System.Int32)">
+            <summary>
+            LCMapStringA ある文字列を別の文字列にマップする
+            </summary>
+        </member>
+        <member name="M:B2.Com.StrConv.GetSystemDefaultLCID">
+            <summary>
+            GetSystemDefaultLCID ロケール識別子を取得
+            </summary>
+        </member>
+        <member name="F:B2.Com.StrConv.enc">
+            <summary>
+            バイト数をカウントするために使用するShift_JISエンコード
+            </summary>
+        </member>
+        <member name="M:B2.Com.StrConv.ToNarrow(System.String)">
+            <summary>
+            文字列内の全角文字 (2 バイト) を半角文字 (1 バイト) に変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="M:B2.Com.StrConv.ToWide(System.String)">
+            <summary>
+            文字列内の半角文字 (1 バイト) を全角文字 (2 バイト) に変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="M:B2.Com.StrConv.ToUpperCase(System.String)">
+            <summary>
+            文字列を大文字に変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="M:B2.Com.StrConv.ToLowerCase(System.String)">
+            <summary>
+            文字列を小文字に変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="M:B2.Com.StrConv.ToKatakana(System.String)">
+            <summary>
+            文字列内のひらがなをカタカナに変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="M:B2.Com.StrConv.ToHiragana(System.String)">
+            <summary>
+            文字列内のカタカナをひらがなに変換します。
+            </summary>
+            <param name="str">変換元の文字列</param>
+            <returns>変換後の文字列</returns>
+        </member>
+        <member name="T:B2.Com.Chk">
+            <summary>
+            指定された値チェックを行います
+            </summary>
+        </member>
+        <member name="M:B2.Com.Chk.IsIntNumber(System.String)">
+            <summary>
+            指定文字列の整数チェック
+            </summary>
+            <param name="pstrNumber">チェック文字列</param>
+            <returns>true:文字列が数値 false:それ以外</returns>
+        </member>
+        <member name="M:B2.Com.Chk.IsPostNo(System.String,System.Int32)">
+            <summary>
+            指定文字列の郵便番号(半角)チェック
+            </summary>
+            <param name="pstrPostNo">チェック文字列</param>
+            <param name="pintMaxLenB">全バイト数</param>
+            <returns>true:文字列が郵便番号 false:それ以外</returns>
+        </member>
+        <member name="M:B2.Com.Chk.IsWideString(System.String,System.Int32)">
+            <summary>
+            指定文字列の全角チェック（文字数チェックあり）
+            </summary>
+            <param name="pstrTarget">チェック文字列</param>
+            <param name="pintMaxLenB">全バイト数</param>
+            <returns>true:文字列が全角文字 false:それ以外</returns>
+        </member>
+        <member name="M:B2.Com.Chk.IsWideString(System.String)">
+            <summary>
+            指定文字列の全角チェック（文字数チェックなし）
+            </summary>
+            <param name="pstrTarget">チェック文字列</param>
+            <returns>true:文字列が全角文字 false:それ以外</returns>
+        </member>
+        <member name="M:B2.Com.Chk.IsLenB(System.String,System.Int32)">
+            <summary>
+            指定文字列のバイトチェック
+            </summary>
+            <param name="pstrChk">チェック文字列</param>
+            <param name="pintLenB">チェック文字数</param>
+            <returns>true:チェック文字列がチェック文字数以下 false:それ以外</returns>
+        </member>
+        <member name="T:B2.Com.Conv">
+            <summary>
+            各変換をnullチェック、""チェック後に実行します
+            </summary>
+        </member>
+        <member name="M:B2.Com.Conv.ToInt(System.String)">
+            <summary>
+            int型変換処理
+            </summary>
+            <param name="pstrData">変換前文字列</param>
+            <returns>int値(変換できないときは0)</returns>
+        </member>
+        <member name="M:B2.Com.Conv.ToInt(System.Object)">
+            <summary>
+            int型変換処理
+            </summary>
+            <param name="pobjData">変換前オブジェクト</param>
+            <returns>数値(nullまたは変換できないときは0)</returns>
+        </member>
+        <member name="M:B2.Com.Conv.ToBool(System.String)">
+            <summary>
+            boolt型変換処理
+            </summary>
+            <param name="pstrData">変換前文字列</param>
+            <returns>bool値(変換できないときはfalse)</returns>
+        </member>
+        <member name="M:B2.Com.Conv.ToString(System.Object)">
+            <summary>
+            string型変換処理
+            </summary>
+            <param name="lobjData">変換前オブジェクト</param>
+            <returns>string文字列(変換できないときは空文字列)</returns>
+        </member>
+        <member name="M:B2.Com.Conv.cnvStrThousandsPrice(System.String)">
+            <summary>
+            カンマ編集（小数部第2位まで）
+            </summary>
+            <param name="price">数値文字列</param>
+            <returns>カンマ編集数値文字列</returns>
+        </member>
+        <member name="M:B2.Com.Conv.cnvStrDecimalPrice(System.String)">
+            <summary>
+            カンマ除去
+            </summary>
+            <param name="price">カンマ編集数値文字列</param>
+            <returns>数値文字列</returns>
+        </member>
+        <member name="M:B2.Com.Conv.replaceKinshiChar(System.String)">
+            <summary>
+            文字列編集（半角スペース変換、スペース削除、カンマスペース変換、改行スペース変換）
+            </summary>
+            <param name="moji">編集対象文字列</param>
+            <returns>編集後文字列</returns>
+        </member>
+        <member name="T:B2.Com.ctlComboBoxGc">
+            <summary>
+            取引先コンボボックスコントロール
+            </summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.CODE_NONE">
+            <summary>非選択時コード</summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.b2Com">
+            <summary>B2コモンオブジェクト</summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.tableMei">
+            <summary>テーブル名</summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.codeKomokumei">
+            <summary>コード項目名</summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.meishoKomokumei">
+            <summary>名称項目名</summary>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.comboboxDataSet">
+            <summary>コンボボックス用データセット</summary>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="container">コンテナー</param>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.Init(B2.Com.B2Com,System.String,System.String,System.String)">
+            <summary>
+            初期化処理
+            </summary>
+            <param name="Pb2Com">B2コモンオブジェクト</param>
+            <param name="table_nm">テーブル名</param>
+            <param name="key_cd">コード項目名</param>
+            <param name="key_nm">名称項目名</param>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.Init(B2.Com.B2Com,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初期化処理
+            </summary>
+            <param name="Pb2Com">B2コモンオブジェクト</param>
+            <param name="table_nm">テーブル名</param>
+            <param name="field_nm">キー項目名</param>
+            <param name="field_key">キー値</param>
+            <param name="key_cd">コード項目名</param>
+            <param name="key_nm">名称項目名</param>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.GetCode">
+            <summary>
+            コード取得
+            </summary>
+            <returns>コード</returns>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.GetCode(System.Int32)">
+            <summary>
+            コード取得
+            </summary>
+            <param name="pintINDEX">インデックス値</param>
+            <returns>コード</returns>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.GetIndex(System.String)">
+            <summary>
+            インデックス値取得
+            </summary>
+            <param name="pstrCODE">コード</param>
+            <returns>インデックス値</returns>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.GetData(System.String)">
+            <summary>
+            データ取得
+            </summary>
+            <param name="pstrColumnName">項目名称</param>
+            <returns>データ</returns>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.GetData(System.Int32,System.String)">
+            <summary>
+            データ取得
+            </summary>
+            <param name="pintINDEX">インデックス値</param>
+            <param name="pstrColumnName">項目名称</param>
+            <returns>データ</returns>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.SetComboBoxDataSet">
+            <summary>
+            コンボボックスDataSetデータ設定
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.SetComboBoxDataSet(System.String,System.String)">
+            <summary>
+            コンボボックスDataSetデータ設定
+            </summary>
+            <param name="field_nm">キー項目名</param>
+            <param name="field_key">キー値</param>
+        </member>
+        <member name="F:B2.Com.ctlComboBoxGc.components">
+            <summary> 
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.Com.ctlComboBoxGc.InitializeComponent">
+            <summary> 
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:B2.Com.ctlWebBrowser">
+            <summary>
+            ファイル閲覧コントロール
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlWebBrowser.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlWebBrowser.PreviewFile(System.String)">
+            <summary>
+            ファイルプレビュー表示
+            </summary>
+            <param name="pstrFileName">ファイル名</param>
+            <returns>true:正常 false:異常</returns>
+        </member>
+        <member name="M:B2.Com.ctlWebBrowser.IsTextFile(System.String)">
+            <summary>
+            テキストファイル確認
+            </summary>
+            <param name="pstrFileName">ファイル名</param>
+            <returns>true:テキストファイル false:バイナリファイル</returns>
+        </member>
+        <member name="F:B2.Com.ctlWebBrowser.components">
+            <summary> 
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:B2.Com.ctlWebBrowser.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.Com.ctlWebBrowser.InitializeComponent">
+            <summary> 
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:B2.Com.ctlWebBrowser.PreviewFileMei">
+            <summary>プレビューファイル名</summary>
+        </member>
+        <member name="P:B2.Com.ctlWebBrowser.HtmlMojiColor">
+            <summary>文字色</summary>
+        </member>
+        <member name="P:B2.Com.ctlWebBrowser.HtmlBackgroundColor">
+            <summary>背景色</summary>
+        </member>
+        <member name="T:B2.Com.InputBoxForm">
+            <summary>
+            テキスト入力フォームクラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.InputBoxForm.okSelectFlag">
+            <summary>OK選択情報(TRUE:OK選択)</summary>
+        </member>
+        <member name="F:B2.Com.InputBoxForm.labelText">
+            <summary> ラベル情報 </summary>
+        </member>
+        <member name="F:B2.Com.InputBoxForm.inputText">
+            <summary>入力テキスト</summary>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.InputBox_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォームロードイベント
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            OKボタンクリックイベント
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            キャンセルボタンクリックイベント
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+        <member name="F:B2.Com.InputBoxForm.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.Com.InputBoxForm.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:B2.Com.InputBoxForm.OkSelectFlag">
+            <summary>OK選択フラグ(true:OK選択 false:キャンセル)</summary>
+        </member>
+        <member name="P:B2.Com.InputBoxForm.LabelText">
+            <summary>ラベル表示テキスト</summary>
+        </member>
+        <member name="P:B2.Com.InputBoxForm.InPutText">
+            <summary>入力テキスト</summary>
+        </member>
+        <member name="T:B2.Com.SelectDataForm">
+            <summary>
+            テーブルデータ一覧表示選択フォームクラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.SelectDataForm.SelectRowData">
+            <summary>選択行データ</summary>
+        </member>
+        <member name="F:B2.Com.SelectDataForm.MeisaiGyosu">
+            <summary>明細行数</summary>
+        </member>
+        <member name="F:B2.Com.SelectDataForm.b2Com">
+            <summary> B2コモンオブジェクト </summary>
+        </member>
+        <member name="F:B2.Com.SelectDataForm.filterFlag">
+            <summary> フィルターフラグ </summary>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.#ctor(B2.Com.B2Com)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="pb2Com">B2コモンオブジェクト</param>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.#ctor(B2.Com.B2Com,System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="pb2Com">B2コモンオブジェクト</param>
+            <param name="pblnFilter">フィルターフラグ</param>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.ClearScreen">
+            <summary>
+            画面クリア処理
+            </summary>
+            <returns>成否</returns>
+            <remarks>画面をクリアします</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.DisplayData">
+            <summary>
+            一覧表示処理
+            </summary>
+            <returns>成否</returns>
+            <remarks>コースの一覧を表示します</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.Initialize">
+            <summary>
+            画面初期化処理
+            </summary>
+            <returns>成否</returns>
+            <remarks>画面を初期化します</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.DisplayFilter">
+            <summary>
+            フィルタ一覧表示
+            </summary>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.RedisplayData">
+            <summary>
+            再表示
+            </summary>
+            <returns>true:正常終了 false:エラー</returns>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.SelectDataForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォームロード
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            キャンセルボタン選択時処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>画面を終了します</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.btnOk_Click(System.Object,System.EventArgs)">
+            <summary>
+            選択決定ボタン選択時処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.spdCosList_CellDoubleClick(System.Object,FarPoint.Win.Spread.CellClickEventArgs)">
+            <summary>
+            一覧ダブルクリック時処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>選択決定ボタンをクリックした時と同等の処理を行います</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.spdList_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            一覧KeyDown時処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>選択決定ボタンをクリックした時と同等の処理を行います</remarks>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.btnReView_Click(System.Object,System.EventArgs)">
+            <summary>
+            再表示ボタンクリックイベント
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+        <member name="F:B2.Com.SelectDataForm.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.Com.SelectDataForm.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:B2.Com.SelectDataForm.Title">
+            <summary>
+            フォームのタイトル
+            </summary>
+        </member>
+        <member name="T:B2.Com.ShowMessageForm">
+            <summary>
+            メッセージ表示フォームクラス
+            </summary>
+        </member>
+        <member name="F:B2.Com.ShowMessageForm.Title">
+            <summary>タイトル</summary>
+        </member>
+        <member name="F:B2.Com.ShowMessageForm.Message">
+            <summary>メッセージ</summary>
+        </member>
+        <member name="F:B2.Com.ShowMessageForm.MessageIcon">
+            <summary>メッセージアイコン</summary>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.#ctor(System.String,System.String,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="title">タイトル</param>
+            <param name="message">メッセージ</param>
+            <param name="icon">アイコン</param>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.ShowMessage_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォームロード
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.btnOk_Click(System.Object,System.EventArgs)">
+            <summary>
+            ＯＫボタンクリック
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.GetIconImage">
+            <summary>
+            アイコンイメージ取得
+            </summary>
+            <returns>アイコンイメージ</returns>
+        </member>
+        <member name="F:B2.Com.ShowMessageForm.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.Com.ShowMessageForm.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+    </members>
+</doc>

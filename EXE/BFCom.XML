@@ -1,0 +1,4479 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BFCom</name>
+    </assembly>
+    <members>
+        <member name="T:B2.BestFunction.BfCom">
+            <summary>
+            BestFunction共通処理クラス
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BfCom.getProgramName(B2.Com.B2Com)">
+            <summary>
+            プログラム名称取得
+            </summary>
+            <param name="b2com">共通パラメータ</param>
+            <returns>日本語プログラム名称</returns>
+        </member>
+        <member name="M:B2.BestFunction.Entities.ZaikoChouseiModel.#ctor(B2.Com.B2Com)">
+            <summary>	
+            コンストラクタ	
+            </summary>	
+            <param name="userid">接続ID。</param>	
+            <param name="password">接続パスワード。</param>	
+            <param name="defaultSchema">接続先スキーマ。</param>	
+        </member>
+        <member name="M:B2.BestFunction.Entities.ZaikoChouseiModel.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            スキーマを変更したい場合はここで変更
+            指定が無いとスキーマ名は『dbo』に設定される。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.ZaikoChouseiModel.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            コネクションの取得
+            </summary>
+            <param name="userid">ユーザーID</param>
+            <param name="password">パスワード</param>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoChouseiModel.DefaultSchema">
+            <summary>
+            参照するスキーマ。
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.HacchuMeisai_wk">
+            <summary>発注明細ワーク</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.HacchuMeisai_wk.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.IchiBango">
+            <summary>一意キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.DenpyoKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.ShoriDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.ShohinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.ShohinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.ShohinNameKikakuYoryo">
+            <summary>商品名、規格、容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.HakoSuryo">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.HosoSuryo">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.BaraSuryo">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.DeliveryDate">
+            <summary>納品指定日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.DeliveryLocation">
+            <summary>納品指定場所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.NyuukoSu">
+            <summary>入庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.ZanKubun">
+            <summary>残区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HacchuMeisai_wk.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.NyukoMeisai_wk">
+            <summary>入庫明細ワーク</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.NyukoMeisai_wk.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.IchiBango">
+            <summary>一意キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.DenpyoKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShoriDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShohinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShohinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShohinNameKikakuYoryo">
+            <summary>商品名、規格、容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.HakoSuryo">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.HosoSuryo">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.BaraSuryo">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.Tanka">
+            <summary>単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.Kingaku">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShohizeiKingaku">
+            <summary>消費税金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShokeKingaku">
+            <summary>小計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.ShiyoKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.LotBango">
+            <summary>ロット番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.NyukoDate">
+            <summary>入庫日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.NyukoBasho">
+            <summary>入庫場所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.HacchuMeisaiBango">
+            <summary>発注明細番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyukoMeisai_wk.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.ShukkoMeisai_wk">
+            <summary>出庫明細ワーク</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.ShukkoMeisai_wk.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.IchiBango">
+            <summary>一意キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.DenpyoKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShoriDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShohinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShohinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShohinNameKikakuYoryo">
+            <summary>商品名、規格、容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.HakoSuryo">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.HosoSuryo">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.BaraSuryo">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.Tanka">
+            <summary>単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.Kingaku">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShohizeiKingaku">
+            <summary>消費税金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShokeKingaku">
+            <summary>小計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShiyoKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.LotBango">
+            <summary>ロット番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.ShukkoDate">
+            <summary>出庫日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShukkoMeisai_wk.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TourokuSyuseiModel.#ctor(B2.Com.B2Com)">
+            <summary>	
+            コンストラクタ	
+            </summary>	
+            <param name="userid">接続ID。</param>	
+            <param name="password">接続パスワード。</param>	
+            <param name="defaultSchema">接続先スキーマ。</param>	
+        </member>
+        <member name="M:B2.BestFunction.Entities.TourokuSyuseiModel.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            スキーマを変更したい場合はここで変更
+            指定が無いとスキーマ名は『dbo』に設定される。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TourokuSyuseiModel.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            コネクションの取得
+            </summary>
+            <param name="userid">ユーザーID</param>
+            <param name="password">パスワード</param>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TourokuSyuseiModel.DefaultSchema">
+            <summary>
+            参照するスキーマ。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.CodeWariateModel.#ctor(B2.Com.B2Com)">
+            <summary>	
+            コンストラクタ	
+            </summary>	
+            <param name="userid">接続ID。</param>	
+            <param name="password">接続パスワード。</param>	
+            <param name="defaultSchema">接続先スキーマ。</param>	
+        </member>
+        <member name="M:B2.BestFunction.Entities.CodeWariateModel.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            スキーマを変更したい場合はここで変更
+            指定が無いとスキーマ名は『dbo』に設定される。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.CodeWariateModel.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            コネクションの取得
+            </summary>
+            <param name="userid">ユーザーID</param>
+            <param name="password">パスワード</param>
+        </member>
+        <member name="P:B2.BestFunction.Entities.CodeWariateModel.DefaultSchema">
+            <summary>
+            参照するスキーマ。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BestFunctionModel.#ctor(B2.Com.B2Com)">
+            <summary>	
+            コンストラクタ	
+            </summary>	
+            <param name="userid">接続ID。</param>	
+            <param name="password">接続パスワード。</param>	
+            <param name="defaultSchema">接続先スキーマ。</param>	
+        </member>
+        <member name="M:B2.BestFunction.Entities.BestFunctionModel.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            スキーマを変更したい場合はここで変更
+            指定が無いとスキーマ名は『dbo』に設定される。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BestFunctionModel.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            コネクションの取得
+            </summary>
+            <param name="userid">ユーザーID</param>
+            <param name="password">パスワード</param>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BestFunctionModel.DefaultSchema">
+            <summary>
+            参照するスキーマ。
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.BfChouzai_jisseki">
+            <summary>BF調剤実績数テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BfChouzai_jisseki.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfChouzai_jisseki.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfChouzai_jisseki.GtinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfChouzai_jisseki.Cymd">
+            <summary>調剤日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfChouzai_jisseki.Cnt">
+            <summary>調剤回数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfChouzai_jisseki.UsedSu">
+            <summary>消費量</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.BfIdou">
+            <summary>BF移動依頼テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BfIdou.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.DenpyoBango">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.DenpyouKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.IdouTenpo">
+            <summary>移動元薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Gyo">
+            <summary>明細行</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.InOutKubun">
+            <summary>入出庫区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.IdouYmd">
+            <summary>問合せ日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.IdouTime">
+            <summary>問合せ時刻</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.MotoSakiTenpo">
+            <summary>移動先薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.GtinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Suryo">
+            <summary>移動数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Tanka">
+            <summary>仕入単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Kingaku">
+            <summary>移動金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.SousinKubun">
+            <summary>送信区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.KakuninhyoList">
+            <summary>移動確認ﾘｽﾄ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.NyuusyukkoFlg">
+            <summary>入出庫フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.LotBango">
+            <summary>ロット番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.ShiyoKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Memo">
+            <summary>コメント</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.ShohinNm">
+            <summary>商品名称</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Kikaku">
+            <summary>規格</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.AnsFlag">
+            <summary>承認否認情報</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.AnsDate">
+            <summary>回答日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.AnsTime">
+            <summary>回答時刻</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.ZaikoSuryo">
+            <summary>在庫数量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.YosokuSuryo">
+            <summary>調剤予測数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.OkSuryo">
+            <summary>承認数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.KidokuFlag">
+            <summary>既読フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.KidokuDate">
+            <summary>既読日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.KidokuTime">
+            <summary>既読時刻</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.Result">
+            <summary>依頼結果</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.NoukiYmd">
+            <summary>納期日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.NoukiYmdChanged">
+            <summary>納期日_変更後</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIdou.SuryoChanged">
+            <summary>数量変更</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.BfIni">
+            <summary>BFＩＮＩテーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BfIni.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Opecd">
+            <summary>オペレータコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Prognm">
+            <summary>プログラム名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Section">
+            <summary>セクション</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Key1">
+            <summary>キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Data">
+            <summary>値</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfIni.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.BfStatus">
+            <summary>BF状態管理テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.BfStatus.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfStatus.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfStatus.CompName">
+            <summary>コンピュータ名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfStatus.Key1">
+            <summary>キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.BfStatus.Data">
+            <summary>値</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.EigyouMaster">
+            <summary>営業日情報マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.EigyouMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.EigyouYmd">
+            <summary>営業日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.Kubun">
+            <summary>区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.EigyouMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.HachukanriMaster">
+            <summary>発注管理情報マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.HachukanriMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.HachukohoKubun">
+            <summary>発注候補区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.HachutenSuryo">
+            <summary>発注点</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.AnzenzaikoSuryo">
+            <summary>安全在庫数量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.HachuSuryo">
+            <summary>発注数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.HachuTani">
+            <summary>発注単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.Raikyokubun">
+            <summary>来局予定分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.Leadtime">
+            <summary>リードタイム日数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.YosokuJyousu">
+            <summary>予測最大調剤数の乗数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.BarahitoGassan">
+            <summary>バラとヒートを合算する</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachukanriMaster.SakujyoFlag">
+            <summary>削除フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.HachuuDetails">
+            <summary>発注データ明細</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.HachuuDetails.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.DetailNo">
+            <summary>明細番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.TorihikisakiCd">
+            <summary>仕入先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.OroshiCd">
+            <summary>卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.SyouhinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.SyouhinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.SyouhinName">
+            <summary>品名・規格・容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.TaniKubun">
+            <summary>単位区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.Suryo">
+            <summary>発注数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.DeliveryDate">
+            <summary>納品指定日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.DeliveryLocation">
+            <summary>納品指定場所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.NyuukoSu">
+            <summary>入庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.ZanKubun">
+            <summary>残区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuDetails.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.HachuuHeader">
+            <summary>発注データヘッダー</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.HachuuHeader.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.DetailsCount">
+            <summary>明細数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.OrderKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TorihikisakiCd">
+            <summary>仕入先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.OroshiCd">
+            <summary>卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TaxSanshutuKubun">
+            <summary>消費税額算出区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.ZeiKubun">
+            <summary>消費税区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.Amount">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TaxAmount">
+            <summary>消費税額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TotalAmount">
+            <summary>合計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.PrintKubun">
+            <summary>印刷区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.PrintNitiji">
+            <summary>印刷日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.SousinKubun">
+            <summary>送信区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.SousinNitiji">
+            <summary>送信日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TsuuchiSikibetu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.HachuuHeader.TsuuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.IniMaster">
+            <summary>カスタマイズ情報テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.IniMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.Program">
+            <summary>プログラム名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.Section">
+            <summary>セクション</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.Keycode">
+            <summary>キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.Data">
+            <summary>値</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.IniMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.KanjyaData">
+            <summary>患者情報データ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.KanjyaData.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.TodofukenBango">
+            <summary>都道府県番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.YakkyokuMei">
+            <summary>薬局名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.KanjyaCode">
+            <summary>患者コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.KanjyaKanaShimei">
+            <summary>患者カナ氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.KanjyaKanjiShimei">
+            <summary>患者漢字氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Seibetsu">
+            <summary>性別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Seinengappi">
+            <summary>生年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Yubinbango">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Jusho">
+            <summary>住所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.JitakuDenwabango">
+            <summary>自宅電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.KinmusakiDenwabango">
+            <summary>勤務先電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.KinkyuRenrakusaki">
+            <summary>緊急連絡先</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.MailAddress">
+            <summary>メールアドレス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ItibufutankinKubun">
+            <summary>一部負担金区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HokenShubtsu">
+            <summary>保険種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HokenshaBango">
+            <summary>保険者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HokenshaBangoShutokubi">
+            <summary>保険者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HihokenshashoKigo">
+            <summary>被保険者証記号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HihokenshashoBango">
+            <summary>被保険者証番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HihokenshaHifuyousha">
+            <summary>被保険者/被扶養者</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Kanjyafutanritsu">
+            <summary>患者負担率</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Hokenkyuufuritsu">
+            <summary>保険給付率</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ShokumujyoNoJiyu">
+            <summary>職務上の時由</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.RojinhokenShichosonbango">
+            <summary>老人保健市町村番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.RojinhokenJyukyushabango">
+            <summary>老人保健受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.RojinhokenShichosonbangoShutokubi">
+            <summary>老人保健市町村番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaiitikohiFutanshaBango">
+            <summary>第一公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaiitikohiJukyushaBango">
+            <summary>第一公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaiitikohiFutanshaBangoShutokubi">
+            <summary>第一公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DainikohiFutanshaBango">
+            <summary>第二公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DainikohiJukyushaBango">
+            <summary>第二公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DainikohiFutanshaBangoShutokubi">
+            <summary>第二公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaisankohiFutanshaBango">
+            <summary>第三公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaisankohiJukyushaBango">
+            <summary>第三公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.DaisankohiFutanshaBangoShutokubi">
+            <summary>第三公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.TokushukohiFutanshaBango">
+            <summary>特殊公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.TokushukohiJukyushaBango">
+            <summary>特殊公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.TokushukohiFutanshaBangoShutokubi">
+            <summary>特殊公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.IppokaShiji">
+            <summary>１包化指示</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.FunsaiShiji">
+            <summary>粉砕指示</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ChuiyakuAri">
+            <summary>注意薬あり</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.SogosayoCheck">
+            <summary>相互作用チェック</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.SogosayoCheckTayakkyoku">
+            <summary>相互作用チェック(他薬局)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ToyoryoOverGekiDoku">
+            <summary>投与量オーバー(劇/毒)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ToyoryoOverKo">
+            <summary>投与量オーバー(向)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ToyoryoOverHoka">
+            <summary>投与量オーバー(他)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Chokin">
+            <summary>長禁</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ChofukuToyo">
+            <summary>重複投与</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.ChofukuToyoTayakkyoku">
+            <summary>重複投与(他薬局)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.HokenshubetsuCode">
+            <summary>保険種別コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.Enable">
+            <summary>有効区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.InsertDate">
+            <summary>登録日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.UpdateDate">
+            <summary>更新日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.KanjyaData.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.LogData">
+            <summary>メッセージログテーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.LogData.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Logno">
+            <summary>ログNo@ログファイルのSEQ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Logdate">
+            <summary>日付</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.ProgramCode">
+            <summary>ﾌﾟﾛｸﾞﾗﾑID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Bunrui">
+            <summary>分類コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Client">
+            <summary>コンピュータ名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.LoginCode">
+            <summary>ログインID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.KeyCode">
+            <summary>キーコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Bikou">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Filename">
+            <summary>EXEファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Param">
+            <summary>実行時引数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LogData.Enable">
+            <summary>有効フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.LotinfoMaster">
+            <summary>ＬＯＴ情報管理マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.LotinfoMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.ShiyoKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.LotBango">
+            <summary>ロット</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.InCount">
+            <summary>入庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.OutCount">
+            <summary>出庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.HakoSuryo">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.HosoSuryo">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.BaraSuryo">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.InsertDate">
+            <summary>登録日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.UpdateDate">
+            <summary>更新日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.LotinfoMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.MakerMaster">
+            <summary>メーカーマスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.MakerMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MakerMaster.MakerCode">
+            <summary>メーカーコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MakerMaster.MakerName">
+            <summary>メーカー名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MakerMaster.MakerKana">
+            <summary>メーカー名（カナ）</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MakerMaster.TougouCode">
+            <summary>統合コード</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.MenuData">
+            <summary>メニューテーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.MenuData.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.BunruiSeq">
+            <summary>分類出力順</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.BunruiName">
+            <summary>分類名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.FileSeq">
+            <summary>EXE出力順</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Filename">
+            <summary>EXEファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.ProgramName">
+            <summary>日本語名称</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Parameta">
+            <summary>実行時引数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Hyoujihouhou">
+            <summary>表示方法</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Doukizokusei">
+            <summary>同期属性</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Formname">
+            <summary>フォーム名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.MenuData.Setumei">
+            <summary>機能詳細</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.NouhinData">
+            <summary>納品データ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.NouhinData.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.RecordKubun">
+            <summary>レコード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.DataClass">
+            <summary>データ識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.OroshiCode">
+            <summary>送信元卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.IryokikanCode">
+            <summary>送信先医療機関コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.SubIryokikanCode">
+            <summary>副送信先医療機関コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.SlipKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.SlipDate">
+            <summary>伝票日付</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.SlipNumber">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.SlipLineNumber">
+            <summary>伝票行番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.MedicineCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.JanCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.GtinCode">
+            <summary>GTIN商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.NameAlpha">
+            <summary>商品名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.Suryo">
+            <summary>数量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.Tanka">
+            <summary>単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.Kingaku">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.ShiyoKigen">
+            <summary>有効期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.LotBango">
+            <summary>製造番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.Filler1">
+            <summary>固定項目</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.InsertDate">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.FileName">
+            <summary>ファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NouhinData.NyuukoFlg">
+            <summary>入庫フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips0Header">
+            <summary>NSIPSヘッダ部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips0Header.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Version">
+            <summary>バージョン情報</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.SoshinNitiji">
+            <summary>送信日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.SoshinTanmatsuShikibetsujyoho">
+            <summary>送信端末識別情報</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.TodofukenBango">
+            <summary>都道府県番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Tensuhyo">
+            <summary>点数表</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.YakkyokuMei">
+            <summary>薬局名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Yubinbango">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.YakkyokuShozaiti">
+            <summary>薬局所在地</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.YakkyokuDenwabango">
+            <summary>薬局電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.KyuFileMei">
+            <summary>旧ファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.FileMei">
+            <summary>ファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.InsertUserId">
+            <summary>登録者</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.InsertTanmatsuId">
+            <summary>登録端末名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.InsertProgram">
+            <summary>登録プログラム</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.UpdateUserId">
+            <summary>更新者</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.UpdateTanmatsuId">
+            <summary>更新端末名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.UpdateProgram">
+            <summary>更新プログラム</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.PickedId">
+            <summary>PickedID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips0Header.DenpyoBango">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips1Kanjya">
+            <summary>NSIPS患者情報部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips1Kanjya.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Nsips1KanjyaId">
+            <summary>Nsips1患者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.KanjyaCode">
+            <summary>患者コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.KanjyaKanaShimei">
+            <summary>患者カナ氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.KanjyaKanjiShimei">
+            <summary>患者漢字氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Seibetsu">
+            <summary>性別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Seinengappi">
+            <summary>生年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Yubinbango">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Jusho">
+            <summary>住所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.JitakuDenwabango">
+            <summary>自宅電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.KinmusakiDenwabango">
+            <summary>勤務先電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.KinkyuRenrakusaki">
+            <summary>緊急連絡先</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.MailAddress">
+            <summary>メールアドレス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ItibufutankinKubun">
+            <summary>一部負担金区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HokenShubtsu">
+            <summary>保険種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HokenshaBango">
+            <summary>保険者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HokenshaBangoShutokubi">
+            <summary>保険者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HihokenshashoKigo">
+            <summary>被保険者証記号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HihokenshashoBango">
+            <summary>被保険者証番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HihokenshaHifuyousha">
+            <summary>被保険者/被扶養者</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Kanjyafutanritsu">
+            <summary>患者負担率</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Hokenkyuufuritsu">
+            <summary>保険給付率</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ShokumujyoNoJiyu">
+            <summary>職務上の時由</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.RojinhokenShichosonbango">
+            <summary>老人保健市町村番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.RojinhokenJyukyushabango">
+            <summary>老人保健受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.RojinhokenShichosonbangoShutokubi">
+            <summary>老人保健市町村番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaiitikohiFutanshaBango">
+            <summary>第一公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaiitikohiJukyushaBango">
+            <summary>第一公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaiitikohiFutanshaBangoShutokubi">
+            <summary>第一公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DainikohiFutanshaBango">
+            <summary>第二公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DainikohiJukyushaBango">
+            <summary>第二公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DainikohiFutanshaBangoShutokubi">
+            <summary>第二公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaisankohiFutanshaBango">
+            <summary>第三公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaisankohiJukyushaBango">
+            <summary>第三公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.DaisankohiFutanshaBangoShutokubi">
+            <summary>第三公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.TokushukohiFutanshaBango">
+            <summary>特殊公費負担者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.TokushukohiJukyushaBango">
+            <summary>特殊公費受給者番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.TokushukohiFutanshaBangoShutokubi">
+            <summary>特殊公費負担者番号取得日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.IppokaShiji">
+            <summary>１包化指示</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.FunsaiShiji">
+            <summary>粉砕指示</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ChuiyakuAri">
+            <summary>注意薬あり</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.SogosayoCheck">
+            <summary>相互作用チェック</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.SogosayoCheckTayakkyoku">
+            <summary>相互作用チェック(他薬局)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ToyoryoOverGekiDoku">
+            <summary>投与量オーバー(劇/毒)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ToyoryoOverKo">
+            <summary>投与量オーバー(向)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ToyoryoOverHoka">
+            <summary>投与量オーバー(他)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Chokin">
+            <summary>長禁</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ChofukuToyo">
+            <summary>重複投与</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.ChofukuToyoTayakkyoku">
+            <summary>重複投与(他薬局)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.HokenshubetsuCode">
+            <summary>保険種別コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips1Kanjya.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips2Shohosen">
+            <summary>NSIPS処方箋部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips2Shohosen.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.Nsips2ShohosenId">
+            <summary>Nsips2処方箋ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShohosenBango">
+            <summary>処方箋番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.UketsukeBango">
+            <summary>受付番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.KoshinKubun">
+            <summary>更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShohosenKofuNengappi">
+            <summary>処方箋交付年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShiyokigenNengappi">
+            <summary>使用期限年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.UketsukeNengappi">
+            <summary>受付年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ChozaiNengappi">
+            <summary>調剤年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.NinpujyunuKubun">
+            <summary>妊婦授乳区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.KyoseikansashijiFlag">
+            <summary>強制監査指示フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanCodeShubetsu">
+            <summary>医療機関コード種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanCode">
+            <summary>医療機関コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanReseputoCode">
+            <summary>医療機関レセプトコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanTodofukenCode">
+            <summary>医療機関都道府県コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanMei">
+            <summary>医療機関名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanYubinbango">
+            <summary>医療機関郵便局</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanShozaiti">
+            <summary>医療機関所在地</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IryokikanDenwabango">
+            <summary>医療機関電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShinryokaCode">
+            <summary>診療科コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShinryokaMei">
+            <summary>診療科名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ByotoCode">
+            <summary>病棟コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ByotoMei">
+            <summary>病棟名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IshiCode">
+            <summary>医師コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IshiKanaShimei">
+            <summary>医師カナ氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IshiKanjiShimei">
+            <summary>医師漢字氏名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.YakuzaishiCode">
+            <summary>薬剤師コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.YakuzaishiMei">
+            <summary>薬剤師名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IshiDoihenkoNaiyo">
+            <summary>医師同意変更内容</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.IshiGigikaitoNaiyo">
+            <summary>医師疑義回答内容</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.MayakushiyoshaMenkyobango">
+            <summary>麻薬施用者免許番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.MayakushiyoKanjyaJyusho">
+            <summary>麻薬施用患者住所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.MayakushiyoKanjyaDenwabango">
+            <summary>麻薬施用患者電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShohosenComment">
+            <summary>処方箋コメント</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.ShohosenJyohobuYobi">
+            <summary>処方箋情報部予備</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.YakutaiHakkoFlag">
+            <summary>薬袋発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.YakujyoHakkoFlag">
+            <summary>薬情発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.FukuyakutechoHakkoFlag">
+            <summary>服薬手帳発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.RyoshushoHakkoFlag">
+            <summary>領収書発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.KichoAHakkoFlag">
+            <summary>帳票A発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.KichoBHakkoFlag">
+            <summary>帳票B発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.KichoCHakkoFlag">
+            <summary>帳票C発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.MeisaishoHakkoFlag">
+            <summary>明細書発行フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips2Shohosen.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips3Yoho">
+            <summary>NSIPS用法部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips3Yoho.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.Nsips3YohoId">
+            <summary>Nsips0用法ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.Nsips2ShohosenId">
+            <summary>Nsips2処方箋ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.RpBango">
+            <summary>RP番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoCode1">
+            <summary>用法コード1</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoMei1">
+            <summary>用法名1</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoCode2">
+            <summary>用法コード2</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoMei2">
+            <summary>用法名2</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoCode3">
+            <summary>用法コード3</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoMei3">
+            <summary>用法名3</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.RpKubun">
+            <summary>RP区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.NichikaiKubun">
+            <summary>日回区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.NitikaiSu">
+            <summary>日回数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.FukuyoKaisu">
+            <summary>服用回数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.FukuyoKaishibi">
+            <summary>服用開始日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YakuhinMeisaisu">
+            <summary>薬品明細数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.IppokaRpKubun">
+            <summary>１包化RP区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.FunsaiRpKubun">
+            <summary>粉砕RP区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoComment1">
+            <summary>用法コメント1</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohobuYobi">
+            <summary>用法部予備</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoComment2">
+            <summary>用法コメント2</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoComment3">
+            <summary>用法コメント3</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoComment4">
+            <summary>用法コメント4</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YohoComment5">
+            <summary>用法コメント5</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips3Yoho.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips4Yakuhin">
+            <summary>NSIPS薬品部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips4Yakuhin.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Nsips4YakuhinId">
+            <summary>キー</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Nsips2ShohosenId">
+            <summary>Nsips2処方箋ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Nsips3YohoId">
+            <summary>Nsips0用法ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinBango">
+            <summary>薬品番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.RpBango">
+            <summary>RP番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.JyohoKubun">
+            <summary>情報区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.ResedensanCode">
+            <summary>レセ電算コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.HotCode">
+            <summary>HOTコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.MeisaiCode">
+            <summary>明細コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinMei">
+            <summary>薬品名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinIppanmei">
+            <summary>薬品一般名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoKisho">
+            <summary>不均等分割服用量(起床)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoAsa">
+            <summary>不均等分割服用量(朝)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoHiru">
+            <summary>不均等分割服用量(昼)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoYu">
+            <summary>不均等分割服用量(夕)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoNerumae">
+            <summary>不均等分割服用量(寝る前)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukintobunkatsuFukuyoRyoYobi">
+            <summary>不均等分割服用量(予備)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukuyoRyo">
+            <summary>服用量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.RikikaFlag">
+            <summary>力価フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FukuyoTani">
+            <summary>服用単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.IppokaKubun">
+            <summary>１包化区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.FunsaiKubun">
+            <summary>粉砕区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.GazoKubun">
+            <summary>画像区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.BetsuhoKubun">
+            <summary>別包区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.HyojiKubun">
+            <summary>表示区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.TanaBango">
+            <summary>棚番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.LotBango">
+            <summary>ロット番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinComment1">
+            <summary>薬品コメント1</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinYjCode">
+            <summary>後発品変更前薬品YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinResedensanCode">
+            <summary>後発品変更前薬品レセ電算コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinHotCode">
+            <summary>後発品変更前薬品HOTコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinMei">
+            <summary>後発品変更前薬品名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KongoKubun">
+            <summary>混合区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinFukuyoRyo">
+            <summary>後発品変更前薬品服用量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.KohatuhinHenkomaeYakuhinFukuyoTani">
+            <summary>後発品変更前薬品服用単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.IkkaiFukuyoRyo">
+            <summary>１回服用量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinComment2">
+            <summary>薬品コメント2</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinComment3">
+            <summary>薬品コメント3</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinComment4">
+            <summary>薬品コメント4</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YakuhinComment5">
+            <summary>薬品コメント5</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.IppannmeiShohoFlag">
+            <summary>一般名処方フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Souryo">
+            <summary>総量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips4Yakuhin.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips5Chozairoku">
+            <summary>NSIPS調剤録部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips5Chozairoku.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Nsips5ChozairokuId">
+            <summary>Nsips5調剤録ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.YakuzairyoNoGoke">
+            <summary>薬剤料の合計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.ChozairyoNoGoke">
+            <summary>調剤料の合計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.ShidokanriryoNoGoke">
+            <summary>指導管理料の合計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.TokuteiHokeniryoZairyoRyo">
+            <summary>特定保険医療材料料</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.HokenseikyuTensu">
+            <summary>保険請求点数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.KihonKazan">
+            <summary>基本加算</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.ChozaiKihonryo">
+            <summary>調剤基本料</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.KazanNoGoke">
+            <summary>加算の合計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Yakureki">
+            <summary>薬歴</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.SonotaNoShidoryo">
+            <summary>その他の指導料</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Kazanto">
+            <summary>加算等</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.GokeTensu">
+            <summary>合計点数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.ItibuFutankin">
+            <summary>一部負担金</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.YokiKingaku">
+            <summary>容器金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.SonotaNoKingaku">
+            <summary>その他の金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.ZenkaimadeMishukin">
+            <summary>前回迄未収金</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.KonkaiSeikyugaku">
+            <summary>今回請求額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.GokeSeikyugaku">
+            <summary>合計請求額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.KonkaiNyukingaku">
+            <summary>今回入金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Mishukin">
+            <summary>未収金</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips5Chozairoku.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips6Chozairoku_meisai">
+            <summary>NSIPS調剤録明細部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Nsips6ChozairokuMeisaiId">
+            <summary>Nsips6調剤録明細ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.RpBango">
+            <summary>RP番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Chozairyo">
+            <summary>調剤料</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Yakuzairyo">
+            <summary>薬剤料</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Suryo">
+            <summary>数量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Shoke">
+            <summary>小計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Yakuzaikazan">
+            <summary>薬剤加算</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Goke">
+            <summary>合計</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode01">
+            <summary>薬剤加算コード01</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo01">
+            <summary>薬剤加算の内容01</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode02">
+            <summary>薬剤加算コード02</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo02">
+            <summary>薬剤加算の内容02</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode03">
+            <summary>薬剤加算コード03</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo03">
+            <summary>薬剤加算の内容03</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode04">
+            <summary>薬剤加算コード04</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo04">
+            <summary>薬剤加算の内容04</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode05">
+            <summary>薬剤加算コード05</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo05">
+            <summary>薬剤加算の内容05</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode06">
+            <summary>薬剤加算コード06</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo06">
+            <summary>薬剤加算の内容06</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode07">
+            <summary>薬剤加算コード07</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo07">
+            <summary>薬剤加算の内容07</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode08">
+            <summary>薬剤加算コード08</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo08">
+            <summary>薬剤加算の内容08</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode09">
+            <summary>薬剤加算コード09</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo09">
+            <summary>薬剤加算の内容09</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanCode10">
+            <summary>薬剤加算コード10</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YakuzaikazanNoNaiyo10">
+            <summary>薬剤加算の内容10</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips6Chozairoku_meisai.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.Nsips7Kasan">
+            <summary>NSIPS加算情報部テーブル</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.Nsips7Kasan.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Nsips7KasanId">
+            <summary>Nsips7加算情報ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Nsips0HeaderId">
+            <summary>Nsips0ヘッダID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Stype">
+            <summary>識別子</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.KasanBango">
+            <summary>加算番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.SanteCode">
+            <summary>算定コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.SanteMeisho">
+            <summary>算定名称</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Kaisu">
+            <summary>回数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Tensu">
+            <summary>点数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.Fupdkbn">
+            <summary>ファイル更新区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.Nsips7Kasan.YukoFlag">
+            <summary>有効区分</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.NyuukoDetails">
+            <summary>入庫データ明細</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.NyuukoDetails.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.DetailNo">
+            <summary>明細番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.TorihikisakiCd">
+            <summary>仕入先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.OroshiCd">
+            <summary>卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.SyouhinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.SyouhinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.SyouhinName">
+            <summary>品名・規格・容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.TaniKubun">
+            <summary>単位区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Suryo">
+            <summary>入庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Tanka">
+            <summary>単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Kingaku">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.TaxAmount">
+            <summary>消費税額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.TotalAmount">
+            <summary>小計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.SiyouYmd">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Lot">
+            <summary>製造番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.DeliveryDate">
+            <summary>入庫日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.DeliveryLocation">
+            <summary>入庫場所</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.HDetailNo">
+            <summary>発注明細番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoDetails.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.NyuukoHeader">
+            <summary>入庫データヘッダー</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.NyuukoHeader.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.DetailsCount">
+            <summary>明細数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.OrderKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TorihikisakiCd">
+            <summary>仕入先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.OroshiCd">
+            <summary>卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TaxSanshutuKubun">
+            <summary>消費税額算出区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.ZeiKubun">
+            <summary>消費税区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.Amount">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TaxAmount">
+            <summary>消費税額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TotalAmount">
+            <summary>合計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.PrintKubun">
+            <summary>印刷区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.PrintNitiji">
+            <summary>印刷日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.SousinKubun">
+            <summary>送信区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.SousinNitiji">
+            <summary>送信日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.HOrderNo">
+            <summary>発注伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TsuuchiSikibetu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.NyuukoHeader.TsuuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.OtcMaster">
+            <summary>OTC商品マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.OtcMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.PdsCode">
+            <summary>PDSコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HotCode">
+            <summary>HOTコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.Hot7Code">
+            <summary>HOT7コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KobetsuIyakuhinCode">
+            <summary>個別医薬品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.YakuhinMei">
+            <summary>薬品名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.YakuhinKana">
+            <summary>薬品フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KikakuTanni">
+            <summary>規格単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HousouKeitai">
+            <summary>包装形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HousouTanniQty">
+            <summary>包装単位数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HousouTanniTanni">
+            <summary>包装単位単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HousouSouryouQty">
+            <summary>包装総量数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HousouSuryouTanni">
+            <summary>包装数量単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.Kubun">
+            <summary>区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.YakkouBunruiCode">
+            <summary>薬効分類コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.ZaikeiKubunCode">
+            <summary>剤形区分コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.SeibunCode">
+            <summary>成分コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.DokuyakuFlag">
+            <summary>毒薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.GekiyakuFlag">
+            <summary>劇薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.MayakuFlag">
+            <summary>麻薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KakuseizaiFlag">
+            <summary>覚醒剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.SeibutsugakutekiSeizaiFlag">
+            <summary>生物学的製剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.ZoueizaiFlag">
+            <summary>造影剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KouseishinyakuFlag">
+            <summary>向精神薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.SeizouKaishaMei">
+            <summary>製造会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HanbaiKaishaMei">
+            <summary>販売会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KokujiYmd">
+            <summary>告示日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KeikaSochiYmd">
+            <summary>経過措置日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.HanbaiChushiYmd">
+            <summary>販売中止日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.SaishuLotShiyouKigen">
+            <summary>最終ロット使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.ApplyStartYmd">
+            <summary>適用開始年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.ApplyEndYmd">
+            <summary>適用終了年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.TaxCode">
+            <summary>税区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.BunruiCode">
+            <summary>分類コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.OtcMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.PickedYakuhin">
+            <summary>Picked薬品</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.PickedYakuhin.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.PickedId">
+            <summary>PickedID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.ShohosenId">
+            <summary>処方箋ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.PickedYjId">
+            <summary>PickedYjID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.HakoQty">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.HousouQty">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.BaraQty">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.LotBango">
+            <summary>Lot番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.ShiyouKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.PickedNitiji">
+            <summary>Picked日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.BunpokiFlag">
+            <summary>分包機フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.InsertUserId">
+            <summary>登録ユーザーID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.InsertTanmatsuId">
+            <summary>登録端末ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.InsertProgram">
+            <summary>登録プログラム</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.UpdateUserId">
+            <summary>更新ユーザーID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.UpdateTanmatsuId">
+            <summary>更新端末ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.UpdateProgram">
+            <summary>更新プログラム</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.FileMei">
+            <summary>ファイル名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.PickedYakuhin.Hikiotoshi">
+            <summary>引落フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.SeibunMaster">
+            <summary>成分マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.SeibunMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.SeibunCode">
+            <summary>成分コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.SeibunMei">
+            <summary>成分名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.SeibunKana">
+            <summary>成分名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.ApplyStartYmd">
+            <summary>適用開始年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.ApplyEndYmd">
+            <summary>適用終了年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SeibunMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.ShiiresakiMaster">
+            <summary>仕入先マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.ShiiresakiMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.ShiiresakiCode">
+            <summary>仕入先コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Yuubin">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Jyu1">
+            <summary>住所（１）</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Jyu2">
+            <summary>住所（２）</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Name">
+            <summary>仕入先名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.NameRyakusyo">
+            <summary>仕入先名(略称)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Tel">
+            <summary>電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.Fax">
+            <summary>ＦＡＸ番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.HenkouYmd">
+            <summary>変更日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.KeizokuKubun">
+            <summary>継続区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.ShiireLine">
+            <summary>仕入伝票行数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.OroshiCode">
+            <summary>卸コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.SiteKubun">
+            <summary>サイト区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.TaxSanKubun">
+            <summary>消費税算出区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.TaxHasuKubun">
+            <summary>消費税端数処理区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.NameSyukei">
+            <summary>仕入先名(集計用)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ShiiresakiMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.StoreMaster">
+            <summary>自社店舗情報マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.StoreMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KaishaMei">
+            <summary>会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KaishaKana">
+            <summary>会社名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuMei">
+            <summary>薬局名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuKana">
+            <summary>薬局フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuRyakuMei">
+            <summary>薬局略名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.DaihyoushaSei">
+            <summary>代表者姓</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.DaihyoushaMei">
+            <summary>代表者名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.DaihyoushaSeiKana">
+            <summary>代表者姓フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.DaihyoushaMeiKana">
+            <summary>代表者名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TantoushaSei">
+            <summary>担当者姓</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TantoushaMei">
+            <summary>担当者名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TantoushaSeiKana">
+            <summary>担当者姓フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TantouushaMeiKana">
+            <summary>担当者名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuType">
+            <summary>薬局種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TempoKeitai">
+            <summary>店舗形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.BungyouKeitai">
+            <summary>分業形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YakkyokuRank">
+            <summary>薬局ランク</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ZipCode">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.State">
+            <summary>都道府県</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.City">
+            <summary>市町村</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.Street">
+            <summary>番地</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TatemonoMei1">
+            <summary>建物名１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TatemonoMei2">
+            <summary>建物名２</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TelNo">
+            <summary>電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.FaxNo">
+            <summary>FAX番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.MailAddress">
+            <summary>Eメールアドレス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.HomepageUrl">
+            <summary>ホームページURL</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.BankCode">
+            <summary>銀行口座-銀行コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ShitenCode">
+            <summary>銀行口座-支店コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.BankYokinType">
+            <summary>銀行口座-預金種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.BankAccountNo">
+            <summary>銀行口座-口座番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.BankAccountMei">
+            <summary>銀行口座-口座名義</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ImagePath1">
+            <summary>画像ファイルパス１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ImagePath2">
+            <summary>画像ファイルパス２</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ImagePath3">
+            <summary>画像ファイルパス３</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ImagePath4">
+            <summary>画像ファイルパス４</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ImagePath5">
+            <summary>画像ファイルパス５</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.ApiTeikyouFlag">
+            <summary>API閲覧フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KaikyokuShoumeishoHozonPath">
+            <summary>開局証明書保存パス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KyokaNo">
+            <summary>許可番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YukoKigenFrom">
+            <summary>有効期限(FROM)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.YukoKigenTo">
+            <summary>有効期限(TO)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.TeikyouService1">
+            <summary>提供サービス１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KeiyakuYmd">
+            <summary>契約年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.KaijoYmd">
+            <summary>解除年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.IryoukikanCode">
+            <summary>医療機関コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.StoreMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.SyukkoDetails">
+            <summary>出庫データ明細</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.SyukkoDetails.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.DetailNo">
+            <summary>明細番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.TorihikiKubun">
+            <summary>取引区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.TorihikisakiCd">
+            <summary>得意先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.SyouhinCodeKubun">
+            <summary>商品コード区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.SyouhinCode">
+            <summary>商品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.SyouhinName">
+            <summary>品名・規格・容量</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.TaniKubun">
+            <summary>単位区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Suryo">
+            <summary>出庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Tanka">
+            <summary>単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Kingaku">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.TaxAmount">
+            <summary>消費税額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.TotalAmount">
+            <summary>小計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.SiyouYmd">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Lot">
+            <summary>製造番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.DeliveryDate">
+            <summary>出庫日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoDetails.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.SyukkoHeader">
+            <summary>出庫データヘッダー</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.SyukkoHeader.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.OrderNo">
+            <summary>伝票番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.DetailsCount">
+            <summary>明細数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.OrderKubun">
+            <summary>伝票区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.ActionDate">
+            <summary>処理日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TorihikisakiCd">
+            <summary>得意先ｺｰﾄﾞ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TaxSanshutuKubun">
+            <summary>消費税額算出区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.ZeiKubun">
+            <summary>消費税区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.Amount">
+            <summary>金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TaxAmount">
+            <summary>消費税額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TotalAmount">
+            <summary>合計金額</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.PrintKubun">
+            <summary>印刷区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.PrintNitiji">
+            <summary>印刷日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.SousinKubun">
+            <summary>送信区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.SousinNitiji">
+            <summary>送信日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.Biko">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TsuuchiSikibetu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.SyukkoHeader.TsuuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TanabanMaster">
+            <summary>棚番号管理マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TanabanMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.TanabanCode">
+            <summary>棚番コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.TanabanMei">
+            <summary>棚番名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.TanabanComment">
+            <summary>棚番コメント</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanMaster.SakujyoFlag">
+            <summary>削除フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TanabanSyouhin">
+            <summary>棚番商品管理マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TanabanSyouhin.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.TanabanCode">
+            <summary>棚番コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.Dan">
+            <summary>段</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.Retu">
+            <summary>列</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.Bikou">
+            <summary>備考</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanabanSyouhin.SakujyoFlag">
+            <summary>削除フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TanaoroshiHeader">
+            <summary>棚卸ヘッダ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TanaoroshiHeader.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TanaoroshiHeaderId">
+            <summary>棚卸ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TanaoroshiYmd">
+            <summary>棚卸年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TanaoroshiMei">
+            <summary>棚卸名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TanaoroshiKubun">
+            <summary>棚卸区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TanaoroshiKanryouFlag">
+            <summary>棚卸完了フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiHeader.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TanaoroshiKaishi">
+            <summary>棚卸開始データ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TanaoroshiKaishi.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.MeisaiCode">
+            <summary>明細コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.ZaikoTotal">
+            <summary>在庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.Genka">
+            <summary>原価単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.Suryo">
+            <summary>棚卸数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.SaiSuryo">
+            <summary>差異数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.StartUseDate">
+            <summary>棚卸開始日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiKaishi.EndUseDate">
+            <summary>棚卸終了日</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TanaoroshiMeisai">
+            <summary>棚卸明細</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TanaoroshiMeisai.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.TanaoroshiId">
+            <summary>棚卸明細ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.TanaoroshiHeaderId">
+            <summary>棚卸ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.PdsCode">
+            <summary>PDSコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.ShiyouKigen">
+            <summary>使用期限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.LotBango">
+            <summary>ロット番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.TanabanCode">
+            <summary>棚番コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.HakoQty">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.HousouQty">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.BaraQty">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.TanmatsuMei">
+            <summary>端末名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.TourokuHouhou">
+            <summary>登録方法</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.InsertStaffName">
+            <summary>登録スタッフ名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.UpdateStaffName">
+            <summary>登録スタッフ名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.MikaifuFlag">
+            <summary>未開封フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TanaoroshiMeisai.FudoFlag">
+            <summary>不動フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TehaiMaster">
+            <summary>手配管理マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TehaiMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.MeisaiCode">
+            <summary>明細コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.ShiiresakiCode">
+            <summary>仕入先コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.Price">
+            <summary>購入価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.InsertDate">
+            <summary>登録日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.UpdateDate">
+            <summary>更新日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TehaiMaster.SakujyoFlag">
+            <summary>削除フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.TenpoMaster">
+            <summary>店舗マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.TenpoMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.TenpoNo">
+            <summary>店舗番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseYuubin">
+            <summary>店郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseJyu1">
+            <summary>店舗住所（１）</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseJyu2">
+            <summary>店舗住所（２）</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseTenmei">
+            <summary>店舗名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseTenpomei">
+            <summary>店舗名(略称)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseTel">
+            <summary>店舗電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MiseFax">
+            <summary>店舗ＦＡＸ番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.HenkouYmd">
+            <summary>変更日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.ServerKubun">
+            <summary>サーバー独立区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.MedzEasyconfig">
+            <summary>MEDZ接続文字列</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.PharEasyconfig">
+            <summary>PHAR接続文字列</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.SyouhiZeiritu1">
+            <summary>消費税率１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.SyouhiZeiritu2">
+            <summary>消費税率２</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.SyouhizeiHasuuKubun">
+            <summary>消費税端数区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.KingakuHasuuKubun">
+            <summary>金額端数区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.IryoukikanCode">
+            <summary>医療機関コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.ShiireTuuchi">
+            <summary>仕入先マスタ通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.OtcTuuchi">
+            <summary>ＯＴＣ商品マスタ通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.TenpoMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.UserAccount">
+            <summary>ユーザアカウント</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.UserAccount.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.UserId">
+            <summary>ユーザID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.Password">
+            <summary>パスワード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.PdsId">
+            <summary>PDS_ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.MailAddress">
+            <summary>Eメールアドレス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.Kengen">
+            <summary>権限</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.AccountRank">
+            <summary>アカウントランク</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.AccountKubun">
+            <summary>アカウント区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.AccountSakujoFlag">
+            <summary>アカウント削除フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.AccountTeishiFlag">
+            <summary>アカウント停止フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.UneiComment">
+            <summary>運営コメント</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.KeiyakuYmd">
+            <summary>契約年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.KaijoYmd">
+            <summary>解除年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.UserAccount.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.YakkyokuMaster">
+            <summary>薬局マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.YakkyokuMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.PdsYakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KaishaMei">
+            <summary>会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KaishaKana">
+            <summary>会社名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuMei">
+            <summary>薬局名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuKana">
+            <summary>薬局フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuRyakuMei">
+            <summary>薬局略名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.DaihyoushaSei">
+            <summary>代表者姓</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.DaihyoushaMei">
+            <summary>代表者名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.DaihyoushaSeiKana">
+            <summary>代表者姓フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.DaihyoushaMeiKana">
+            <summary>代表者名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TantoushaSei">
+            <summary>担当者姓</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TantoushaMei">
+            <summary>担当者名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TantoushaSeiKana">
+            <summary>担当者姓フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TantouushaMeiKana">
+            <summary>担当者名フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuType">
+            <summary>薬局種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TempoKeitai">
+            <summary>店舗形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.BungyouKeitai">
+            <summary>分業形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YakkyokuRank">
+            <summary>薬局ランク</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ZipCode">
+            <summary>郵便番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.State">
+            <summary>都道府県</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.City">
+            <summary>市町村</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.Street">
+            <summary>番地</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TatemonoMei1">
+            <summary>建物名１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TatemonoMei2">
+            <summary>建物名２</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TelNo">
+            <summary>電話番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.FaxNo">
+            <summary>FAX番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.MailAddress">
+            <summary>Eメールアドレス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.HomepageUrl">
+            <summary>ホームページURL</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.BankCode">
+            <summary>銀行口座-銀行コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ShitenCode">
+            <summary>銀行口座-支店コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.BankYokinType">
+            <summary>銀行口座-預金種別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.BankAccountNo">
+            <summary>銀行口座-口座番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.BankAccountMei">
+            <summary>銀行口座-口座名義</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.PaymentMethod">
+            <summary>支払方法</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ImagePath1">
+            <summary>画像ファイルパス１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ImagePath2">
+            <summary>画像ファイルパス２</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ImagePath3">
+            <summary>画像ファイルパス３</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ImagePath4">
+            <summary>画像ファイルパス４</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ImagePath5">
+            <summary>画像ファイルパス５</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.ApiTeikyouFlag">
+            <summary>API閲覧フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KaikyokuShoumeishoHozonPath">
+            <summary>開局証明書保存パス</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KyokaNo">
+            <summary>許可番号</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YukoKigenFrom">
+            <summary>有効期限(FROM)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.YukoKigenTo">
+            <summary>有効期限(TO)</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.TeikyouService1">
+            <summary>提供サービス１</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KeiyakuYmd">
+            <summary>契約年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KaijoYmd">
+            <summary>解除年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakkyokuMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.YakuhinMaster">
+            <summary>薬品マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.YakuhinMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.PdsCode">
+            <summary>PDSコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HotCode">
+            <summary>HOTコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.Hot7Code">
+            <summary>HOT7コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KobetsuIyakuhinCode">
+            <summary>個別医薬品コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.GtinCodeChozaihosotani">
+            <summary>GTINコード調剤包装単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.YakuhinMei">
+            <summary>薬品名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.YakuhinKana">
+            <summary>薬品フリガナ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KikakuTanni">
+            <summary>規格単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HousouKeitai">
+            <summary>包装形態</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HousouTanniQty">
+            <summary>包装単位数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HousouTanniTanni">
+            <summary>包装単位単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HousouSouryouQty">
+            <summary>包装総量数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HousouSuryouTanni">
+            <summary>包装数量単位</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.Kubun">
+            <summary>区分</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.YakkouBunruiMei">
+            <summary>薬効分類名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.ZaikeiKubunMei">
+            <summary>剤形区分名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.SeibunMei">
+            <summary>成分名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.Yakka">
+            <summary>薬価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.DokuyakuFlag">
+            <summary>毒薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.GekiyakuFlag">
+            <summary>劇薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.MayakuFlag">
+            <summary>麻薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KakuseizaiFlag">
+            <summary>覚醒剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.SeibutsugakutekiSeizaiFlag">
+            <summary>生物学的製剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.ZoueizaiFlag">
+            <summary>造影剤フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KouseishinyakuFlag">
+            <summary>向精神薬フラグ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.SeizouKaishaMei">
+            <summary>製造会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HanbaiKaishaMei">
+            <summary>販売会社名</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KokujiYmd">
+            <summary>告示日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KeikaSochiYmd">
+            <summary>経過措置日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.HanbaiChushiYmd">
+            <summary>販売中止日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.ApplyStartYmd">
+            <summary>適用開始年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.ApplyEndYmd">
+            <summary>適用終了年月日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.InsertUserId">
+            <summary>登録者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.InsertNitiji">
+            <summary>登録日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.UpdateUserId">
+            <summary>更新者ID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.UpdateNitiji">
+            <summary>更新日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.UpdateProgramId">
+            <summary>更新プログラムID</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KanriZokusei">
+            <summary>管理属性</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.YakuhinMaster.KohatsuFlag">
+            <summary>後発フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.Entities.ZaikoMaster">
+            <summary>在庫管理マスタ</summary>
+        </member>
+        <member name="M:B2.BestFunction.Entities.ZaikoMaster.#ctor">
+            <summary> コンストラクタ</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.YakkyokuCode">
+            <summary>薬局コード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.YjCode">
+            <summary>YJコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.GtinCode">
+            <summary>GTINコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.JanCode">
+            <summary>JANコード</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.ZaikoTotal">
+            <summary>在庫数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.HakoSuryo">
+            <summary>箱数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.HosoSuryo">
+            <summary>包装数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.BaraSuryo">
+            <summary>バラ数</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.Genka">
+            <summary>原価単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.SaisyuuGenka">
+            <summary>最終仕入単価</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.InsertDate">
+            <summary>登録日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.UpdateDate">
+            <summary>更新日</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.StartUseDate">
+            <summary>使用開始</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.EndUseDate">
+            <summary>使用終了</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.TsuchiSikibetsu">
+            <summary>通知識別</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.TsuchiDate">
+            <summary>通知日時</summary>
+        </member>
+        <member name="P:B2.BestFunction.Entities.ZaikoMaster.SakujyoFlag">
+            <summary>削除フラグ</summary>
+        </member>
+        <member name="T:B2.BestFunction.MenuShowModeNo">
+            <summary>
+            メニュー表示モード№
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.MenuShowModeNo.History">
+            <summary>履歴</summary>
+        </member>
+        <member name="F:B2.BestFunction.MenuShowModeNo.List">
+            <summary>一覧</summary>
+        </member>
+        <member name="F:B2.BestFunction.MenuShowModeNo.New">
+            <summary>新規</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFCallbackEventNo">
+            <summary>
+            コールバックイベント№
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventNo.Exit">
+            <summary>プログラム終了</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventNo.CompleteDisplay">
+            <summary>表示完了</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventNo.Processing">
+            <summary>処理中</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventNo.CompleteProcess">
+            <summary>処理完了</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventNo.CancelProcess">
+            <summary>処理キャンセル</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFCallbackEventResuslt">
+            <summary>
+            コールバックイベント結果
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventResuslt.Success">
+            <summary>成功</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventResuslt.Error">
+            <summary>エラー</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFBaseForm">
+            <summary>
+            BestFunctionフォーム基本クラス
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.SearchItem(System.String)">
+            <summary>
+            項目検索
+            </summary>
+            <param name="key">検索キー</param>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.RedisplayForm">
+            <summary>
+            フォーム再表示
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.CanChangeForm">
+            <summary>
+            フォーム切替表示問合せ
+            </summary>
+            <returns>true:フォーム切替表示可 false:フォーム切替表示不可</returns>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.CanCloseForm">
+            <summary>
+            フォームクローズ問合せ
+            </summary>
+            <returns>true:フォームクローズ可 false:フォームクローズ不可</returns>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.CallBFCallbackEvent(B2.BestFunction.BFCallbackEventNo,B2.BestFunction.BFCallbackEventResuslt,System.String)">
+            <summary>
+            コールバック処理呼び出し
+            </summary>
+            <param name="no">イベント№</param>
+            <param name="ret">結果</param>
+            <param name="stringValue">イベント文字列情報</param>
+        </member>
+        <member name="F:B2.BestFunction.BFBaseForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:B2.BestFunction.BFBaseForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFBaseForm.MenuLevel">
+            <summary>メニュー階層文字列</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFBaseForm.ShowMode">
+            <summary>表示モード</summary>
+        </member>
+        <member name="E:B2.BestFunction.BFBaseForm.BFCallbackEvent">
+            <summary>
+            コールバック用イベントハンドラ
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.BFBaseForm.BFEventHandler">
+            <summary>
+            コールバック用イベントハンドラのデリゲート
+            </summary>
+            <param name="e">イベントデータ</param>
+        </member>
+        <member name="T:B2.BestFunction.BFCallbackEventArgs">
+            <summary>
+            コールバック用イベント引数クラス
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.eventNo">
+            <summary>イベント№</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.menuLevel">
+            <summary>メニュー階層</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.showMode">
+            <summary>表示モード</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.result">
+            <summary>結果</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.eventStringValue">
+            <summary>イベント文字列情報</summary>
+        </member>
+        <member name="M:B2.BestFunction.BFCallbackEventArgs.#ctor(B2.BestFunction.BFCallbackEventNo,System.String,B2.BestFunction.MenuShowModeNo,B2.BestFunction.BFCallbackEventResuslt,System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="no">イベント№</param>
+            <param name="level">メニュー階層</param>
+            <param name="mode">表示モード</param>
+            <param name="ret">結果</param>
+            <param name="stringValue">イベント文字列情報</param>
+        </member>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.EventNO">
+            <summary>イベント№</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.MenuLevel">
+            <summary>メニュー階層</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.ShowMode">
+            <summary>表示モード</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.Result">
+            <summary>結果</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.CommandStringValue">
+            <summary>イベント文字列情報</summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.ReturnValue">
+            <summary>
+            呼び出し元への復帰情報
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.action_mode">
+            <summary> コード情報　0：レセコンコード　1:GTINコード　2:ＪＡＮコード   /// </summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.edit_mode">
+            <summary> 編集モード　0：新規　1:訂正　2:参照   /// </summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.search_code">
+            <summary> 紐付けＣｏｄｅ /// </summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.b2Com">
+            <summary>共通パラメータ</summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.gtin_code_save">
+            <summary>GTIN 退避用</summary>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.ShowForm(System.Int32,System.String)">
+            <summary>
+            フォーム起動ファンクション
+            </summary>
+            <param name="mode">コード情報　0：レセコンコード　1:GTINコード　2:ＪＡＮコード</param>
+            <param name="code">レセコンコード　Or　GTINコード　OrＪＡＮコード</param>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.ShowForm(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            フォーム起動ファンクション
+            </summary>
+            <param name="mode">コード情報　0：レセコンコード　1:GTINコード　2:ＪＡＮコード</param>
+            <param name="code">レセコンコード　Or　GTINコード　OrＪＡＮコード</param>
+            <param name="mode2">編集モード　0：新規　1:訂正 2:参照</param>
+            <param name="use_date">使用開始日</param>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.frm_Code_Wariate_Load(System.Object,System.EventArgs)">
+            <summary>
+            Loadイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.frm_Code_Wariate_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Shownイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.setInitialize">
+            <summary>
+            初期化設定
+            </summary>
+            <param name="pnumState">状態情報</param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.setSearchInfo">
+            <summary>
+            起動パラメータ情報を表示エリアにセット
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.dbSelect">
+            <summary>
+            手配管理、薬品マスタ、発注点情報管理、棚情報　から情報の抽出
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.btn_select_Click(System.Object,System.EventArgs)">
+            <summary>
+            薬品検索(GTIN or YJ)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.btn_select_jan_Click(System.Object,System.EventArgs)">
+            <summary>
+            JANコードで薬品検索
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.btn_exit_Click(System.Object,System.EventArgs)">
+            <summary>
+            閉じる　
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.btn_ok_Click(System.Object,System.EventArgs)">
+            <summary>
+            登録処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.dbInsert">
+            <summary>
+            手配管理、在庫管理、発注点情報管理へレコードの登録
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.CodeWariateForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:B2.BestFunction.CodeWariateForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.KensakuSyouhinForm">
+            <summary>
+            商品検索ダイアログ（フォーム）
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_result">
+            <summary>　 呼び出し元への渡し用エリア </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.b2Com">
+            <summary>共通パラメータ</summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.action_flag">
+            <summary> 起動情報　0：引数なし　1:引数あり        /// </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.action_mode">
+            <summary> 起動情報　0：コード指定なし　1:コード指定あり  /// </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.ReturnValue">
+            <summary>
+            呼び出し元への復帰情報
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.search_code">
+            <summary> 紐付けＣｏｄｅ /// </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.#ctor">
+            <summary>
+             コンストラクタ　引数無しパターン
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.#ctor(B2.Com.B2Com)">
+            <summary>
+            コンストラクタ 引数有りパターン
+            </summary>
+            <param name="paramCom">共通パラメータ</param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.frm_Kensaku_Syouhin_Load(System.Object,System.EventArgs)">
+            <summary>
+            LOADイベント時の処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.frm_Kensaku_Syouhin_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Shownイベント時の処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.setInitialize">
+            <summary>
+            初期化設定
+            </summary>
+            <param name="pnumState">状態情報</param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.setSpreadInitialize">
+            <summary>
+            スプレッドの初期化
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.ClearMain">
+            <summary>
+            明細クリア
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.setSpreadInfo">
+            <summary>
+            スプレッドの属性設定
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.btn_exit_Click(System.Object,System.EventArgs)">
+            <summary>
+            閉じる
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.btn_ok_Click(System.Object,System.EventArgs)">
+            <summary>
+            ＯＫ　選択　戻し用のデータをセット
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.btn_select_Click(System.Object,System.EventArgs)">
+            <summary>
+            検索ボタン
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.kensaku_syori">
+            <summary>
+            データ抽出処理
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.InitDispInputMap(FarPoint.Win.Spread.FpSpread)">
+            <summary>スプレッド標準キー を無効にし上位へスルー通知を行う処理</summary>
+            <param name="pspdObj">スプレッドシートインスタンス</param>
+            <returns>true：正常終了　false：エラー</returns>
+            <remark>
+            各起動時に実行してください。
+            TAB：フォーカス移動用にします
+            ESC：通常画面の終了に使用します など
+            
+            ※　スプレッド読み取り専用の場合必要なし(OperationModeの設定だけ)
+            　　標準でキーを取得したい場合に使用します
+            </remark>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.dBselect_Yakuhin(System.String)">
+            <summary>
+            データの抽出
+            </summary>
+            <param name="search_key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.frm_Kensaku_Syouhin_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            キースルー設定
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.fpSMain_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            検索ダイアログの表示
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.search_text_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            検索文字列フィールドでEnterキーで実行
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.fpSMain_CellDoubleClick(System.Object,FarPoint.Win.Spread.CellClickEventArgs)">
+            <summary>
+            明細行でダブルクリック　行選択確定
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin">
+            <summary>呼び出し元への渡し用クラス</summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.gtin_code">
+            <summary>GTINコード </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.gtin_code_chozaihosotani">
+            <summary>GTIN調剤コード </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.yj_code">
+            <summary>YJコード </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.jan_code">
+            <summary>JANコード </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.kouhatu_flag">
+            <summary>後発フラグ </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.yakuhin_mei">
+            <summary>薬品名 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.yakuhin_kana">
+            <summary>薬品名カナ </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.kikaku_tanni">
+            <summary>規格 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.kubun">
+            <summary>区分 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.housou_keitai">
+            <summary>包装形態 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.housou_souryou_qty">
+            <summary>箱入り数 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.housou_tanni_qty">
+            <summary>包装入り数 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.seizou_kaisha_mei">
+            <summary>製造会社名 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.hanbai_kaisha_mei">
+            <summary>販売会社名 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.yakka">
+            <summary>薬価 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.meisai_code">
+            <summary>レセコンコード </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.zaiko_total">
+            <summary>現在庫数 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.housou_tanni_tanni">
+            <summary>包装単位　単位 </summary>
+        </member>
+        <member name="F:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.housou_suryou_tanni">
+            <summary>包装数量　単位 </summary>
+        </member>
+        <member name="M:B2.BestFunction.KensakuSyouhinForm.kensaku_syouhin.#ctor">
+            <summary>初期化　</summary>
+        </member>
+        <member name="T:B2.BestFunction.KensakuSyouhinForm.mainColum">
+            <summary> Spreadの列インデックス</summary>
+        </member>
+        <member name="T:B2.BestFunction.TourokuSyuseiForm">
+            <summary>
+            frm_Touroku_Syusei.cs
+            入庫、出庫、発注のワークテーブルへの登録・修正
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.TourokuSyuseiForm.ReturnValue">
+            <summary>
+            呼び出し元への復帰情報
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.TourokuSyuseiForm.Touroku_Syusei_result">
+            <summary>　 呼び出し元への渡し用エリア </summary>
+        </member>
+        <member name="F:B2.BestFunction.TourokuSyuseiForm.b2Com">
+            <summary>共通パラメータ</summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.ShowForm(B2.BestFunction.TourokuSyuseiForm.Touroku_Syusei,B2.BestFunction.TourokuSyuseiForm.Touroku_Syusei@)">
+            <summary>
+            フォーム起動ファンクション
+            </summary>
+            <param name="param">呼び出しパラメータ</param>
+            <param name="result">呼び出し元へ戻す値</param>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.frm_Touroku_Syusei_Load(System.Object,System.EventArgs)">
+            <summary>
+            Loadイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.frm_Touroku_Syusei_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Shownイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.setInitialize">
+            <summary>
+            表示エリアの初期化
+            </summary>
+            <param name="pnumState">状態情報</param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.setSearchInfo">
+            <summary>
+            起動パラメータ情報を表示エリアにセット
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.setVisibleControl">
+            <summary>
+            コントロールの活性、非活性や表示、非表示の設定を行う
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.setTankaGoukeiControl">
+            <summary>
+            単価欄、合計金額欄のコントロール
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbSelectYakuhin(System.String)">
+            <summary>
+            薬品マスタから情報の抽出
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbSelectTanka(System.String)">
+            <summary>
+            単価情報の抽出　手配管理　在庫管理
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbSelectTani(System.String)">
+            <summary>
+            発注単位の抽出
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbSelectTenpo">
+            <summary>
+            店舗情報（消費税率等の取得）
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.btn_exit_Click(System.Object,System.EventArgs)">
+            <summary>
+            キャンセル終了
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.btn_ok_Click(System.Object,System.EventArgs)">
+            <summary>
+            登録－＞終了
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.checkReturnData">
+            <summary>
+            編集データの妥当性チェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_denpyou_kubun">
+            <summary>
+            伝票区分のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_torihiki_kubun">
+            <summary>
+            取引区分のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_syouhin_code">
+            <summary>
+            商品コードのチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_seizou_bangou">
+            <summary>
+            製造番号のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_siyou_kigen">
+            <summary>
+            使用期限のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_torihiki_suryo">
+            <summary>
+            取引数のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_tanka">
+            <summary>
+            単価のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.check_goukeigaku">
+            <summary>
+            合計金額のチェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.setReturnData">
+            <summary>
+            戻りデータのセット
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbInsert">
+            <summary>
+            データベースへの登録処理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbInsert_hacchu_meisai_wk">
+            <summary>
+            発注データWKへの書き込み
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbInsert_nyuko_meisai_wk">
+            <summary>
+            入庫データWKへの書き込み
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.dbInsert_shukko_meisai_wk">
+            <summary>
+            出庫データWKへの書き込み
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.btn_select_Click(System.Object,System.EventArgs)">
+            <summary>
+            薬品検索(GTIN or JAN)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.gcNum_hako_suryo_torihiki_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            箱　取引数変更
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.gcNum_hoso_suryo_torihiki_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            ヒート　取引数変更
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.gcNum_bara_suryo_torihiki_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            バラ　取引数変更
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.suryo_Calc(System.String)">
+            <summary>
+            数量、合計金額の算出
+            </summary>
+            <param name="search_code"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.gcNum_tanka_Leave(System.Object,System.EventArgs)">
+            <summary>
+            単価欄でフォーカスが離れた時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.gcNum_torihiki_goukeigaku_Leave(System.Object,System.EventArgs)">
+            <summary>
+            合計金額欄でフォーカスが離れた時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.ctlCom_denpyou_kubun_SelectedValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            伝票区分が変更された時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.ctlCom_torihiki_kubun_SelectedValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            取引区分が変更された時
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.ctlCom_seizou_bangou_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            製造番号コンボボックスのインデックスが変更された。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:B2.BestFunction.TourokuSyuseiForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.TourokuSyuseiForm.Touroku_Syusei">
+            <summary>呼び出し元への渡し用クラス</summary>
+        </member>
+        <member name="M:B2.BestFunction.TourokuSyuseiForm.Touroku_Syusei.#ctor">
+            <summary>初期化　</summary>
+        </member>
+        <member name="F:B2.BestFunction.ZaikoChouseiForm.ReturnValue">
+            <summary>
+            呼び出し元への復帰情報
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.ZaikoChouseiForm.b2Com">
+            <summary>共通パラメータ</summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.ShowForm(System.String)">
+            <summary>
+            フォーム起動ファンクション
+            </summary>
+            <param name="shouhin_code">商品コード</param>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.frm_Zaiko_Chousei_Load(System.Object,System.EventArgs)">
+            <summary>
+            Loadイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.frm_Zaiko_Chousei_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Shownイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.setInitialize">
+            <summary>
+            表示エリアの初期化
+            </summary>
+            <param name="pnumState">状態情報</param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.setSearchInfo">
+            <summary>
+            パラメータ情報を元にＬＯＴ情報を取得し表示エリアにセット
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbSelectYakuhin(System.String)">
+            <summary>
+            薬品マスタから情報の抽出
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbSelectLotinfo(System.String)">
+            <summary>
+            ロット情報管理マスタから情報の抽出
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.btn_exit_Click(System.Object,System.EventArgs)">
+            <summary>
+            キャンセル（閉じる）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.btn_ok_Click(System.Object,System.EventArgs)">
+            <summary>
+            ＯＫ（登録－＞終了）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.checkReturnData">
+            <summary>
+            編集データの妥当性チェック
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbInsert">
+            <summary>
+            データベースへの登録処理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbInsert_nyuko_meisai_wk(System.Decimal,System.String,System.String,System.String)">
+             <summary>
+            入庫データWKへの書き込み 
+             </summary>
+             <param name="rows_no">スプレッドの行番号</param>
+             <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbInsert_shukko_meisai_wk(System.Decimal,System.String,System.String,System.String,System.Int32)">
+             <summary>
+            出庫データWKへの書き込み 
+             </summary>
+             <param name="rows_no">スプレッドの行番号</param>
+             <param name="mode">0:訂正出庫　1:廃棄出庫</param>
+             <returns></returns>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbSelectTenpo">
+            <summary>
+            店舗情報（消費税率等の取得）
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.dbSelectTanka(System.String)">
+            <summary>
+            単価情報の抽出　手配管理　在庫管理
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.ZaikoChouseiForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:B2.BestFunction.ZaikoChouseiForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.ZaikoChouseiForm.mainColum">
+            <summary> Spreadの列インデックス</summary>
+        </member>
+        <member name="T:B2.BestFunction.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.Culture">
+            <summary>
+              厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+    </members>
+</doc>

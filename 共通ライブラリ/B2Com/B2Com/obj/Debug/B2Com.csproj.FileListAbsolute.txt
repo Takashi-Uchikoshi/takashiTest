@@ -1,0 +1,10 @@
+D:\EXE\B2Com.dll.config
+D:\EXE\B2Com.dll
+D:\EXE\B2Com.pdb
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2Com.dll.licenses
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2Com.dll
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2Com.pdb
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2.Com.SelectDataForm.resources
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2Com.csproj.GenerateResource.Cache
+D:\EXE\B2Com.XML
+D:\BestFunction2\共通ライブラリ\B2Com\B2Com\obj\Debug\B2Com.csprojResolveAssemblyReference.cache

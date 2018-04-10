@@ -1,0 +1,12 @@
+D:\BestFunction2\商品マスタ\BF_Shouhin\bin\Release\BF_Shouhin.exe.config
+D:\EXE\BF_Shouhin.exe.config
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\B2.BestFunction.Properties.Resources.resources
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\B2.BestFunction.ShouhinMasterForm.resources
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\BF_Shouhin.csproj.GenerateResource.Cache
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\BF_Shouhin.exe.licenses
+D:\EXE\BF_Shouhin.XML
+D:\EXE\BF_Shouhin.exe
+D:\EXE\BF_Shouhin.pdb
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\BF_Shouhin.exe
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\BF_Shouhin.pdb
+D:\BestFunction2\商品マスタ\BF_Shouhin\obj\Release\BF_Shouhin.csprojResolveAssemblyReference.cache

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BF817CD-9B40-446F-B4F4-0A77DDCCE66B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>B2.BestFunction</RootNamespace>
+    <AssemblyName>BFCom</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\EXE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\..\..\EXE\BFCom.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\EXE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\..\..\EXE\BFCom.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="B2Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\EXE\B2Com.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.CalcEngine, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.Excel, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.PDF, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.Win, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.Win.Chart, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
+    <Reference Include="FarPoint.Win.SpreadJ, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.ActiveReports.Chart.v7, Version=7.6.8201.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="GrapeCity.ActiveReports.Diagnostics.v7, Version=7.6.8201.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="GrapeCity.ActiveReports.Document.v7, Version=7.6.8201.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="GrapeCity.ActiveReports.Extensibility.v7, Version=7.6.8201.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="GrapeCity.ActiveReports.v7, Version=7.6.8201.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2016.428, Culture=neutral, PublicKeyToken=fdd90f5c44b73170" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2016.428, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Npgsql, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\EXE\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BfCom.cs" />
+    <Compile Include="Entities\ZaikoChouseiModel.cs" />
+    <Compile Include="Entities\HacchuMeisai_wk.cs" />
+    <Compile Include="Entities\NyukoMeisai_wk.cs" />
+    <Compile Include="Entities\ShukkoMeisai_wk.cs" />
+    <Compile Include="Entities\TourokuSyuseiModel.cs" />
+    <Compile Include="Entities\CodeWariateModel.cs" />
+    <Compile Include="Entities\BfDbContext.cs" />
+    <Compile Include="Entities\BfChouzai_jisseki.cs" />
+    <Compile Include="Entities\BfIdou.cs" />
+    <Compile Include="Entities\BfIni.cs" />
+    <Compile Include="Entities\BfStatus.cs" />
+    <Compile Include="Entities\EigyouMaster.cs" />
+    <Compile Include="Entities\HachukanriMaster.cs" />
+    <Compile Include="Entities\HachuuDetails.cs" />
+    <Compile Include="Entities\HachuuHeader.cs" />
+    <Compile Include="Entities\IniMaster.cs" />
+    <Compile Include="Entities\KanjyaData.cs" />
+    <Compile Include="Entities\LogData.cs" />
+    <Compile Include="Entities\LotinfoMaster.cs" />
+    <Compile Include="Entities\MakerMaster.cs" />
+    <Compile Include="Entities\MenuData.cs" />
+    <Compile Include="Entities\NouhinData.cs" />
+    <Compile Include="Entities\Nsips0Header.cs" />
+    <Compile Include="Entities\Nsips1Kanjya.cs" />
+    <Compile Include="Entities\Nsips2Shohosen.cs" />
+    <Compile Include="Entities\Nsips3Yoho.cs" />
+    <Compile Include="Entities\Nsips4Yakuhin.cs" />
+    <Compile Include="Entities\Nsips5Chozairoku.cs" />
+    <Compile Include="Entities\Nsips6Chozairoku_meisai.cs" />
+    <Compile Include="Entities\Nsips7Kasan.cs" />
+    <Compile Include="Entities\NyuukoDetails.cs" />
+    <Compile Include="Entities\NyuukoHeader.cs" />
+    <Compile Include="Entities\OtcMaster.cs" />
+    <Compile Include="Entities\PickedYakuhin.cs" />
+    <Compile Include="Entities\SeibunMaster.cs" />
+    <Compile Include="Entities\ShiiresakiMaster.cs" />
+    <Compile Include="Entities\StoreMaster.cs" />
+    <Compile Include="Entities\SyukkoDetails.cs" />
+    <Compile Include="Entities\SyukkoHeader.cs" />
+    <Compile Include="Entities\TanabanMaster.cs" />
+    <Compile Include="Entities\TanabanSyouhin.cs" />
+    <Compile Include="Entities\TanaoroshiHeader.cs" />
+    <Compile Include="Entities\TanaoroshiKaishi.cs" />
+    <Compile Include="Entities\TanaoroshiMeisai.cs" />
+    <Compile Include="Entities\TehaiMaster.cs" />
+    <Compile Include="Entities\TenpoMaster.cs" />
+    <Compile Include="Entities\UserAccount.cs" />
+    <Compile Include="Entities\YakkyokuMaster.cs" />
+    <Compile Include="Entities\YakuhinMaster.cs" />
+    <Compile Include="Entities\ZaikoMaster.cs" />
+    <Compile Include="BFBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BFBaseForm.Designer.cs">
+      <DependentUpon>BFBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeWariateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeWariateForm.Designer.cs">
+      <DependentUpon>CodeWariateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BFIconControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BFIconControl.Designer.cs">
+      <DependentUpon>BFIconControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KensakuSyouhinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KensakuSyouhinForm.Designer.cs">
+      <DependentUpon>KensakuSyouhinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourokuSyuseiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourokuSyuseiForm.Designer.cs">
+      <DependentUpon>TourokuSyuseiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaikoChouseiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaikoChouseiForm.Designer.cs">
+      <DependentUpon>ZaikoChouseiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Teisu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BFBaseForm.resx">
+      <DependentUpon>BFBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeWariateForm.resx">
+      <DependentUpon>CodeWariateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BFIconControl.resx">
+      <DependentUpon>BFIconControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KensakuSyouhinForm.resx">
+      <DependentUpon>KensakuSyouhinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourokuSyuseiForm.resx">
+      <DependentUpon>TourokuSyuseiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaikoChouseiForm.resx">
+      <DependentUpon>ZaikoChouseiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\CsvIcon.png" />
+    <Content Include="Images\IchiranHyojiIcon.png" />
+    <Content Include="Images\KensakuIcon.png" />
+    <Content Include="Images\KensakuIcon16.png" />
+    <Content Include="Images\PdfIcon.png" />
+    <Content Include="Images\RirekiHyojiIcon.png" />
+    <Content Include="Images\SakujoIcon.png" />
+    <Content Include="Images\ShuseiIcon.png" />
+    <Content Include="Images\TojiruIcon.png" />
+    <Content Include="Images\TsuikaIcon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
