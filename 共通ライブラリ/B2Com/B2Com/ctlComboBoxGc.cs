@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,23 +15,23 @@ using GrapeCity.Win.Editors;
 namespace B2.Com
 {
     /// <summary>
-    /// 取引�?コンボ�?�?��スコントロール
+    /// 取引先コンボボックスコントロール
     /// </summary>
     public partial class ctlComboBoxGc : GcComboBox
     {
-        /// <summary>非選択時コー�?</summary>
+        /// <summary>非選択時コード</summary>
         private const string CODE_NONE = "00";
 
-        /// <summary>B2コモンオブジェク�?</summary>
+        /// <summary>B2コモンオブジェクト</summary>
         private B2Com b2Com;
-        /// <summary>�??ブル�?</summary>
+        /// <summary>テーブル名</summary>
         private string tableMei = string.Empty;
-        /// <summary>コード�??���?</summary>
+        /// <summary>コード項目名</summary>
         private string codeKomokumei = string.Empty;
-        /// <summary>名称�?���?</summary>
+        /// <summary>名称項目名</summary>
         private string meishoKomokumei = string.Empty;
         
-        /// <summary>コンボ�?�?��ス用�??タセ�?��</summary>
+        /// <summary>コンボボックス用データセット</summary>
         private DataSet comboboxDataSet = new DataSet();
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace B2.Com
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="container">コン�?��ー</param>
+        /// <param name="container">コンテナー</param>
         public ctlComboBoxGc(IContainer container)
             : base(container)
         {
@@ -53,12 +53,12 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// 初期化�?�?
+        /// 初期化処理
         /// </summary>
-        /// <param name="Pb2Com">B2コモンオブジェク�?</param>
-        /// <param name="table_nm">�??ブル�?</param>
-        /// <param name="key_cd">コード�??���?</param>
-        /// <param name="key_nm">名称�?���?</param>
+        /// <param name="Pb2Com">B2コモンオブジェクト</param>
+        /// <param name="table_nm">テーブル名</param>
+        /// <param name="key_cd">コード項目名</param>
+        /// <param name="key_nm">名称項目名</param>
         public void Init(B2Com Pb2Com, string table_nm, string key_cd, string key_nm)
         {
             this.b2Com = Pb2Com;
@@ -70,14 +70,14 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// 初期化�?�?
+        /// 初期化処理
         /// </summary>
-        /// <param name="Pb2Com">B2コモンオブジェク�?</param>
-        /// <param name="table_nm">�??ブル�?</param>
-        /// <param name="field_nm">キー�?���?</param>
+        /// <param name="Pb2Com">B2コモンオブジェクト</param>
+        /// <param name="table_nm">テーブル名</param>
+        /// <param name="field_nm">キー項目名</param>
         /// <param name="field_key">キー値</param>
-        /// <param name="key_cd">コード�??���?</param>
-        /// <param name="key_nm">名称�?���?</param>
+        /// <param name="key_cd">コード項目名</param>
+        /// <param name="key_nm">名称項目名</param>
         public void Init(B2Com Pb2Com, string table_nm, string field_nm, string field_key, string key_cd, string key_nm)
         {
             this.b2Com = Pb2Com;
@@ -89,9 +89,9 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// コード取�?
+        /// コード取得
         /// </summary>
-        /// <returns>コー�?</returns>
+        /// <returns>コード</returns>
         public string GetCode()
         {
             try
@@ -106,10 +106,10 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// コード取�?
+        /// コード取得
         /// </summary>
-        /// <param name="pintINDEX">イン�?��クス値</param>
-        /// <returns>コー�?</returns>
+        /// <param name="pintINDEX">インデックス値</param>
+        /// <returns>コード</returns>
         public string GetCode(int pintINDEX)
         {
             try
@@ -137,10 +137,10 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// イン�?��クス値取�?
+        /// インデックス値取得
         /// </summary>
-        /// <param name="pstrCODE">コー�?</param>
-        /// <returns>イン�?��クス値</returns>
+        /// <param name="pstrCODE">コード</param>
+        /// <returns>インデックス値</returns>
         public int GetIndex(string pstrCODE)
         {
             try
@@ -161,10 +161,10 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// �??タ取�?
+        /// データ取得
         /// </summary>
-        /// <param name="pstrColumnName">�?��名称</param>
-        /// <returns>�??タ</returns>
+        /// <param name="pstrColumnName">項目名称</param>
+        /// <returns>データ</returns>
         public object GetData(string pstrColumnName)
         {
             try
@@ -179,11 +179,11 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// �??タ取�?
+        /// データ取得
         /// </summary>
-        /// <param name="pintINDEX">イン�?��クス値</param>
-        /// <param name="pstrColumnName">�?��名称</param>
-        /// <returns>�??タ</returns>
+        /// <param name="pintINDEX">インデックス値</param>
+        /// <param name="pstrColumnName">項目名称</param>
+        /// <returns>データ</returns>
         public object GetData(int pintINDEX, string pstrColumnName)
         {
             try
@@ -197,19 +197,19 @@ namespace B2.Com
             }
             catch
             {
-                MessageBox.Show("コンボ�?�?��スには'" + pstrColumnName + "'と�?���?��がありません。�?�?��継続します�??", "確�?", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                MessageBox.Show("コンボボックスには'" + pstrColumnName + "'という項目がありません。処理を継続します。", "確認", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 return null;
             }
         }
 
         /// <summary>
-        /// コンボ�?�?��スDataSet�??タ設�?
+        /// コンボボックスDataSetデータ設定
         /// </summary>
         private void SetComboBoxDataSet()
         {
             try
             {
-                // 使用�??タセ�?��?�テーブル?��?初期�?
+                // 使用データセット（テーブル）の初期化
                 if (this.comboboxDataSet.Tables.Count > 0)
                 {
                     int i;
@@ -224,7 +224,7 @@ namespace B2.Com
                     }
                 }
 
-                // マスタ�??�取得用SQL
+                // マスタ情報取得用SQL
                 this.b2Com.PgLib.Sql.Clear();
                 this.b2Com.PgLib.Sql.Append("\r\n SELECT '0'  AS CODE  ");
                 this.b2Com.PgLib.Sql.Append("\r\n      , '' AS NAME  ");
@@ -240,7 +240,7 @@ namespace B2.Com
 
                 oAdp.Fill(this.comboboxDataSet, this.tableMei);
 
-                // コントロールパラメータ設�?
+                // コントロールパラメータ設定
                 this.DataSource = this.comboboxDataSet.Tables[this.tableMei];
                 
                 this.ListColumns[0].Width = 28;
@@ -261,15 +261,15 @@ namespace B2.Com
         }
 
         /// <summary>
-        /// コンボ�?�?��スDataSet�??タ設�?
+        /// コンボボックスDataSetデータ設定
         /// </summary>
-        /// <param name="field_nm">キー�?���?</param>
+        /// <param name="field_nm">キー項目名</param>
         /// <param name="field_key">キー値</param>
         private void SetComboBoxDataSet(string field_nm, string field_key)
         {
             try
             {
-                // 使用�??タセ�?��?�テーブル?��?初期�?
+                // 使用データセット（テーブル）の初期化
                 if (this.comboboxDataSet.Tables.Count > 0)
                 {
                     int i;
@@ -284,7 +284,7 @@ namespace B2.Com
                     }
                 }
 
-                // コンボ�?�?��ス用�??�取�?
+                // コンボボックス用情報取得
                 this.b2Com.PgLib.Sql.Clear();
                 this.b2Com.PgLib.Sql.Append("\r\n SELECT " + this.codeKomokumei + "  AS CODE ");
                 this.b2Com.PgLib.Sql.Append("\r\n      , " + this.meishoKomokumei + "  AS NAME ");
@@ -296,10 +296,9 @@ namespace B2.Com
                 NpgsqlDataAdapter oAdp = new NpgsqlDataAdapter(b2Com.PgLib.Sql.ToString(),
                         b2Com.PgLib.Connection);
 
-
                 oAdp.Fill(this.comboboxDataSet, this.tableMei);
 
-                // コントロールパラメータ設�?
+                // コントロールパラメータ設定
                 this.DataSource = this.comboboxDataSet.Tables[this.tableMei];
 
                 this.ListColumns[0].Width = 28;

@@ -38,18 +38,17 @@
     <Reference Include="B2Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\EXE\B2Com.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\EXE\EntityFramework.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\..\..\BFメインメニュー\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\EXE\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="FarPoint.CalcEngine, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
     <Reference Include="FarPoint.Excel, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7" />
@@ -67,9 +66,10 @@
     <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2016.428, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
     <Reference Include="GrapeCity.Win.PluginInputMan, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Npgsql, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+    <Reference Include="Npgsql, Version=3.1.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\EXE\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\EXE\Npgsql.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -88,7 +88,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BFButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BFColor.cs" />
     <Compile Include="BfCom.cs" />
+    <Compile Include="BFConst.cs" />
     <Compile Include="Entities\ZaikoChouseiModel.cs" />
     <Compile Include="Entities\HacchuMeisai_wk.cs" />
     <Compile Include="Entities\NyukoMeisai_wk.cs" />
@@ -213,18 +218,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\CsvIcon.png" />
     <Content Include="Images\IchiranHyojiIcon.png" />
     <Content Include="Images\KensakuIcon.png" />
-    <Content Include="Images\KensakuIcon16.png" />
-    <Content Include="Images\PdfIcon.png" />
     <Content Include="Images\RirekiHyojiIcon.png" />
     <Content Include="Images\SakujoIcon.png" />
     <Content Include="Images\ShuseiIcon.png" />
-    <Content Include="Images\TojiruIcon.png" />
     <Content Include="Images\TsuikaIcon.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

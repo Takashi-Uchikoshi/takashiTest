@@ -222,6 +222,13 @@
             </summary>
             <param name="pctrl">スタイル設定するコントロール</param>
         </member>
+        <member name="M:B2.Com.B2Com.GetAllControls(System.Windows.Forms.Control)">
+            <summary>
+            対象コントロール下の全コントロール取得
+            </summary>
+            <param name="pControl">対象コントロール</param>
+            <returns>全コントロール郡</returns>
+        </member>
         <member name="M:B2.Com.B2Com.InitDb(System.Boolean)">
             <summary>
             DB接続処理
@@ -293,6 +300,13 @@
             <param name="key">キー名</param>
             <param name="def">デフォルト値</param>
             <returns>INIデータ</returns>
+        </member>
+        <member name="M:B2.Com.B2Com.ExistsTable(System.String)">
+            <summary>
+            DBテーブル有無確認
+            </summary>
+            <param name="pTableName">テーブル名称</param>
+            <returns>true:有 false:無</returns>
         </member>
         <member name="P:B2.Com.B2Com.DbServerMei">
             <summary>DBサーバー名</summary>

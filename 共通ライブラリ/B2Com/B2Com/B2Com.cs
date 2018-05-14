@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Data;
 using Npgsql;
 
 /*---------------------------------------------------------------------------------
@@ -515,6 +516,24 @@ namespace B2.Com
             }
         }
 
+        //**********************************************************************
+        /// <summary>
+        /// 対象コントロール下の全コントロール取得
+        /// </summary>
+        /// <param name="pControl">対象コントロール</param>
+        /// <returns>全コントロール郡</returns>
+        //**********************************************************************
+        public List<Control> GetAllControls(Control pControl)
+        {
+            List<Control> lControlR = new List<Control>();
+            foreach (Control lControl in pControl.Controls)
+            {
+                lControlR.Add(lControl);
+                lControlR.AddRange(GetAllControls(lControl));
+            }
+            return lControlR;
+        }
+
         /// <summary>
         /// DB接続処理
         /// </summary>
@@ -836,6 +855,51 @@ namespace B2.Com
             }
 
             return data;
+        }
+
+        //**********************************************************************
+        /// <summary>
+        /// DBテーブル有無確認
+        /// </summary>
+        /// <param name="pTableName">テーブル名称</param>
+        /// <returns>true:有 false:無</returns>
+        //**********************************************************************
+        public bool ExistsTable(string pTableName)
+        {
+            try
+            {
+                //------------------
+                // SQL作成
+                //------------------
+                this.PgLib.Sql.Clear();
+                this.PgLib.Sql.Append("\r\n select count(*) as cnt ");
+                this.PgLib.Sql.Append("\r\n   from pg_stat_user_tables ");
+                this.PgLib.Sql.Append("\r\n  where lower(schemaname) = lower(session_user) ");
+                this.PgLib.Sql.Append("\r\n    and lower(relname)    = lower('" + pTableName.Replace("'", "''") + "') ");
+                //------------------
+                // SQL実行
+                //------------------
+                NpgsqlDataAdapter lNpgsqlDataAdapter = new NpgsqlDataAdapter(this.PgLib.Sql.ToString(), this.PgLib.Connection);
+                //------------------
+                // 結果をDataSetへ
+                //------------------
+                DataSet lDataSet = new DataSet();
+                lNpgsqlDataAdapter.Fill(lDataSet, "ExistsTable");
+                //------------------
+                // 結果確認
+                //------------------
+                if (lDataSet.Tables[0].Rows[0].ItemArray[0].ToString() == "0")
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.ShowErrMsg(ex);
+                return false;
+            }
         }
     }
 }

@@ -35,17 +35,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EXE\EntityFramework.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EXE\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="FarPoint.CalcEngine, Version=7.0.2019.2008, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -87,9 +85,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\SpreadWin7\Bin\v7.0.2019.2008\GrapeCity.Win.PluginInputMan.dll</HintPath>
     </Reference>
-    <Reference Include="Npgsql, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+    <Reference Include="Npgsql, Version=3.1.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\EXE\Npgsql.dll</HintPath>
+      <HintPath>..\..\EXE\Npgsql.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -176,7 +175,9 @@
       <DependentUpon>KinoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,10 +195,12 @@
     <ProjectReference Include="..\..\共通ライブラリ\B2Com\B2Com\B2Com.csproj">
       <Project>{a77b8dd3-fb7c-4f60-8531-cd3d388a49bd}</Project>
       <Name>B2Com</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\共通ライブラリ\BFCom\BFCom\BFCom.csproj">
       <Project>{5bf817cd-9b40-446f-b4f4-0a77ddcce66b}</Project>
       <Name>BFCom</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\BfLogin\BfLogin.csproj">
       <Project>{9f69a472-1933-4b42-b7ac-502552dfdd02}</Project>

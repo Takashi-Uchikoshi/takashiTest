@@ -4,6 +4,128 @@
         <name>BFCom</name>
     </assembly>
     <members>
+        <member name="T:B2.BestFunction.BFButton">
+            <summary>
+            BestFunctionボタンクラス
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.mForeColor">
+            <summary>
+            前景色
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.mBackColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFButton.#ctor">
+            <summary>
+            BestFunctionボタンクラスコンストラクタ
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFButton.ColorType">
+            <summary>
+            カラータイプ
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFButton.ForeColor">
+            <summary>
+            コントロール前景色(編集不可となるよう制御)
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFButton.BackColor">
+            <summary>
+            コントロール背景色(編集不可となるよう制御)
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFButton.FlatStyle">
+            <summary>
+            コントロール外観(編集不可となるよう制御)
+            </summary>
+        </member>
+        <member name="T:B2.BestFunction.BFButton.ColorTypeRenban">
+            <summary>
+            カラー種類連番
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorWater">
+            <summary>前景色：水</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorPink">
+            <summary>前景色：桃</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorPistachio">
+            <summary>前景色：ピスタチオ緑</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorDarkGray">
+            <summary>前景色：暗灰</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorGray">
+            <summary>前景色：灰</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorOrange">
+            <summary>前景色：橙</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.ForeColorRed">
+            <summary>前景色：赤</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorWater">
+            <summary>背景色：水</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorPink">
+            <summary>背景色：桃</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorPistachio">
+            <summary>背景色：ピスタチオ緑</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorDarkGray">
+            <summary>背景色：暗灰</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorGray">
+            <summary>背景色：灰</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorOrange">
+            <summary>背景色：橙</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFButton.ColorTypeRenban.BackColorRed">
+            <summary>背景色：赤</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFColor">
+            <summary>
+            BestFunction 使用色定義
+            </summary>
+            <remarks>
+            ※ Color に合わせて class ではなく struct で定義
+            </remarks>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.White">
+            <summary>白色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Water">
+            <summary>水色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Pink">
+            <summary>桃色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Pistachio">
+            <summary>ピスタチオ緑色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.DarkGray">
+            <summary>暗灰色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.PearlGray">
+            <summary>明灰色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Gray">
+            <summary>灰色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Orange">
+            <summary>橙色</summary>
+        </member>
+        <member name="P:B2.BestFunction.BFColor.Red">
+            <summary>赤色</summary>
+        </member>
         <member name="T:B2.BestFunction.BfCom">
             <summary>
             BestFunction共通処理クラス
@@ -15,6 +137,65 @@
             </summary>
             <param name="b2com">共通パラメータ</param>
             <returns>日本語プログラム名称</returns>
+        </member>
+        <member name="M:B2.BestFunction.BfCom.TorokuUseDate(B2.Com.B2Com,System.String,System.String[],System.String,System.String)">
+            <summary>
+            DBテーブル使用開始日・使用終了日 設定
+            </summary>
+            <remarks>
+            ┌──┐
+            │メモ│使用開始日を元に使用終了日を設定します。
+            └──┘
+            以下の場合SQLエラーとなります
+            ※ 同一主キー内にて使用開始日が重複していた場合NG
+            ※ 使用開始日に0以外で日付変換不可の数値が入っていた場合NG
+            </remarks>
+            <param name="b2Com">共通パラメータ</param>
+            <param name="pTableName">テーブル名称</param>
+            <param name="pPrimaryKeys">主キー項目名称(使用開始日・使用終了日除く)</param>
+            <param name="pStartUseDate">使用開始日項目名称</param>
+            <param name="pEndUseDate">使用終了日項目名称</param>
+            <returns>true:正常 false:異常</returns>
+        </member>
+        <member name="T:B2.BestFunction.HasuKubun">
+            <summary>
+            端数区分
+            </summary>
+        </member>
+        <member name="F:B2.BestFunction.HasuKubun.ShishaGonyu">
+            <summary>四捨五入</summary>
+        </member>
+        <member name="F:B2.BestFunction.HasuKubun.KiriSute">
+            <summary>切り捨て</summary>
+        </member>
+        <member name="F:B2.BestFunction.HasuKubun.KiriAge">
+            <summary>切り上げ</summary>
+        </member>
+        <member name="T:B2.BestFunction.HasuKubunExt">
+            <summary>
+            端数区分補助クラス
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.HasuKubunExt.DisplayName(System.String)">
+            <summary>
+            端数区分表示名称
+            </summary>
+            <param name="pHasuKubun">端数区分</param>
+            <returns>端数区分表示名称</returns>
+        </member>
+        <member name="M:B2.BestFunction.HasuKubunExt.DisplayName(System.Int32)">
+            <summary>
+            端数区分表示名称
+            </summary>
+            <param name="pHasuKubun">端数区分</param>
+            <returns>端数区分表示名称</returns>
+        </member>
+        <member name="M:B2.BestFunction.HasuKubunExt.DisplayName(B2.BestFunction.HasuKubun)">
+            <summary>
+            端数区分表示名称
+            </summary>
+            <param name="pHasuKubun">端数区分</param>
+            <returns>端数区分表示名称</returns>
         </member>
         <member name="M:B2.BestFunction.Entities.ZaikoChouseiModel.#ctor(B2.Com.B2Com)">
             <summary>	
@@ -295,28 +476,26 @@
             参照するスキーマ。
             </summary>
         </member>
-        <member name="M:B2.BestFunction.Entities.BestFunctionModel.#ctor(B2.Com.B2Com)">
+        <member name="M:B2.BestFunction.Entities.BfDbContext.#ctor(B2.Com.B2Com)">
             <summary>	
             コンストラクタ	
             </summary>	
-            <param name="userid">接続ID。</param>	
-            <param name="password">接続パスワード。</param>	
-            <param name="defaultSchema">接続先スキーマ。</param>	
+            <param name="b2Com">接続情報を含むB2共通ユーティリティ</param>	
         </member>
-        <member name="M:B2.BestFunction.Entities.BestFunctionModel.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+        <member name="M:B2.BestFunction.Entities.BfDbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
             <summary>
             スキーマを変更したい場合はここで変更
             指定が無いとスキーマ名は『dbo』に設定される。
             </summary>
         </member>
-        <member name="M:B2.BestFunction.Entities.BestFunctionModel.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:B2.BestFunction.Entities.BfDbContext.GetConnecting(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             コネクションの取得
             </summary>
             <param name="userid">ユーザーID</param>
             <param name="password">パスワード</param>
         </member>
-        <member name="P:B2.BestFunction.Entities.BestFunctionModel.DefaultSchema">
+        <member name="P:B2.BestFunction.Entities.BfDbContext.DefaultSchema">
             <summary>
             参照するスキーマ。
             </summary>
@@ -1023,35 +1202,29 @@
         <member name="M:B2.BestFunction.Entities.MenuData.#ctor">
             <summary> コンストラクタ</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.BunruiSeq">
-            <summary>分類出力順</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.YakkyokuCode">
+            <summary>薬局コード</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.BunruiName">
-            <summary>分類名</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.Program">
+            <summary>プログラム名</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.FileSeq">
-            <summary>EXE出力順</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.Section">
+            <summary>セクション</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Filename">
-            <summary>EXEファイル名</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.Keycode">
+            <summary>キー</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.ProgramName">
-            <summary>日本語名称</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.Data">
+            <summary>値</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Parameta">
-            <summary>実行時引数</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.Biko">
+            <summary>備考</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Hyoujihouhou">
-            <summary>表示方法</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.StartUseDate">
+            <summary>使用開始</summary>
         </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Doukizokusei">
-            <summary>同期属性</summary>
-        </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Formname">
-            <summary>フォーム名</summary>
-        </member>
-        <member name="P:B2.BestFunction.Entities.MenuData.Setumei">
-            <summary>機能詳細</summary>
+        <member name="P:B2.BestFunction.Entities.MenuData.EndUseDate">
+            <summary>使用終了</summary>
         </member>
         <member name="T:B2.BestFunction.Entities.NouhinData">
             <summary>納品データ</summary>
@@ -3543,38 +3716,41 @@
         <member name="P:B2.BestFunction.Entities.ZaikoMaster.SakujyoFlag">
             <summary>削除フラグ</summary>
         </member>
-        <member name="T:B2.BestFunction.MenuShowModeNo">
+        <member name="T:B2.BestFunction.MenuShowMode">
             <summary>
-            メニュー表示モード№
+            メニュー表示モード
             </summary>
         </member>
-        <member name="F:B2.BestFunction.MenuShowModeNo.History">
+        <member name="F:B2.BestFunction.MenuShowMode.Rireki">
             <summary>履歴</summary>
         </member>
-        <member name="F:B2.BestFunction.MenuShowModeNo.List">
+        <member name="F:B2.BestFunction.MenuShowMode.Ichiran">
             <summary>一覧</summary>
         </member>
-        <member name="F:B2.BestFunction.MenuShowModeNo.New">
+        <member name="F:B2.BestFunction.MenuShowMode.Shinki">
             <summary>新規</summary>
         </member>
-        <member name="T:B2.BestFunction.BFCallbackEventNo">
+        <member name="F:B2.BestFunction.MenuShowMode.Kensaku">
+            <summary>検索</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFCallbackEventType">
             <summary>
-            コールバックイベント№
+            コールバックイベントタイプ
             </summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventNo.Exit">
+        <member name="F:B2.BestFunction.BFCallbackEventType.Exit">
             <summary>プログラム終了</summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventNo.CompleteDisplay">
+        <member name="F:B2.BestFunction.BFCallbackEventType.CompleteDisplay">
             <summary>表示完了</summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventNo.Processing">
+        <member name="F:B2.BestFunction.BFCallbackEventType.Processing">
             <summary>処理中</summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventNo.CompleteProcess">
+        <member name="F:B2.BestFunction.BFCallbackEventType.CompleteProcess">
             <summary>処理完了</summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventNo.CancelProcess">
+        <member name="F:B2.BestFunction.BFCallbackEventType.CancelProcess">
             <summary>処理キャンセル</summary>
         </member>
         <member name="T:B2.BestFunction.BFCallbackEventResuslt">
@@ -3609,23 +3785,23 @@
             フォーム再表示
             </summary>
         </member>
-        <member name="M:B2.BestFunction.BFBaseForm.CanChangeForm">
+        <member name="M:B2.BestFunction.BFBaseForm.CanChange">
             <summary>
             フォーム切替表示問合せ
             </summary>
             <returns>true:フォーム切替表示可 false:フォーム切替表示不可</returns>
         </member>
-        <member name="M:B2.BestFunction.BFBaseForm.CanCloseForm">
+        <member name="M:B2.BestFunction.BFBaseForm.CanClose">
             <summary>
             フォームクローズ問合せ
             </summary>
             <returns>true:フォームクローズ可 false:フォームクローズ不可</returns>
         </member>
-        <member name="M:B2.BestFunction.BFBaseForm.CallBFCallbackEvent(B2.BestFunction.BFCallbackEventNo,B2.BestFunction.BFCallbackEventResuslt,System.String)">
+        <member name="M:B2.BestFunction.BFBaseForm.CallBFCallbackEvent(B2.BestFunction.BFCallbackEventType,B2.BestFunction.BFCallbackEventResuslt,System.String)">
             <summary>
             コールバック処理呼び出し
             </summary>
-            <param name="no">イベント№</param>
+            <param name="no">イベントタイプ</param>
             <param name="ret">結果</param>
             <param name="stringValue">イベント文字列情報</param>
         </member>
@@ -3668,8 +3844,8 @@
             コールバック用イベント引数クラス
             </summary>
         </member>
-        <member name="F:B2.BestFunction.BFCallbackEventArgs.eventNo">
-            <summary>イベント№</summary>
+        <member name="F:B2.BestFunction.BFCallbackEventArgs.eventType">
+            <summary>イベントタイプ</summary>
         </member>
         <member name="F:B2.BestFunction.BFCallbackEventArgs.menuLevel">
             <summary>メニュー階層</summary>
@@ -3683,18 +3859,18 @@
         <member name="F:B2.BestFunction.BFCallbackEventArgs.eventStringValue">
             <summary>イベント文字列情報</summary>
         </member>
-        <member name="M:B2.BestFunction.BFCallbackEventArgs.#ctor(B2.BestFunction.BFCallbackEventNo,System.String,B2.BestFunction.MenuShowModeNo,B2.BestFunction.BFCallbackEventResuslt,System.String)">
+        <member name="M:B2.BestFunction.BFCallbackEventArgs.#ctor(B2.BestFunction.BFCallbackEventType,System.String,B2.BestFunction.MenuShowMode,B2.BestFunction.BFCallbackEventResuslt,System.String)">
             <summary>
             コンストラクタ
             </summary>
-            <param name="no">イベント№</param>
+            <param name="type">イベントタイプ</param>
             <param name="level">メニュー階層</param>
             <param name="mode">表示モード</param>
-            <param name="ret">結果</param>
+            <param name="result">結果</param>
             <param name="stringValue">イベント文字列情報</param>
         </member>
-        <member name="P:B2.BestFunction.BFCallbackEventArgs.EventNO">
-            <summary>イベント№</summary>
+        <member name="P:B2.BestFunction.BFCallbackEventArgs.EventType">
+            <summary>イベントタイプ</summary>
         </member>
         <member name="P:B2.BestFunction.BFCallbackEventArgs.MenuLevel">
             <summary>メニュー階層</summary>
@@ -3769,7 +3945,6 @@
             <summary>
             初期化設定
             </summary>
-            <param name="pnumState">状態情報</param>
         </member>
         <member name="M:B2.BestFunction.CodeWariateForm.setSearchInfo">
             <summary>
@@ -3830,6 +4005,73 @@
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
+        </member>
+        <member name="T:B2.BestFunction.BFIconControl">
+            <summary>BFアイコンコントロール</summary>
+        </member>
+        <member name="M:B2.BestFunction.BFIconControl.#ctor">
+            <summary>
+            BFアイコンコントロールコンストラクタ
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFIconControl.PerformClick">
+            <summary>
+            B2.BestFunction.BFIconControl.Click ボタンのイベントを生成します
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFIconControl.This_Click(System.Object,System.EventArgs)">
+            <summary>
+            クリックイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.components">
+            <summary> 
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:B2.BestFunction.BFIconControl.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:B2.BestFunction.BFIconControl.InitializeComponent">
+            <summary> 
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.BFIconControl.IconType">
+            <summary>アイコン種類</summary>
+        </member>
+        <member name="E:B2.BestFunction.BFIconControl.Click">
+            <summary>アイコンがクリック及びダブルクリックされたときに発生します。</summary>
+        </member>
+        <member name="T:B2.BestFunction.BFIconControl.IconTypeRenban">
+            <summary>アイコン種類連番</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.None">
+            <summary>アイコンなし</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.IchiranHyoji">
+            <summary>一覧表示</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.Kensaku">
+            <summary>検索</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.RirekiHyoji">
+            <summary>履歴表示</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.Sakujo">
+            <summary>削除</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.Shusei">
+            <summary>修正</summary>
+        </member>
+        <member name="F:B2.BestFunction.BFIconControl.IconTypeRenban.Tsuika">
+            <summary>追加</summary>
         </member>
         <member name="T:B2.BestFunction.KensakuSyouhinForm">
             <summary>
@@ -4473,6 +4715,36 @@
             <summary>
               厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
               現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.IchiranHyojiIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.KensakuIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.RirekiHyojiIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.SakujoIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.ShuseiIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+            </summary>
+        </member>
+        <member name="P:B2.BestFunction.Properties.Resources.TsuikaIcon">
+            <summary>
+              型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
             </summary>
         </member>
     </members>

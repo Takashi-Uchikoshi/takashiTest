@@ -18,24 +18,16 @@ namespace B2.BestFunction
         {
             /// <summary>アイコンなし</summary>
             None = 0,
-            /// <summary>CSV出力</summary>
-            Csv,
             /// <summary>一覧表示</summary>
             IchiranHyoji,
             /// <summary>検索</summary>
             Kensaku,
-            /// <summary>検索(16×16)</summary>
-            KensakuIcon16,
-            /// <summary>PFD出力</summary>
-            Pdf,
             /// <summary>履歴表示</summary>
             RirekiHyoji,
             /// <summary>削除</summary>
             Sakujo,
             /// <summary>修正</summary>
             Shusei,
-            /// <summary>閉じる</summary>
-            Tojiru,
             /// <summary>追加</summary>
             Tsuika
         }
@@ -47,48 +39,21 @@ namespace B2.BestFunction
             set 
             {
                 _IconType = value;
-
-                switch (_IconType)
-                {
-                    case IconTypeRenban.None:
-                        this.IconPictureBox.Image = null;
-                        break;
-                    case IconTypeRenban.Csv:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.CsvIcon;
-                        break;
-                    case IconTypeRenban.IchiranHyoji:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.IchiranHyojiIcon;
-                        break;
-                    case IconTypeRenban.Kensaku:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.KensakuIcon;
-                        break;
-                    case IconTypeRenban.KensakuIcon16:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.KensakuIcon16;
-                        break;
-                    case IconTypeRenban.Pdf:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.PdfIcon;
-                        break;
-                    case IconTypeRenban.RirekiHyoji:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.RirekiHyojiIcon;
-                        break;
-                    case IconTypeRenban.Sakujo:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.SakujoIcon;
-                        break;
-                    case IconTypeRenban.Shusei:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.ShuseiIcon;
-                        break;
-                    case IconTypeRenban.Tojiru:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.TojiruIcon;
-                        break;
-                    case IconTypeRenban.Tsuika:
-                        this.IconPictureBox.Image = global::B2.BestFunction.Properties.Resources.TsuikaIcon;
-                        break;
-                    default:
-                        break;
-                }
+                this.IconPictureBox.Image = mImages[(int)_IconType];
             }
         }
         private IconTypeRenban _IconType = IconTypeRenban.None;
+
+        private Image[] mImages = new Image[]
+        {
+                null
+                ,global::B2.BestFunction.Properties.Resources.IchiranHyojiIcon
+                ,global::B2.BestFunction.Properties.Resources.KensakuIcon
+                ,global::B2.BestFunction.Properties.Resources.RirekiHyojiIcon
+                ,global::B2.BestFunction.Properties.Resources.SakujoIcon
+                ,global::B2.BestFunction.Properties.Resources.ShuseiIcon
+                ,global::B2.BestFunction.Properties.Resources.TsuikaIcon
+        };
 
         /// <summary>アイコンがクリック及びダブルクリックされたときに発生します。</summary>
         new public event System.EventHandler Click;
@@ -101,6 +66,21 @@ namespace B2.BestFunction
         public BFIconControl()
         {
             InitializeComponent();
+
+            if (Enum.GetNames(typeof(IconTypeRenban)).Length != mImages.Length) { MessageBox.Show("コーディング異常"); }
+        }
+
+        //**********************************************************************
+        /// <summary>
+        /// B2.BestFunction.BFIconControl.Click ボタンのイベントを生成します
+        /// </summary>
+        //**********************************************************************
+        public void PerformClick()
+        {
+            if (this.Click != null)
+            {
+                this.Click(this, new EventArgs());
+            }
         }
 
         //**********************************************************************

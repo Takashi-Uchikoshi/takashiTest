@@ -61,10 +61,12 @@
     <ProjectReference Include="..\..\共通ライブラリ\B2Com\B2Com\B2Com.csproj">
       <Project>{a77b8dd3-fb7c-4f60-8531-cd3d388a49bd}</Project>
       <Name>B2Com</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\共通ライブラリ\BFCom\BFCom\BFCom.csproj">
       <Project>{5bf817cd-9b40-446f-b4f4-0a77ddcce66b}</Project>
       <Name>BFCom</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

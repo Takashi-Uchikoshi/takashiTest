@@ -63,16 +63,6 @@ namespace B2.BestFunction.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        public static System.Drawing.Bitmap CsvIcon {
-            get {
-                object obj = ResourceManager.GetObject("CsvIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
         public static System.Drawing.Bitmap IchiranHyojiIcon {
             get {
                 object obj = ResourceManager.GetObject("IchiranHyojiIcon", resourceCulture);
@@ -86,26 +76,6 @@ namespace B2.BestFunction.Properties {
         public static System.Drawing.Bitmap KensakuIcon {
             get {
                 object obj = ResourceManager.GetObject("KensakuIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        public static System.Drawing.Bitmap KensakuIcon16 {
-            get {
-                object obj = ResourceManager.GetObject("KensakuIcon16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        public static System.Drawing.Bitmap PdfIcon {
-            get {
-                object obj = ResourceManager.GetObject("PdfIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,16 +106,6 @@ namespace B2.BestFunction.Properties {
         public static System.Drawing.Bitmap ShuseiIcon {
             get {
                 object obj = ResourceManager.GetObject("ShuseiIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        public static System.Drawing.Bitmap TojiruIcon {
-            get {
-                object obj = ResourceManager.GetObject("TojiruIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

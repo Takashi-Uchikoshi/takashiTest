@@ -37,7 +37,7 @@
             this.IconPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IconPictureBox.Location = new System.Drawing.Point(0, 0);
             this.IconPictureBox.Name = "IconPictureBox";
-            this.IconPictureBox.Size = new System.Drawing.Size(32, 32);
+            this.IconPictureBox.Size = new System.Drawing.Size(30, 30);
             this.IconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.IconPictureBox.TabIndex = 0;
             this.IconPictureBox.TabStop = false;
@@ -50,7 +50,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.IconPictureBox);
             this.Name = "BFIconControl";
-            this.Size = new System.Drawing.Size(32, 32);
+            this.Size = new System.Drawing.Size(30, 30);
             ((System.ComponentModel.ISupportInitialize)(this.IconPictureBox)).EndInit();
             this.ResumeLayout(false);
 
